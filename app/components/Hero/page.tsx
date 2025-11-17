@@ -69,27 +69,31 @@ export default function Home() {
 
         {/* Navigation */}
         {mounted && (
-          <nav className="hidden md:flex gap-12 items-center text-xl font-semibold leading-10 tracking-[-1px] font-sans">
-            {links.map((link) => (
-              <div key={link} className="relative group">
-                <Link
-                  href="#"
-                  onClick={() => setActive(link)}
-                  className="cursor-pointer"
-                >
-                  {link}
-                </Link>
-                <span
-                  className={`absolute left-0 -bottom-1 h-[3px] transition-all duration-300 ${
-                    active === link
-                      ? "w-full bg-[#D11417]"
-                      : "w-0 bg-black group-hover:w-full"
-                  }`}
-                ></span>
-              </div>
-            ))}
-          </nav>
-        )}
+  <nav className="hidden md:flex gap-12 items-center text-xl font-semibold leading-10 tracking-[-1px] font-sans">
+    {links.map((link) => {
+      const cleanLink = link.trim();  
+      return (
+        <div key={cleanLink} className="relative group">
+          <Link
+            href="#"
+            onClick={() => setActive(cleanLink)}
+            className="cursor-pointer inline-block"
+          >
+            {cleanLink}
+          </Link>
+          <span
+            className={`absolute left-0 -bottom-1 h-[3px] transition-all duration-300 ${
+              active === cleanLink
+                ? "w-full bg-[#D11417]"
+                : "w-0 bg-black group-hover:w-full"
+            }`}
+          ></span>
+        </div>
+      );
+    })}
+  </nav>
+)}
+
 
         {/* Contact Button */}
         <div className="hidden md:block">

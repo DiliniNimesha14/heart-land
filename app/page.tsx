@@ -5,6 +5,7 @@ import Testimonials from "./components/Testimonials/page";
 import Faq from "./components/FaQ/page";
 import HeroBanner from "./components/HeroBanner/page";
 import Hero from "./components/Hero/page";
+import Footer from "./components/Footer/page";
 
  
 
@@ -18,6 +19,7 @@ export default function Page() {
     <Testimonials />
     <Faq />
     <HeroBanner />
+    <Footer />
     </ >
   );
 }

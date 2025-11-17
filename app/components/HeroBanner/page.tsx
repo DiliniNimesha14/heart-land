@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroBanner() {
   return (
-    <section className="relative w-full overflow-visible mt-10 mb-10">
+    <section className="relative w-full overflow-visible mt-10 mb-36">
         
       {/* Red banner */}
       <div className="bg-[#D11417] w-full">
