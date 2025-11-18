@@ -2,6 +2,12 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 
+import { Open_Sans, Nunito } from "next/font/google";
+
+
+const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
+const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" });
+
 export default function Founders() {
   const cardsRef = useRef([]);
 
@@ -41,12 +47,12 @@ export default function Founders() {
 
   return (
     <section className="py-20 bg-white">
-      <div className="text-center max-w-4xl mx-auto mb-16">
-        <h2 className="text-3xl md:text-5xl font-semibold mb-6">
+<div className={`text-center text-2xl max-w-4xl mb-16 mx-auto ${nunito.className}`}>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6">
           Meet Our Founders
         </h2>
-        <p className="text-gray-700 text-xl leading-relaxed">
-          At <span className="font-semibold">Heartland General Trading</span>, 
+        <p className="text-black text-xl leading-relaxed">
+          At <span className="font-bold">Heartland General Trading</span>, 
           we take pride in offering more than just quality products —
           we deliver trust, consistency, and a commitment to excellence in every partnership.
           Here’s what makes us stand out in Sri Lanka’s food industry.
@@ -83,8 +89,13 @@ export default function Founders() {
   z-20        
   h-30
 ">
-  <h3 className="text-xl font-bold">{founder.name}</h3>
-  <p className="text-black font-semibold mt-1">{founder.title}</p>
+ <h3 className={`${openSans.className} font-bold text-xl text-[#000000] text-center `}>
+  {founder.name}
+</h3>
+<p className={`${openSans.className} text-lg font-semibold text-[#000000] text-center`}>
+  {founder.title}
+</p>
+
 </div>
 
 
