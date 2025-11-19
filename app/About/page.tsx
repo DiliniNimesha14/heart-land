@@ -1,4 +1,5 @@
 import AboutHero from '@/components/aboutUsHero';
+import CommunitySection from '@/components/community';
 import Footer from '@/components/footer';
 import Navbar from '@/components/Navbar';
 import Founders from '@/components/ourFounders';
@@ -15,6 +16,7 @@ export default function AboutPagee() {
     <WhyWorkWithUs />
     <Founders />
     <TeamMembers />
+    <CommunitySection />
     <Footer />
    
   
