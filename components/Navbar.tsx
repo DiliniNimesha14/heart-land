@@ -1,25 +1,31 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const links = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/About" },
-    { name: "Products", href: "/products" },
+    { name: "Products", href: "/Product" },
     { name: "CSR", href: "/csr" },
     { name: "Resources & Insights", href: "/resources" },
     { name: "FAQ & Support", href: "/faq" },
   ];
 
-  const [active, setActive] = useState("Home");
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const getActiveLink = (href: string) => {
+    // "/" matches Home exactly, other links check if pathname starts with href
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className="max-w-7xl mx-auto px-6 pt-8 flex items-center justify-between">
@@ -39,17 +45,13 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-12 items-center text-xl font-semibold leading-10 tracking-[-1px] font-sans">
           {links.map((link) => (
             <div key={link.name} className="relative group">
-              <Link
-                href={link.href}
-                onClick={() => setActive(link.name)}
-                className="cursor-pointer inline-block"
-              >
+              <Link href={link.href} className="cursor-pointer inline-block">
                 {link.name}
               </Link>
 
               <span
                 className={`absolute left-0 -bottom-1 h-[3px] transition-all duration-300 ${
-                  active === link.name
+                  getActiveLink(link.href)
                     ? "w-full bg-[#D11417]"
                     : "w-0 bg-black group-hover:w-full"
                 }`}

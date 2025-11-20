@@ -1,7 +1,13 @@
+import { Open_Sans } from "next/font/google";
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+});
+
 export default function Footer() {
   return (
-    <footer className="bg-[#1B1D21] text-white md:pb-10 md:pt-10 mt-10 font-[Open Sans] px-6 md:px-15 md:py-0 py-1">
-
+    <footer className={`${openSans.className} bg-[#1B1D21] text-white md:pb-10 md:pt-10 mt-10 px-6 md:px-15 md:py-0 py-1`}>
+   
       {/* Container to center the content */}
       <div className="max-w-7xl mx-auto">
 
@@ -14,13 +20,15 @@ export default function Footer() {
 
             <div className="flex items-center gap-2 mb-4 cursor-pointer w-fit">
               <p className="text-sm">info@heartlandtrading.ae</p>
-              <span className="text-lg">↗</span>
+              <span className="text-4xl ml-[400px] ">⭧</span>
             </div>
+            <div className="w-[600px] h-px bg-gray-600 mb-7 "></div>
 
-            <p className="text-sm text-gray-300 leading-6 mb-4">
-              Subscribe to our newsletter and discover the authentic taste of Sri Lanka in every update.<br/>
+
+            <p className="text-sm text-white leading-8 mb-4 w-[570px]">
+              Subscribe to our newsletter and discover the authentic taste of Sri Lanka in every update.
               Be the first to know about new product launches, exclusive offers, and Heartland community
-              stories from Sri Lankan producers to UAE homes.<br/>
+              stories from Sri Lankan producers to UAE homes. <br />
               Join our global community that celebrates authentic flavour, quality, and sustainability.
             </p>
 
@@ -38,7 +46,7 @@ export default function Footer() {
     <h4 className="font-semibold -mt-5 mb-4">Quick Link</h4>
     <ul className="space-y-5 text-sm text-gray-300">
       <li><a href="/About">About Us</a></li>
-      <li><a href="#">Our Products</a></li>
+      <li><a href="/Product">Our Products</a></li>
       <li><a href="#">CSR Initiatives</a></li>
       <li><a href="#">Careers</a></li>
       <li><a href="#">Contact Us</a></li>
@@ -55,7 +63,7 @@ export default function Footer() {
   </div>
 
   <div className="-mr-44">
-    <h4 className="font-semibold mb-4">Contact Us</h4>
+    <h4 className="font-bold text-xl mb-4">Contact Us</h4>
     <p className="text-sm text-gray-300 leading-6 mb-4">
       <span className="font-semibold">Corporate Office</span><br/>
       Heartland General Trading FZE<br/>

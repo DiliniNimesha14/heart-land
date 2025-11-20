@@ -3,38 +3,27 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Inter, Nunito } from "next/font/google";
 import Image from "next/image";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
 
 const team = [
-  { name: "Tharindu Senanayake", role: "Export Logistics Coordinator", img: "/tharindu.png", offset: 0, size: 380 },
-  { name: "Hashan Madushanka", role: "Business Development Executive", img: "/hashan.png", offset: -40, size: 350 },
-  { name: "Shalini Perera", role: "Quality Assurance Officer", img: "/shalini.png", offset: 0, size: 400 },
-  { name: "Hansi Hettiarachchi", role: "Digital Marketing Specialist", img: "/hansi.png", offset: -40, size: 380 },
-  { name: "Lakshani Wanigathunga", role: "Customer Relations Manager", img: "/lakshani.png", offset: 0, size: 400 },
+  { name: "Tharindu Senanayake", role: "Export Logistics Coordinator", img: "/tharindu.png", offset: 0, size: 360 },
+  { name: "Hashan Madushanka", role: "Business Development Executive", img: "/hashan.png", offset: -40, size: 330 },
+  { name: "Shalini Perera", role: "Quality Assurance Officer", img: "/shalini.png", offset: 0, size: 365 },
+  { name: "Hansi Hettiarachchi", role: "Digital Marketing Specialist", img: "/hansi.png", offset: -40, size: 330 },
+  { name: "Lakshani Wanigathunga", role: "Customer Relations Manager", img: "/lakshani.png", offset: 0, size: 380 },
+  { name: "Hansi Hettiarachchi", role: "Digital Marketing Specialist", img: "/hansi.png", offset: -40, size: 330 },
+  { name: "Tharindu Senanayake", role: "Export Logistics Coordinator", img: "/tharindu.png", offset: 0, size: 360 },
+
+
 ];
 
 export default function TeamMembers() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -50]);
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  // Auto-scroll effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (scrollRef.current) {
-        const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth;
-        if (scrollRef.current.scrollLeft >= maxScroll) {
-          scrollRef.current.scrollTo({ left: 0 });
-        } else {
-          scrollRef.current.scrollBy({ left: 1 });
-        }
-      }
-    }, 20);
-    return () => clearInterval(interval);
-  }, []);
 
   const scrollLeft = () => {
     if (scrollRef.current) scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
@@ -62,16 +51,33 @@ export default function TeamMembers() {
         {/* Left Arrow */}
         <button
           onClick={scrollLeft}
-          className="absolute -top-12 right-24 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 shadow hover:bg-gray-400"
+          className="absolute -top-12 right-24 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400"
         >
-          &#8592;
+          <svg
+  width="17"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M9.53 6.47a.75.75 0 0 1 0 1.06L5.56 11.5H21a.75.75 0 0 1 0 1.5H5.56l3.97 3.97a.75.75 0 1 1-1.06 1.06l-5.25-5.25a.75.75 0 0 1 0-1.06l5.25-5.25a.75.75 0 0 1 1.06 0Z"/>
+</svg>
         </button>
         {/* Right Arrow */}
         <button
           onClick={scrollRight}
-          className="absolute -top-12 right-7 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 shadow hover:bg-gray-400"
+          className="absolute -top-12 right-7 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400"
         >
-          &#8594;
+         <svg
+  width="17"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M14.47 6.47a.75.75 0 0 0 0 1.06L18.44 11.5H3a.75.75 0 0 0 0 1.5h15.44l-3.97 3.97a.75.75 0 1 0 1.06 1.06l5.25-5.25a.75.75 0 0 0 0-1.06l-5.25-5.25a.75.75 0 0 0-1.06 0Z"/>
+</svg>
+
         </button>
 
         {/* Scrollable Team Grid */}
@@ -79,35 +85,32 @@ export default function TeamMembers() {
           ref={scrollRef}
           className="flex overflow-x-auto pb-4 pt-20 gap-0 no-scrollbar"
         >
-          <div className="flex" style={{ minWidth: "100%" }}>
-            {team.map((person, i) => (
-              <motion.div
-                key={i}
-                style={{ y }}
-                className="shrink-0 flex flex-col items-center p-0 rounded-2xl"
+          {team.map((person, i) => (
+            <motion.div
+              key={i}
+              style={{ y }}
+              className="shrink-0 flex flex-col items-center p-0 rounded-2xl -mr-20"
+            >
+              <div
+                className="relative mb-0"
+                style={{
+                  width: `${person.size}px`,
+                  height: `${person.size}px`,
+                  marginTop: person.offset,
+                }}
               >
-                <div
-                  className="relative mb-0"
-                  style={{
-                    width: `${person.size}px`,
-                    height: `${person.size}px`,
-                    marginTop: person.offset,
-                  }}
-                >
-                  <Image src={person.img} alt={person.name} fill className="object-contain" />
-                </div>
-                <h3
-                  className={`${inter.className} font-semibold w-52 text-2xl text-[#564F4F] text-left`}
-                   
-                >
-                  {person.name}
-                </h3>
-                <p className={`${inter.className} text-lg w-52 font-semibold text-[#ADADAD] text-left`}>
-                  {person.role}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+                <Image src={person.img} alt={person.name} fill className="object-contain" />
+              </div>
+              <h3
+                className={`${inter.className} font-semibold w-52 text-2xl text-[#564F4F] text-left`}
+              >
+                {person.name}
+              </h3>
+              <p className={`${inter.className} text-lg w-52 font-semibold text-[#ADADAD] text-left`}>
+                {person.role}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
 

@@ -30,13 +30,13 @@ export default function JoinWithUs() {
       {/* Content */}
       <div className="relative max-w-4xl mx-auto py-24 px-6 mt-32 text-center">
         <h2
-          className={`text-[36px] leading-[36px] font-semibold uppercase text-white ${nunito.className}`}
+          className={`text-[36px] leading-9 font-semibold uppercase text-white ${nunito.className}`}
         >
           JOIN WITH US
         </h2>
 
         <p
-          className={`mt-4 text-[14px] leading-[24px] text-white mx-auto max-w-4xl ${openSans.className}`}
+          className={`mt-4 text-[14px] leading-6 text-white mx-auto max-w-4xl ${openSans.className}`}
         >
           At Heartland General Trading, we believe in growing together — with our
           people, our partners, and our communities. Join a team that connects

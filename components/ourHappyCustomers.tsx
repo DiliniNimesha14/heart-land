@@ -1,6 +1,6 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function Testimonials() {
   const testimonials = [
@@ -33,15 +33,14 @@ export default function Testimonials() {
       role: "Food Distributor",
       image: "/Owner.png",
       text: "Lorem ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque. Leo in cursus enim magnis ante. Proin iaculis platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt tempus semper",
-    }, 
+    },
   ];
 
- 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const bgRef = useRef<HTMLDivElement | null>(null);
 
   const [activeIndex, setActiveIndex] = useState(0);
- 
+
   const scrollToIndex = (index: number) => {
     const container = containerRef.current;
     if (!container) return;
@@ -56,7 +55,6 @@ export default function Testimonials() {
     setActiveIndex(index);
   };
 
- 
   useEffect(() => {
     scrollToIndex(activeIndex);
     const handleResize = () => scrollToIndex(activeIndex);
@@ -64,7 +62,6 @@ export default function Testimonials() {
     return () => window.removeEventListener("resize", handleResize);
   }, [activeIndex]);
 
- 
   useEffect(() => {
     const handleScroll = () => {
       if (bgRef.current) {
@@ -75,6 +72,19 @@ export default function Testimonials() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // AUTO-SCROLL
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % testimonials.length;
+        scrollToIndex(next);
+        return next;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+   }, []);  
 
   return (
     <section className="relative py-20 bg-[#F5F5F5] overflow-hidden">
@@ -110,15 +120,15 @@ export default function Testimonials() {
         >
           {testimonials.map((t, i) => (
             <div
-        key={i}
-        className="shrink-0 relative bg-white/95 shadow-xl mb-10 p-20 mt-20 w-[550px] h-[351px] text-center backdrop-blur-sm scroll-snap-align-center hover:scale-105 transition-transform duration-300"
-        style={{
-        borderTopLeftRadius: "80px",
-        borderBottomRightRadius: "80px",
-        borderTopRightRadius: "30px",
-        borderBottomLeftRadius: "30px",
-        }}
-        >
+              key={i}
+              className="shrink-0 relative bg-white/95 shadow-xl mb-10 p-20 mt-20 w-[550px] h-[351px] text-center backdrop-blur-sm scroll-snap-align-center hover:scale-105 transition-transform duration-300"
+              style={{
+                borderTopLeftRadius: "80px",
+                borderBottomRightRadius: "80px",
+                borderTopRightRadius: "30px",
+                borderBottomLeftRadius: "30px",
+              }}
+            >
               {/* Customer Image */}
               <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full overflow-hidden shadow-md">
                 <Image

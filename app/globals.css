@@ -4,6 +4,10 @@
 body {
   font-family: 'David Libre', serif;
 }
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

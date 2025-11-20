@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Open_Sans } from "next/font/google";
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" });
 
 
@@ -41,11 +44,11 @@ export default function CommunitySection() {
           </p>
 
           <button
-            className="mt-6 px-8 py-3 text-[18px] font-semibold border-2 border-[#E60012] text-[#E60012] rounded-2xl
-            transition-all hover:bg-[#E60012] hover:text-white hover:shadow-lg"
-          >
-            Partner With Us
-          </button>
+  className={`${nunito.className} mt-6 px-8 py-3 text-[18px] font-bold border-2 border-[#E60012] text-[#E60012] rounded-2xl
+  transition-all hover:bg-[#E60012] hover:text-white hover:shadow-lg`}
+>
+  Partner With Us
+</button>
         </div>
       </div>
     </section>
