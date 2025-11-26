@@ -9,9 +9,9 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/About" },
     { name: "Products", href: "/Product" },
-    { name: "CSR", href: "/csr" },
-    { name: "Resources & Insights", href: "/resources" },
-    { name: "FAQ & Support", href: "/faq" },
+    { name: "CSR", href: "/CSR" },
+    { name: "Resources & Insights", href: "/Resources" },
+    { name: "FAQ & Support", href: "/FAQ" },
   ];
 
   const pathname = usePathname();
@@ -63,7 +63,7 @@ export default function Navbar() {
 
       {/* Contact Button */}
       <div className="hidden md:block">
-        <Link href="#">
+        <Link href="/Contact">
           <Image
             src="/contact-button.png"
             alt="Contact button"

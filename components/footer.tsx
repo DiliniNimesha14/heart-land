@@ -47,16 +47,16 @@ export default function Footer() {
     <ul className="space-y-5 text-sm text-gray-300">
       <li><a href="/About">About Us</a></li>
       <li><a href="/Product">Our Products</a></li>
-      <li><a href="#">CSR Initiatives</a></li>
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="/CSR">CSR Initiatives</a></li>
+      <li><a href="/About">Careers</a></li>
+      <li><a href="/Contact">Contact Us</a></li>
     </ul>
   </div>
 
   <div>
     <h4 className="font-semibold -mt-24 mb-4">Information</h4>
     <ul className="space-y-5 text-sm text-gray-300">
-      <li><a href="#">FAQ</a></li>
+      <li><a href="/FAQ">FAQ</a></li>
       <li><a href="#">Blog</a></li>
       <li><a href="#">News</a></li>
     </ul>
