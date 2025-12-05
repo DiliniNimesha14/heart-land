@@ -3,6 +3,14 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
+import { Nunito, Open_Sans, Poppins } from "next/font/google";
+
+const nunito = Nunito({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 export default function WhyWorkWithUs() {
   const { scrollY } = useScroll();
 
@@ -24,7 +32,7 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          style={{ letterSpacing: '5px' }}
+          style={{ letterSpacing: "5px" }}
           className="text-sm text-gray-500 uppercase"
         >
           About Us
@@ -35,7 +43,7 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="text-4xl md:text-5xl font-semibold mt-2"
+          className={`${nunito.className} text-4xl md:text-5xl font-bold mt-2`}
         >
           Why Work With Us
         </motion.h1>
@@ -45,12 +53,13 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="max-w-4xl text-xl mt-10 mb-10 mx-auto text-black leading-relaxed"
+          className={`${nunito.className} max-w-4xl text-xl mt-10 mb-10 mx-auto text-black leading-relaxed`}
         >
-          At <span className="font-semibold">Heartland General Trading</span>, we take
-          pride in offering more than just quality products — we deliver trust,
-          consistency, and a commitment to excellence in every partnership.
-          Here’s what makes us stand out in Sri Lanka’s food industry.
+          At <span className="font-semibold">Heartland General Trading</span>, we
+          take pride in offering more than just quality products — we deliver
+          trust, consistency, and a commitment to excellence in every
+          partnership. Here’s what makes us stand out in Sri Lanka’s food
+          industry.
         </motion.p>
       </motion.div>
 
@@ -63,21 +72,34 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="p-8 bg-white shadow-lg rounded-2xl border border-gray-100 hover:shadow-2xl transition-shadow cursor-pointer"
+          className="p-8 bg-[white] shadow-lg rounded-2xl border border-gray-100 hover:shadow-2xl transition-shadow cursor-pointer"
         >
-<div className="relative flex items-center">
-  <div className="w-14 h-14 rounded-full bg-[#071440]/10 absolute left-0"></div>
-  <span className="text-[#071440] text-3xl font-bold -ml-4">
-    01
-  </span>
-</div>          <h3 className="font-semibold text-[#071440] text-lg mb-2 mt-5">Quality Certified Product</h3>
-          <p className="text-[#071440] text-sm leading-relaxed">
-            Every product we deliver undergoes rigorous quality checks and adheres to
-            international food-safety standards. From sourcing top‑tier ingredients
-            to final packaging, we prioritize trust, freshness, authenticity, and
-            reliability in every batch.
+          <div className="relative flex items-center">
+            <div className="w-14 h-14 rounded-full bg-[#D11417] absolute inset-y-0 left-0 my-auto"></div>
+
+            <span className="relative text-white text-4xl font-bold ml-2">
+              01
+            </span>
+          </div>
+
+          <h3
+            className={`${openSans.className} font-semibold text-[#071440] text-lg mb-2 mt-5`}
+          >
+            Quality Certified Product
+          </h3>
+
+          <p
+            className={`${nunito.className} text-[#676767] text-sm leading-relaxed`}
+          >
+            Every product we deliver undergoes rigorous quality checks and
+            adheres to international food-safety standards. From sourcing raw
+            ingredients to final packaging, our process ensures freshness,
+            authenticity, and reliability in every batch.
           </p>
-          <button className="mt-9 text-[#071440] font-semibold text-sm hover:underline">
+
+          <button
+            className={`${poppins.className} mt-9 text-[#071440] font-semibold text-sm hover:underline`}
+          >
             Explore more →
           </button>
         </motion.div>
@@ -90,23 +112,33 @@ export default function WhyWorkWithUs() {
           viewport={{ once: true }}
           variants={fadeIn}
           className="p-8 bg-white shadow-lg rounded-2xl border border-gray-100 hover:shadow-2xl transition-shadow cursor-pointer"
-        > 
-         <div className="relative flex items-center">
-  <div className="w-14 h-14 rounded-full bg-[#EE2A52]/10 absolute left-0"></div>
-  <span className="text-[#071440] text-3xl font-bold -ml-4">
-    02
-  </span>
-</div>
+        >
+          <div className="relative flex items-center">
+            <div className="w-14 h-14 rounded-full bg-[#D11417] absolute inset-y-0 left-0 my-auto"></div>
 
+            <span className="relative text-white text-4xl font-bold ml-2">
+              02
+            </span>
+          </div>
 
-          <h3 className="font-semibold text-[#071440] text-lg mt-5 mb-2">Strong Supplier Network</h3>
-          <p className="text-[#071440] text-sm leading-relaxed">
+          <h3
+            className={`${openSans.className} font-semibold text-[#071440] text-lg mt-5 mb-2`}
+          >
+            Strong Supplier Network
+          </h3>
+
+          <p
+            className={`${nunito.className} text-[#676767] text-sm leading-relaxed`}
+          >
             With connections across Sri Lanka’s trusted suppliers, growers,
-            manufacturers, and distributors, we guarantee a steady supply of premium
-            products. Our long‑term partnerships ensure transparency, ethical
-            sourcing, and better growth for local producers.
+            manufacturers, and distributors, we guarantee a steady supply of
+            premium products. Our long-term partnerships ensure transparency,
+            ethical sourcing, and better growth for local producers.
           </p>
-          <button className="mt-4 text-[#071440] font-semibold text-sm hover:underline">
+
+          <button
+            className={`${poppins.className} mt-4 text-[#071440] font-semibold text-sm hover:underline`}
+          >
             Explore more →
           </button>
         </motion.div>
@@ -120,19 +152,32 @@ export default function WhyWorkWithUs() {
           variants={fadeIn}
           className="p-8 bg-white shadow-lg rounded-2xl border border-gray-100 hover:shadow-2xl transition-shadow cursor-pointer"
         >
-<div className="relative flex items-center">
-  <div className="w-14 h-14 rounded-full bg-[#FAB33F]/10 absolute left-0"></div>
-  <span className="text-[#071440] text-3xl font-bold -ml-4">
-    03
-  </span>
-</div>          <h3 className="font-semibold text-[#071440] text-lg mt-5 mb-2">Efficient UAE Distribution</h3>
-          <p className="text-[#071440] text-sm leading-relaxed">
+          <div className="relative flex items-center">
+            <div className="w-14 h-14 rounded-full bg-[#D11417] absolute inset-y-0 left-0 my-auto"></div>
+
+            <span className="relative text-white text-4xl font-bold ml-2">
+              03
+            </span>
+          </div>
+
+          <h3
+            className={`${openSans.className} font-semibold text-[#071440] text-lg mt-5 mb-2`}
+          >
+            Efficient UAE Distribution
+          </h3>
+
+          <p
+            className={`${nunito.className} text-[#676767] text-sm leading-relaxed`}
+          >
             With advanced logistics networks, we ensure timely delivery across
-            Sri Lanka and international markets. Our efficient distribution channels
-            maintain product freshness while ensuring every customer receives the
-            best.
+            Sri Lanka and international markets. Our efficient distribution
+            channels maintain product freshness while ensuring every customer
+            receives the best.
           </p>
-          <button className="mt-10 text-[#071440] font-semibold text-sm hover:underline">
+
+          <button
+            className={`${poppins.className} mt-10 text-[#071440] font-semibold text-sm hover:underline`}
+          >
             Explore more →
           </button>
         </motion.div>
