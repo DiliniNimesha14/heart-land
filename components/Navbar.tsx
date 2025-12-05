@@ -22,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   const getActiveLink = (href: string) => {
-    // "/" matches Home exactly, other links check if pathname starts with href
+
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
@@ -34,8 +34,8 @@ export default function Navbar() {
         <Image
           src="/logo.png"
           alt="logo"
-          width={90}
-          height={120}
+          width={100}
+          height={130}
           className="object-contain"
         />
       </div>
