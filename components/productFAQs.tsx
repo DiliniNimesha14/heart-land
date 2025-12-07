@@ -61,7 +61,7 @@ export default function ProductFaqs() {
           </h2>
 
           <p
-            className={`text-[18px] mt-4 max-w-[400px] text-[#333] leading-[28px] ${nunito.className}`}
+            className={`text-[18px] mt-4 max-w-[400px] text-[#333] leading-7 ${nunito.className}`}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
           </p>

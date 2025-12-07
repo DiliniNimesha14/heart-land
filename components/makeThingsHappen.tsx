@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroBanner() {
   return (
@@ -60,12 +61,14 @@ export default function HeroBanner() {
               </p>
 
               {/* CTA */}
-              <button
-                className="mt-6 inline-flex items-center justify-center px-9 py-2 rounded-full border border-white text-white font-openSans font-semibold text-[16px] leading-4 tracking-[0.43em] transition-colors duration-200"
-                style={{ textTransform: "uppercase" }}
-              >
-                CONTACT US
-              </button>
+<Link href="/Contact">
+  <button
+    className="mt-6 inline-flex items-center justify-center px-9 py-2 rounded-full border border-white text-white font-openSans font-semibold text-[16px] leading-4 tracking-[0.43em] transition-colors duration-200"
+    style={{ textTransform: "uppercase" }}
+  >
+    CONTACT US
+  </button>
+</Link>
             </div>
           </div>
         </div>
