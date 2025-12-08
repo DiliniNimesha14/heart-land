@@ -10,7 +10,7 @@ export default function Partners() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-8">
-            Your Trusted Partners
+            Our Trusted Partners
           </h2>
 
           {/* Partner Logos */}
@@ -85,7 +85,7 @@ export default function Partners() {
 
   {/* Right: Read More button (absolute) */}
   <div className="absolute top-32 right-32">
-    <Link href="/about">
+    <Link href="/About">
       <button
         type="button"
         className="bg-[#D11417] hover:bg-red-700 text-white px-9 py-4 rounded-full font-semibold transition-colors duration-200"

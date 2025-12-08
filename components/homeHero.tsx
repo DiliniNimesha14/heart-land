@@ -117,13 +117,13 @@ export default function HomeHero() {
 <div className="md:col-span-5 lg:col-span-6 relative flex items-center justify-center min-h-[600px]">
   
   {/* World Map - Background Layer */}
-  <div className="absolute -left-80 top-56 w-[420px] h-[300px] md:w-[620px] md:h-[480px] opacity-180 pointer-events-none">
+  <div className="absolute -left-125 top-7 w-[420px] h-[300px] md:w-[2020px] md:h-[1080px] opacity-50 pointer-events-none">
               <Image 
-                src="/WRLD-EPS-02-4001 1.png" 
+                src="/MapNew.png" 
                 alt="world map" 
-                width={620} 
-                height={480} 
-                className="object-contain" 
+                width={1220} 
+                height={880} 
+                className="object-contain rotate-[8deg]" 
               />
             </div>
             <div className="absolute -left-24 -top-15 w-[420px] h-[300px] md:w-[450px] md:h-[280px] opacity-180 pointer-events-none">

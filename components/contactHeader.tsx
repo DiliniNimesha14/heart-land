@@ -33,7 +33,13 @@ export default function ContactHeader() {
           {/* Centered social row */}
           <div className="flex justify-center items-center gap-4 mt-14">
             <p className="font-semibold">follow us</p>
-            <img src="/fbwhite.png" alt="Facebook" className="w-5 h-5" />
+            <a
+               href="https://www.facebook.com/p/Heartland-General-Trading-Co-LLC-61556223026571/?_rdc=2&_rdr#"
+               target="_blank"
+               rel="noopener noreferrer"
+               >
+             <img src="/fbwhite.png" alt="Facebook" className="w-5 h-5" />
+            </a>
             <img src="/instawhite.png" alt="Instagram" className="w-5 h-5" />
             <img src="/ytwhite.png" alt="YouTube" className="w-5 h-5" />
           </div>
