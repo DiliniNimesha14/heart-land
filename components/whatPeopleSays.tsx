@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhatPeopleSays() {
   return (
     <section className="w-full flex flex-col items-center py-16 bg-white">
@@ -14,7 +16,13 @@ export default function WhatPeopleSays() {
 <div className="bg-white rounded-xl p-6 w-full max-w-[340px] mx-auto shadow-[5px_20px_30px_rgba(0,0,0,0.70)] transition-transform duration-300 hover:scale-110">
 
           <div className="flex items-center gap-3 mb-4">
-            <img src="/fathima.png" className="w-10 h-10 rounded-full" />
+<Image
+  src="/fathima.png"
+  alt="Fathima R."
+  width={40}   // 10 * 4px per Tailwind unit
+  height={40}  // same as above
+  className="rounded-full"
+/>
             <div>
               <p className="text-[15px]" style={{ fontFamily: "Georgia", fontWeight: 600 }}>
                 Fathima R.
@@ -42,7 +50,13 @@ export default function WhatPeopleSays() {
         {/* Card 2 */}
 <div className="bg-white rounded-xl p-6 w-full max-w-[340px] mx-auto shadow-[5px_20px_30px_rgba(0,0,0,0.70)] transition-transform duration-300 hover:scale-110">
           <div className="flex items-center gap-3 mb-4">
-            <img src="/arjun.png" className="w-10 h-10 rounded-full" />
+<Image
+  src="/farhan.png"
+  alt="Farhan R."
+  width={40}   // 10 * 4px per Tailwind unit
+  height={40}  // same as above
+  className="rounded-full"
+/>
             <div>
               <p className="text-[15px]" style={{ fontFamily: "Georgia", fontWeight: 600 }}>
                 Arjun Verma
@@ -70,7 +84,13 @@ export default function WhatPeopleSays() {
         {/* Card 3 */}
 <div className="bg-white rounded-xl p-6 w-full max-w-[340px] mx-auto shadow-[5px_20px_30px_rgba(0,0,0,0.70)] transition-transform duration-300 hover:scale-110">
           <div className="flex items-center gap-3 mb-4">
-            <img src="/farhan.png" className="w-10 h-10 rounded-full" />
+<Image
+  src="/arjun.png"
+  alt="arjun R."
+  width={40}   // 10 * 4px per Tailwind unit
+  height={40}  // same as above
+  className="rounded-full"
+/>
             <div>
               <p className="text-[15px]" style={{ fontFamily: "Georgia", fontWeight: 600 }}>
                 Farhan A.

@@ -1,4 +1,6 @@
 import { Open_Sans } from "next/font/google";
+import Image from "next/image";
+
 const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-open-sans",
@@ -97,10 +99,38 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-4 mt-4 md:mt-0">
-            <img src="/fb.png" alt="Facebook" className="w-5 h-5" />
-            <img src="/twitter.png" alt="Twitter" className="w-5 h-5" />
-            <img src="/instagram.png" alt="Instagram" className="w-5 h-5" />
-            <img src="/youtub.png" alt="YouTube" className="w-5 h-5" />
+            <Image
+  src="/fb.png"
+  alt="Facebook"
+  width={20}
+  height={20}
+  className="w-5 h-5"
+/>
+
+<Image
+  src="/twitter.png"
+  alt="Twitter"
+  width={20}
+  height={20}
+  className="w-5 h-5"
+/>
+
+<Image
+  src="/instagram.png"
+  alt="Instagram"
+  width={20}
+  height={20}
+  className="w-5 h-5"
+/>
+
+<Image
+  src="/youtub.png"
+  alt="YouTube"
+  width={20}
+  height={20}
+  className="w-5 h-5"
+/>
+
           </div>
         </div>
 

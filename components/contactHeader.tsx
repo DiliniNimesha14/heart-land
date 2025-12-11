@@ -1,4 +1,5 @@
 import { Open_Sans } from "next/font/google";
+import Image from "next/image";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ export default function ContactHeader() {
 >
 
         {/* Background Image */}
-        <img
+        <Image
           src="/MAP.png"
           alt="Background Map"
           className="absolute top-6 right-60 w-[800px] h-80 opacity-100 items-center pointer-events-none select-none"
@@ -38,10 +39,10 @@ export default function ContactHeader() {
                target="_blank"
                rel="noopener noreferrer"
                >
-             <img src="/fbwhite.png" alt="Facebook" className="w-5 h-5" />
+             <Image src="/fbwhite.png" alt="Facebook" className="w-5 h-5" />
             </a>
-            <img src="/instawhite.png" alt="Instagram" className="w-5 h-5" />
-            <img src="/ytwhite.png" alt="YouTube" className="w-5 h-5" />
+            <Image src="/instawhite.png" alt="Instagram" className="w-5 h-5" />
+            <Image src="/ytwhite.png" alt="YouTube" className="w-5 h-5" />
           </div>
         </div>
       </section>

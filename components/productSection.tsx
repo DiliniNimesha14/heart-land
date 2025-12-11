@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Open_Sans } from "next/font/google";
+import Image from "next/image";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -17,44 +18,44 @@ type Product = {
 };
 
 const initialProducts: Product[] = [
-  { id: 1, title: "Essential Electrolytes", price: 60, category: "Biscuits", image: "productImage1.png", bestseller: true },
-  { id: 2, title: "Essential Electrolytes", price: 70, category: "Snacks", image: "productImage2.png", bestseller: false },
-  { id: 3, title: "Essential Electrolytes", price: 80, category: "Rice", image: "productImage3.png", bestseller: false },
-  { id: 4, title: "Essential Electrolytes", price: 90, category: "Sweets", image: "productImage2.png", bestseller: false },
-  { id: 5, title: "Essential Electrolytes", price: 100, category: "Milk", image: "productImage1.png", bestseller: false },
-  { id: 6, title: "Essential Electrolytes", price: 110, category: "Curry Powder", image: "productImage3.png", bestseller: true },
-  { id: 7, title: "Essential Electrolytes", price: 18, category: "Noodles", image: "productImage2.png", bestseller: false },
-  { id: 8, title: "Essential Electrolytes", price: 18, category: "Coconut Milk  ", image: "productImage3.png", bestseller: true },
-  { id: 9, title: "Essential Electrolytes", price: 18, category: "Jam", image: "productImage3.png", bestseller: true },
-  { id: 10, title: "Essential Electrolytes", price: 18, category: "Spices", image: "productImage1.png", bestseller: true },
-  { id: 11, title: "Essential Electrolytes", price: 18, category: "Oil & Ghee", image: "productImage1.png", bestseller: true },
-  { id: 12, title: "Essential Electrolytes", price: 18, category: "Dairy Products", image: "productImage1.png", bestseller: true },
-  { id: 13, title: "Essential Electrolytes", price: 60, category: "Biscuits", image: "productImage1.png", bestseller: true },
-  { id: 14, title: "Essential Electrolytes", price: 70, category: "Snacks", image: "productImage2.png", bestseller: false },
-  { id: 15, title: "Essential Electrolytes", price: 80, category: "Rice", image: "productImage3.png", bestseller: false },
-  { id: 16, title: "Essential Electrolytes", price: 90, category: "Sweets", image: "productImage2.png", bestseller: false },
-  { id: 18, title: "Essential Electrolytes", price: 100, category: "Milk", image: "productImage1.png", bestseller: false },
-  { id: 19, title: "Essential Electrolytes", price: 110, category: "Curry Powder", image: "productImage3.png", bestseller: true },
-  { id: 20, title: "Essential Electrolytes", price: 18, category: "Noodles", image: "productImage2.png", bestseller: false },
-  { id: 21, title: "Essential Electrolytes", price: 18, category: "Coconut Milk  ", image: "productImage3.png", bestseller: true },
-  { id: 22, title: "Essential Electrolytes", price: 18, category: "Jam", image: "productImage3.png", bestseller: true },
-  { id: 23, title: "Essential Electrolytes", price: 18, category: "Spices", image: "productImage1.png", bestseller: true },
-  { id: 24, title: "Essential Electrolytes", price: 18, category: "Oil & Ghee", image: "productImage1.png", bestseller: true },
-  { id: 25, title: "Essential Electrolytes", price: 18, category: "Dairy Products", image: "productImage1.png", bestseller: true },
-  { id: 26, title: "Essential Electrolytes", price: 110, category: "Curry Powder", image: "productImage3.png", bestseller: true },
-  { id: 27, title: "Essential Electrolytes", price: 18, category: "Noodles", image: "productImage2.png", bestseller: false },
-  { id: 28, title: "Essential Electrolytes", price: 18, category: "Coconut Milk  ", image: "productImage3.png", bestseller: true },
-  { id: 29, title: "Essential Electrolytes", price: 18, category: "Jam", image: "productImage3.png", bestseller: true },
-  { id: 30, title: "Essential Electrolytes", price: 18, category: "Spices", image: "productImage1.png", bestseller: true },
-  { id: 31, title: "Essential Electrolytes", price: 18, category: "Oil & Ghee", image: "productImage1.png", bestseller: true },
-  { id: 32, title: "Essential Electrolytes", price: 18, category: "Dairy Products", image: "productImage1.png", bestseller: true },
-  { id: 33, title: "Essential Electrolytes", price: 60, category: "Biscuits", image: "productImage1.png", bestseller: true },
-  { id: 34, title: "Essential Electrolytes", price: 70, category: "Snacks", image: "productImage2.png", bestseller: false },
-  { id: 35, title: "Essential Electrolytes", price: 80, category: "Rice", image: "productImage3.png", bestseller: false },
-  { id: 36, title: "Essential Electrolytes", price: 90, category: "Sweets", image: "productImage2.png", bestseller: false },
-  { id: 38, title: "Essential Electrolytes", price: 100, category: "Milk", image: "productImage1.png", bestseller: false },
-  { id: 39, title: "Essential Electrolytes", price: 110, category: "Curry Powder", image: "productImage3.png", bestseller: true },
-  { id: 40, title: "Essential Electrolytes", price: 18, category: "Noodles", image: "productImage2.png", bestseller: false },
+  { id: 1, title: "Essential Electrolytes", price: 60, category: "Biscuits", image: "/productImage1.png", bestseller: true },
+  { id: 2, title: "Essential Electrolytes", price: 70, category: "Snacks", image: "/productImage2.png", bestseller: false },
+  { id: 3, title: "Essential Electrolytes", price: 80, category: "Rice", image: "/productImage3.png", bestseller: false },
+  { id: 4, title: "Essential Electrolytes", price: 90, category: "Sweets", image: "/productImage2.png", bestseller: false },
+  { id: 5, title: "Essential Electrolytes", price: 100, category: "Milk", image: "/productImage1.png", bestseller: false },
+  { id: 6, title: "Essential Electrolytes", price: 110, category: "Curry Powder", image: "/productImage3.png", bestseller: true },
+  { id: 7, title: "Essential Electrolytes", price: 18, category: "Noodles", image: "/productImage2.png", bestseller: false },
+  { id: 8, title: "Essential Electrolytes", price: 18, category: "Coconut Milk  ", image: "/productImage3.png", bestseller: true },
+  { id: 9, title: "Essential Electrolytes", price: 18, category: "Jam", image: "/productImage3.png", bestseller: true },
+  { id: 10, title: "Essential Electrolytes", price: 18, category: "Spices", image: "/productImage1.png", bestseller: true },
+  { id: 11, title: "Essential Electrolytes", price: 18, category: "Oil & Ghee", image: "/productImage1.png", bestseller: true },
+  { id: 12, title: "Essential Electrolytes", price: 18, category: "Dairy Products", image: "/productImage1.png", bestseller: true },
+  { id: 13, title: "Essential Electrolytes", price: 60, category: "Biscuits", image: "/productImage1.png", bestseller: true },
+  { id: 14, title: "Essential Electrolytes", price: 70, category: "Snacks", image: "/productImage2.png", bestseller: false },
+  { id: 15, title: "Essential Electrolytes", price: 80, category: "Rice", image: "/productImage3.png", bestseller: false },
+  { id: 16, title: "Essential Electrolytes", price: 90, category: "Sweets", image: "/productImage2.png", bestseller: false },
+  { id: 18, title: "Essential Electrolytes", price: 100, category: "Milk", image: "/productImage1.png", bestseller: false },
+  { id: 19, title: "Essential Electrolytes", price: 110, category: "Curry Powder", image: "/productImage3.png", bestseller: true },
+  { id: 20, title: "Essential Electrolytes", price: 18, category: "Noodles", image: "/productImage2.png", bestseller: false },
+  { id: 21, title: "Essential Electrolytes", price: 18, category: "Coconut Milk  ", image: "/productImage3.png", bestseller: true },
+  { id: 22, title: "Essential Electrolytes", price: 18, category: "Jam", image: "/productImage3.png", bestseller: true },
+  { id: 23, title: "Essential Electrolytes", price: 18, category: "Spices", image: "/productImage1.png", bestseller: true },
+  { id: 24, title: "Essential Electrolytes", price: 18, category: "Oil & Ghee", image: "/productImage1.png", bestseller: true },
+  { id: 25, title: "Essential Electrolytes", price: 18, category: "Dairy Products", image: "/productImage1.png", bestseller: true },
+  { id: 26, title: "Essential Electrolytes", price: 110, category: "Curry Powder", image: "/productImage3.png", bestseller: true },
+  { id: 27, title: "Essential Electrolytes", price: 18, category: "Noodles", image: "/productImage2.png", bestseller: false },
+  { id: 28, title: "Essential Electrolytes", price: 18, category: "Coconut Milk  ", image: "/productImage3.png", bestseller: true },
+  { id: 29, title: "Essential Electrolytes", price: 18, category: "Jam", image: "/productImage3.png", bestseller: true },
+  { id: 30, title: "Essential Electrolytes", price: 18, category: "Spices", image: "/productImage1.png", bestseller: true },
+  { id: 31, title: "Essential Electrolytes", price: 18, category: "Oil & Ghee", image: "/productImage1.png", bestseller: true },
+  { id: 32, title: "Essential Electrolytes", price: 18, category: "Dairy Products", image: "/productImage1.png", bestseller: true },
+  { id: 33, title: "Essential Electrolytes", price: 60, category: "Biscuits", image: "/productImage1.png", bestseller: true },
+  { id: 34, title: "Essential Electrolytes", price: 70, category: "Snacks", image: "/productImage2.png", bestseller: false },
+  { id: 35, title: "Essential Electrolytes", price: 80, category: "Rice", image: "/productImage3.png", bestseller: false },
+  { id: 36, title: "Essential Electrolytes", price: 90, category: "Sweets", image: "/productImage2.png", bestseller: false },
+  { id: 38, title: "Essential Electrolytes", price: 100, category: "Milk", image: "/productImage1.png", bestseller: false },
+  { id: 39, title: "Essential Electrolytes", price: 110, category: "Curry Powder", image: "/productImage3.png", bestseller: true },
+  { id: 40, title: "Essential Electrolytes", price: 18, category: "Noodles", image: "/productImage2.png", bestseller: false },
 
 
 ];
@@ -206,10 +207,11 @@ export default function ProductsSection() {
             <label className="text-lg text-[#495057]">Sort by : </label>
             <select
               value={sortBy}
-              onChange={(e) => {
-                setSortBy(e.target.value as any);
-                setPage(0);
-              }}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+  setSortBy(e.target.value as "bestselling" | "price-asc" | "price-desc" | "alpha");
+  setPage(0);
+}}
+
               className="px-3 py-2 rounded "
             >
               <option value="bestselling">Bestselling</option>
@@ -281,18 +283,20 @@ export default function ProductsSection() {
                   key={p.id}
                   className="bg-white rounded-xl shadow-sm p-0 hover:shadow-lg transition-shadow duration-200"
                 >
-                  {/* image-only mode hides metadata but preserves card size */}
                   <div
                     className={`rounded-2xl overflow-hidden mb-3 bg-black flex items-center justify-center`}
                     style={{ height: 350 }}
                   >
-                    {/* using <img> with the provided path */}
-                    <img
-                      src={p.image}
-                      alt={p.title}
-                      className="max-h-full w-auto object-contain transition-transform duration-300 transform hover:scale-105"
-                      style={{ maxHeight: "300px" }}
-                    />
+
+                    <div className="relative w-full h-[350px] rounded-2xl overflow-hidden mb-3 bg-black flex items-center justify-center">
+  <Image
+    src={p.image}
+    alt={p.title}
+    fill
+    className="object-contain transition-transform duration-300 transform hover:scale-105"
+  />
+</div>
+
                   </div>
 
                   {!showImageOnly ? (

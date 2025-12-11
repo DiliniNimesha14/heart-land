@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Nunito, Open_Sans } from "next/font/google";
+import Image from "next/image";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -45,7 +46,7 @@ export default function GeneralFaqs() {
     <section className="relative w-full py-36 px-10">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-5 mt-10 pointer-events-none">
-        <img
+        <Image
           src="/WRLD-EPS-02-4001 1.png"
           alt="World Map Background"
           className="w-[1030px] h-[600px] object-left"

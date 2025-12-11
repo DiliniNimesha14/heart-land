@@ -46,19 +46,20 @@ export default function Testimonials() {
   }, []);
 
   // AUTO-SCROLL
-  useEffect(() => {
-    const interval = setInterval(() => {
-      requestAnimationFrame(() => {
-        setActiveIndex((prev) => {
-          const next = (prev + 1) % testimonials.length;
-          scrollToIndex(next);
-          return next;
-        });
+ useEffect(() => {
+  const interval = setInterval(() => {
+    requestAnimationFrame(() => {
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % testimonials.length;
+        scrollToIndex(next);
+        return next;
       });
-    }, 3000); // slower interval for smoothness
+    });
+  }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+  return () => clearInterval(interval);
+}, [testimonials.length]);  
+
 
   return (
     <section className="relative py-20 bg-[#F5F5F5] overflow-hidden">

@@ -1,4 +1,5 @@
 import { Open_Sans } from "next/font/google";
+import Image from "next/image";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -17,14 +18,14 @@ export default function FAQHeader() {
 <div className="absolute inset-0 flex justify-between items-center pointer-events-none select-none opacity-100">
 
   {/* LEFT */}
-  <img
+  <Image
     src="/questionmarks.png"
     alt="Background Questions"
     className="w-1/2 h-full object-contain brightness-[1.8]"
   />
 
   {/* RIGHT */}
-  <img
+  <Image
     src="/questionmarks.png"
     alt="Background Questions"
     className="w-1/2 h-full object-contain brightness-[1.8]"
