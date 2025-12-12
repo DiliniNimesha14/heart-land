@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Roboto } from "next/font/google";
+import { useRouter } from "next/navigation"; // ✅ Added
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -83,16 +84,33 @@ const cards: Card[] = [
 ];
 
 export default function BlogSection() {
+  const router = useRouter(); // ✅ initialize router
+
+  const goToAll = () => router.push("/blogs");
+  const goToCategory = (cat: string) => router.push(`/blogs/${cat}`);
+
   return (
     <section className={`section ${roboto.className}`}>
       <div className="container">
         {/* Categories */}
         <div className="categories">
-          <button className="viewAll">View All</button>
-          <span className="categoryText">Category One</span>
-          <span className="categoryText">Category Two</span>
-          <span className="categoryText">Category Three</span>
-          <span className="categoryText">Category Four</span>
+          <button className="viewAll" onClick={goToAll}>View All</button>
+
+          <span className="categoryText" onClick={() => goToCategory("category-one")}>
+            Category One
+          </span>
+
+          <span className="categoryText" onClick={() => goToCategory("category-two")}>
+            Category Two
+          </span>
+
+          <span className="categoryText" onClick={() => goToCategory("category-three")}>
+            Category Three
+          </span>
+
+          <span className="categoryText" onClick={() => goToCategory("category-four")}>
+            Category Four
+          </span>
         </div>
 
         {/* Cards */}
@@ -181,38 +199,35 @@ export default function BlogSection() {
           gap: 40px;
         }
 
-      .card {
-  width: 370px;
-  height: 549px;
-  border-radius: 15px;
-  box-shadow: 4px 4px 6.6px rgba(0, 0, 0, 0.25);
-   display: flex;
-  flex-direction: column;
-  
-}
+        .card {
+          width: 370px;
+          height: 549px;
+          border-radius: 15px;
+          box-shadow: 4px 4px 6.6px rgba(0, 0, 0, 0.25);
+          display: flex;
+          flex-direction: column;
+        }
 
-.imagePlaceholder {
-  position: relative;
-  width: 375px;
-  height: 300px;
-  border -radius: 10px 10px 0 0;
-}
+        .imagePlaceholder {
+          position: relative;
+          width: 375px;
+          height: 300px;
+          border-radius: 10px 10px 0 0;
+        }
 
-.blogImage {
-  object-fit: contain;
-  object-position: center;
-  
-}
+        .blogImage {
+          object-fit: contain;
+          object-position: center;
+        }
 
-.content {
-  padding: 16px; /* ✅ padding only for content below image */
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex-grow: 1;
-  width: 100%;
-}
-
+        .content {
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          flex-grow: 1;
+          width: 100%;
+        }
 
         .cardCategory {
           font-size: 14px;
@@ -220,21 +235,14 @@ export default function BlogSection() {
         }
 
         .title {
-  font-size: 24px;
-  font-weight: 700;
-
-  /* stable line height */
-  line-height: 1.4;
-
-  /* EXACT height for 2 lines */
-  min-height: calc(1.4em * 2);
-
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 1.4;
+          min-height: calc(1.4em * 2);
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         .description {
