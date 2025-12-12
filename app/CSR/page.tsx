@@ -8,16 +8,10 @@ import WhatPeopleSays from '@/components/whatPeopleSays';
 export default function csr() {
   return (
     <>
-    <Navbar />
     <CsrShowcase />
     <OurProjects />
     <CsrIntro />
     <WhatPeopleSays />
-    
-    <Footer />
-   
-  
-    
     </ >
   );
 }

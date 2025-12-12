@@ -8,15 +8,10 @@ import HaveQ from '@/components/stillHaveQuestion';
 export default function FAQ() {
   return (
     <>
-    <Navbar />
     <FAQHeader />
     <GeneralFaqs />
     <ProductFaqs />
-    <HaveQ />    
-    <Footer />
-   
-  
-    
+    <HaveQ />   
     </ >
   );
 }
