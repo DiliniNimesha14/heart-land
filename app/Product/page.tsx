@@ -5,13 +5,7 @@ import ProductsSection from '@/components/productSection';
 export default function ProductPage() {
   return (
     <>
-    <Navbar />
-    <ProductsSection />
-    
-    <Footer />
-   
-  
-    
+    <ProductsSection />    
     </ >
   );
 }

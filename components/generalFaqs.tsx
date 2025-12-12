@@ -84,11 +84,17 @@ export default function GeneralFaqs() {
                 {faq.question}
               </p>
 
-              {openIndex === index && (
-                <p className={`text-[16px] text-[#333] leading-[26px] mt-2 ${nunito.className}`}>
+              <div 
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openIndex === index 
+                    ? "max-h-96 opacity-100" 
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                <p className={`text-[16px] text-[#333] leading-[26px] mt-2 transform transition-transform duration-300 ${nunito.className}`}>
                   {faq.answer}
                 </p>
-              )}
+              </div>
             </div>
           ))}
         </div>

@@ -108,11 +108,17 @@ export default function Faq() {
                   {faq.question}
                 </button>
 
-                {openIndex === index && (
-                  <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+                <div 
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    openIndex === index 
+                      ? "max-h-96 opacity-100" 
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <p className="text-gray-600 mt-3 text-sm leading-relaxed transform transition-transform duration-300">
                     {faq.answer}
                   </p>
-                )}
+                </div>
               </div>
             ))}
           </div>
