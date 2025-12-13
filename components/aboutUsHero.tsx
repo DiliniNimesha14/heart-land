@@ -8,8 +8,7 @@ import { usePathname } from "next/navigation";
 export default function AboutHero() {
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
-
-  // eslint-disable-next-line react-hooks/set-state-in-effect
+ 
   useEffect(() => setMounted(true), []);
  
 

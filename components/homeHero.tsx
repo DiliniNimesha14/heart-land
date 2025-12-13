@@ -60,7 +60,7 @@ export default function HomeHero() {
             </p>
 
             <div className="flex -ml-8 mt-12 mb-8">
-             <Link href="#"><button
+             <Link href="/Product"><button
              
               className="inline-block cursor-pointer ml-7 h-13 w-30 bg-black text-white px-5 py-2 shadow-md hover:shadow-lg transition-shadow
              rounded-tl-2xl rounded-br-2xl rounded-tr-sm rounded-bl-sm"
