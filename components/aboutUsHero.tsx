@@ -15,7 +15,7 @@ useEffect(() => {
   return () => clearTimeout(timer);
 }, []);
 
-  // Parallax scrolling for right images
+  // Parallax scrolling  
   useEffect(() => {
     const handleScroll = () => {
       if (!imageRef.current) return;
