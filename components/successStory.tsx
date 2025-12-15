@@ -73,7 +73,7 @@ export default function BlogsSuccessStory() {
   return (
     <section
       className={`${openSans.variable} ${nunito.variable}`}
-      style={{ width: "100%", maxWidth: "1317px", display: "flex", flexDirection: "column", gap: "40px", padding: "60px 20px", margin: "0 auto", boxSizing: "border-box" }}
+      style={{ width: "100%", maxWidth: "1317px", display: "flex", flexDirection: "column", gap: "40px", padding: "60px 50px", margin: "0 auto", boxSizing: "border-box" }}
     >
       {/* Heading */}
       <header style={{ width: "594px", display: "flex", flexDirection: "column", gap: "5px", marginLeft: "15px", marginTop: 0 }}>
