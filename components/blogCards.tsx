@@ -166,13 +166,13 @@ export default function BlogSection() {
       <style jsx>{`
         .section {
           width: 100%;
-          padding: 40px 0 120px 0;
+          padding: 50px 0 120px 0;
         }
 
         .container {
           max-width: 1440px;
           margin: 0 auto;
-          padding: 0 40px;
+          padding: 0 85px;
         }
 
         .categories {
