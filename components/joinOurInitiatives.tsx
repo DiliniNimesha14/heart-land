@@ -4,8 +4,23 @@ import Image from "next/image";
 import { Play } from "lucide-react";
 
 export default function Initiative() {
+  const imageRef = React.useRef<HTMLDivElement>(null);
+
+React.useEffect(() => {
+  const handleScroll = () => {
+    const y = window.scrollY;
+
+    if (imageRef.current) {
+      imageRef.current.style.transform = `translateY(${y * 0.06}px)`;
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-6 bg-white relative overflow-hidden">
       {/* Right side background image */}
       <div className="absolute right-0 -top-24 bottom-0 w-[700px] opacity-100 pointer-events-none">
         <Image
@@ -19,7 +34,7 @@ export default function Initiative() {
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Section - Images */}
-        <div className="relative ml-20 w-80 h-80 md:w-[430px] md:h-[430px] overflow-visible">
+        <div  ref={imageRef} className="relative ml-20 w-80 h-80 -top-30 md:w-[430px] md:h-[430px] overflow-visible">
           <Image
             src="/Group 69.png"
             alt="Child Initiative"

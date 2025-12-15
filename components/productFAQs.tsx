@@ -56,32 +56,31 @@ export default function ProductFaqs() {
       <div className="relative z-10 max-w-7xl  mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
         {/* LEFT SIDE */}
         <div className="ml-32">
-          <h2 className={`text-[32px]  font-bold text-black ${nunito.className}`}>
-            Product FAQs
-          </h2>
+<h2 className="text-[32px] font-bold text-black font-nunito">
+  Product FAQs
+</h2>
+        
 
-          <p
-            className={`text-[18px] mt-4 max-w-[400px] text-[#333] leading-7 ${nunito.className}`}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
-          </p>
+          <p className="text-[18px] mt-4 max-w-[400px] text-[#333] leading-7 font-nunito">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
+</p>
+
         </div>
 
         <div className="space-y-5 -ml-20 max-w-[650px]">
   {faqs.map((faq, index) => (
     <div key={index}>
       <p
-        className={`text-[18px] py-2 cursor-pointer font-semibold ${openSans.className} ${
-          openIndex === index
-            ? "text-[#D11417]"  
-            : "text-black border-b border-[#D11417]"  
-        }`}
-        onClick={() =>
-          setOpenIndex(openIndex === index ? null : index)
-        }
-      >
-        {faq.question}
-      </p>
+  className={`text-[18px] py-2 cursor-pointer font-semibold font-openSans ${
+    openIndex === index
+      ? "text-[#D11417]"  
+      : "text-black border-b border-[#D11417]"  
+  }`}
+  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+>
+  {faq.question}
+</p>
+
 
       <div 
         className={`overflow-hidden transition-all duration-500 ease-in-out ${
@@ -90,9 +89,10 @@ export default function ProductFaqs() {
             : "max-h-0 opacity-0"
         }`}
       >
-        <p className={`text-[16px] text-[#333] leading-[26px] mt-2 transform transition-transform duration-300 ${nunito.className}`}>
-          {faq.answer}
-        </p>
+        <p className="text-[16px] text-[#333] leading-[26px] mt-2 transform transition-transform duration-300 font-nunito">
+  {faq.answer}
+</p>
+
       </div>
     </div>
   ))}

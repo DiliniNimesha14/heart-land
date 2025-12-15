@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Open_Sans, Nunito } from "next/font/google";
 
@@ -7,14 +8,15 @@ const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
 const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" });
 
 export default function Founders() {
+  const [mounted, setMounted] = useState(false);
   const cardsRef = useRef<Array<HTMLDivElement | null>>([]);
 
-  // Scroll parallax effect
   useEffect(() => {
+    setMounted(true);
+
     const handleScroll = () => {
       cardsRef.current.forEach((card) => {
         if (!card) return;
-
         const rect = card.getBoundingClientRect();
         const offset = rect.top * 0.15;
 
@@ -37,8 +39,10 @@ export default function Founders() {
     cardsRef.current[index] = el;
   };
 
+  if (!mounted) return null;  
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-0 bg-white">
       {/* Section Header */}
       <div className={`text-center text-2xl max-w-4xl mb-16 mx-auto ${nunito.className}`}>
         <h2 className="text-3xl md:text-5xl font-bold mb-6">Meet Our Founders</h2>

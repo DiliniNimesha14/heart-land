@@ -44,7 +44,7 @@ export default function GeneralFaqs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First FAQ open by default
 
   return (
-    <section className="relative w-full py-36 px-10">
+    <section className="relative w-full py-10 px-10">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-5 mt-10 pointer-events-none">
         <Image
