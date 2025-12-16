@@ -55,7 +55,7 @@ export default function JoinWithUs() {
         <div className="mt-6">
           <a
             href="#careers"
-            className="inline-block bg-[#E60012] hover:bg-[#C11212] transition px-6 py-3 rounded-xl text-white text-sm font-medium"
+            className="inline-block bg-[#E60012] text-white px-6 py-3 rounded-xl text-sm font-medium border-2 border-[#E60012] transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 transform-gpu hover:bg-white hover:text-[#E60012] hover:border-[#E60012]"
           >
             See Current Openings
           </a>

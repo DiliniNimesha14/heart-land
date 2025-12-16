@@ -43,8 +43,10 @@ useEffect(() => {
             className="
               inline-block uppercase font-semibold 
               bg-[#D11417] text-white px-10 py-4 
-              shadow-2xl hover:shadow-xl transition 
-              relative overflow-hidden rounded-xl 
+              shadow-2xl transition-all duration-300 ease-out
+              relative overflow-hidden rounded-xl
+              hover:scale-[1.02] hover:shadow-xl
+              hover:-translate-y-1 transform-gpu
             "
             style={{
               clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)",
