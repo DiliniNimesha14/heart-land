@@ -59,7 +59,7 @@ useEffect(() => {
         {/* Left Arrow */}
         <button
           onClick={scrollLeft}
-          className="absolute -top-12 right-24 z-10 w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400"
+          className="absolute -top-12 right-24 z-10 w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
         >
           <svg
             width="17"
@@ -74,7 +74,7 @@ useEffect(() => {
         {/* Right Arrow */}
         <button
           onClick={scrollRight}
-          className="absolute -top-12 right-7 z-10 w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400"
+          className="absolute -top-12 right-7 z-10 w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
         >
           <svg
             width="17"

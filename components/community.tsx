@@ -48,7 +48,7 @@ export default function CommunitySection() {
            <Link href="/About"> 
           <button
             className={`${nunito.className} cursor-pointer mt-6 px-8 py-3 text-[19px] font-bold border-2 border-[#E60012] 
-            text-[#E60012] rounded-2xl transition-all hover:bg-[#E60012] hover:text-white hover:shadow-lg`}
+            text-[#E60012] rounded-2xl transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1`}
           >
             Partner With Us
           </button></Link>
