@@ -110,7 +110,7 @@ React.useEffect(() => {
   </div>
 
   {/* Right: Read More button (absolute) */}
-  <div className="absolute top-32 right-32">
+  <div className="absolute top-32 right-10">
     <Link href="/About">
       <button
         type="button"
@@ -120,7 +120,8 @@ React.useEffect(() => {
       </button>
     </Link>
   </div>
-  <div className="flex flex-wrap gap-32 absolute top-[327px] left-[545px]">
+<div className="absolute top-[327px] -right-32  w-full max-w-[900px] flex flex-wrap justify-center gap-16 px-6">
+
   {/* 15+ Years Expertise */}
 <div className="text-center lg:text-left">
   <h4
