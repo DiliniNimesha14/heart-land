@@ -130,7 +130,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-white text-left mb-4">
-            © 2025 Heartland General Trading FZE. All Rights Reserved.
+            © 2025 Heartland General Trading FZE. <br/>All Rights Reserved.
           </p>
 
           {/* Terms Privacy Cookies */}
