@@ -129,12 +129,12 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-sm text-white text-center mb-4">
+          <p className="text-sm text-white text-left mb-4">
             © 2025 Heartland General Trading FZE. All Rights Reserved.
           </p>
 
           {/* Terms Privacy Cookies */}
-          <div className="flex justify-center gap-6 text-sm text-white">
+          <div className="flex justify-start gap-6 text-sm text-white">
             <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Terms</a>
             <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Privacy</a>
             <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Cookies</a>
