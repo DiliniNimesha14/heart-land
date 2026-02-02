@@ -4,7 +4,18 @@
 body {
   font-family: 'David Libre', serif;
 }
+
+/* Force vertical scrollbar to always display - prevents layout shift on filter */
 html, body {
+  overflow-y: scroll;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Hide horizontal scrollbar only, preserve vertical */
+body {
   overflow-x: hidden;
 }
 
