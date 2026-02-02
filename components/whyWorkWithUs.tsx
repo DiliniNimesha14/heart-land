@@ -157,7 +157,7 @@ export default function WhyWorkWithUs() {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 max-w-7xl lg:max-w-[1200px] xl:max-w-[1500px] 2xl:max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 pb-0 md:pb-20 lg:pb-28">
+      <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 max-w-7xl lg:max-w-[1200px] xl:max-w-[1500px] 2xl:max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 pb-0 md:pb-5 lg:pb-8">
         {/* CARD 1 */}
         <motion.div
           style={{ y: y1 }}
