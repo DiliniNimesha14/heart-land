@@ -86,12 +86,12 @@ export default function Founders() {
       <section className="hidden md:block py-0 bg-white">
         {/* Section Header - Desktop */}
         <div
-          className={`text-center max-w-4xl mb-8 md:mb-16 mx-auto px-4 sm:px-6 ${nunito.className}`}
+          className={`text-center max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mb-8 md:mb-16 lg:mb-20 xl:mb-24 mx-auto px-4 sm:px-6 lg:px-8 ${nunito.className}`}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[64px] font-bold mb-4 md:mb-6 lg:mb-8">
             Meet Our Founders
           </h2>
-          <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+          <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl leading-relaxed xl:leading-8">
             Heartland General Trading was founded by Mohamed Fazal Mawjood, who
             envisioned a connection between the Sri Lankan community in the UAE
             and authentic food products from home. Their passion for quality and
@@ -100,38 +100,38 @@ export default function Founders() {
         </div>
 
         {/* Desktop Layout - 2 cards centered */}
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-9">
+        <div className="relative max-w-6xl xl:max-w-[1200px] 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 md:px-9 lg:px-12 xl:px-16">
           {/* vertical divider like the screenshot */}
           <div className="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-[#E6E6E6]" />
 
-          <div className="grid grid-cols-2 gap-8 lg:gap-12 justify-items-center items-start">
+          <div className="grid grid-cols-2 gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 justify-items-center items-start">
             {founders.map((founder, index) => (
               <div
                 key={index}
                 ref={(el) => setCardRef(el, index)}
-                className="relative overflow-hidden bg-white group w-full max-w-[420px]"
+                className="relative overflow-hidden bg-white group w-full max-w-[420px] xl:max-w-[480px] 2xl:max-w-[540px]"
               >
                 {/* Image Container for Parallax */}
-                <div className="h-[420px] lg:h-[520px] w-full overflow-hidden relative parallax-img">
+                <div className="h-[420px] lg:h-[520px] xl:h-[580px] 2xl:h-[640px] w-full overflow-hidden relative parallax-img">
                   <Image
                     src={founder.img}
                     alt={founder.name}
                     fill
-                    sizes="(max-width: 1024px) 50vw, 420px"
+                    sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 420px, (max-width: 1536px) 480px, 540px"
                     className="object-cover transition-transform duration-300 ease-out"
                     priority={index === 0}
                   />
                 </div>
 
                 {/* Info Box */}
-                <div className="mx-auto w-[80%] text-center border-t-8 border-red-600 bg-white relative -mt-10 z-20 min-h-[100px] md:min-h-[120px] py-4 px-4">
+                <div className="mx-auto w-[80%] text-center border-t-8 border-red-600 bg-white relative -mt-10 xl:-mt-12 z-20 min-h-[100px] md:min-h-[120px] xl:min-h-[140px] py-4 xl:py-5 2xl:py-6 px-4 xl:px-6">
                   <h3
-                    className={`${openSans.className} font-bold text-base md:text-lg text-[#000000]`}
+                    className={`${openSans.className} font-bold text-base md:text-lg xl:text-xl 2xl:text-2xl text-[#000000]`}
                   >
                     {founder.name}
                   </h3>
                   <p
-                    className={`${openSans.className} text-sm md:text-base font-semibold text-[#000000]`}
+                    className={`${openSans.className} text-sm md:text-base xl:text-lg 2xl:text-xl font-semibold text-[#000000]`}
                   >
                     {founder.title}
                   </p>
