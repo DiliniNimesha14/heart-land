@@ -142,7 +142,8 @@ const scrollYRef = useRef(0);
 
 useLayoutEffect(() => {
   window.scrollTo({ top: scrollYRef.current, behavior: "auto" });
-}, [selectedCategories, page, query, sortBy]);
+}, [selectedCategories, page]);
+
 
 
   // toggle category selection
@@ -210,7 +211,8 @@ if (query.trim()) {
 
   return (
   <div
-      className={`${openSans.className} w-full mx-auto py-8 px-10 pr-[calc(100vw-100%)]`}
+className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-0 lg:pr-[calc(100vw-100%)] overflow-x-hidden`}
+
 
     >
       <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 justify-center">
@@ -236,9 +238,9 @@ if (query.trim()) {
     <button
   onClick={() => setShowFilters(!showFilters)}
   className="px-5 py-3 rounded-full bg-red-100 flex items-center justify-center"
->
+  >
   <SlidersHorizontal size={18} className="text-red-600" />
-</button>
+  </button>
 
   </div>
 
@@ -263,7 +265,7 @@ if (query.trim()) {
                       ? "border-[#8B0000] bg-red-50"
                       : "border-gray-200 bg-gray-50"
                   }`}
-                >
+                  >
                   {/* IMAGE */}
                   <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0">
                     <Image
@@ -283,8 +285,8 @@ if (query.trim()) {
                 </button>
                ))}
             </div>
-    </div>
-  )}
+     </div>
+    )}
 </div>
   
 
@@ -345,7 +347,7 @@ if (query.trim()) {
 
 
           {/* grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-8 md:px-0">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-8 md:px-0">
             {paginated.length === 0 ? (
               <div className="col-span-full text-center text-gray-500 py-20">No products found.</div>
             ) : (
@@ -400,7 +402,7 @@ if (query.trim()) {
           </div>
 
           {/* Slider Controls: arrows + dots */}
-          <div className="w-full flex items-center justify-center gap-96 mt-10">
+<div className="w-full flex items-center justify-center gap-6 sm:gap-20 lg:gap-96 mt-10">
             {/* Left Arrow */}
             <button
               onClick={() => goToPage(page - 1)}

@@ -37,8 +37,9 @@ React.useEffect(() => {
 
   return (
     <section className="py-10 md:py-20 bg-white">
-      <div className="max-w-full w-auto">
-        {/* Full-width Gradient Section */}
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+<div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
+          {/* Full-width Gradient Section */}
 <div className="py-7">
 
   {/* Content */}
@@ -61,14 +62,14 @@ React.useEffect(() => {
 </div>
 
 
-        {/* About Section   */}
-        <div className="mx-auto mb-0 mt-5 md:mt-20 max-w-[1100px] px-4 md:px-8 text-center lg:text-left">
+          {/* About Section   */}
+          <div className="mx-auto mb-0 mt-5 md:mt-20 px-4 md:px-8 text-center lg:text-left">
 
-          <p className="text-[#6D7D7D] text-[16px] sm:text-base md:text-lg lg:text-sm tracking-[0.4rem] uppercase mb-5 mt-8">
-            About
-          </p>
+            <p className="text-[#6D7D7D] text-[16px] sm:text-base md:text-lg lg:text-sm tracking-[0.4rem] uppercase mb-5 mt-8">
+              About
+            </p>
 
-          <h3 className="text-[20px] sm:text-3xl md:text-4xl font-bold text-black leading-normal mb-1 tracking-wide">
+            <h3 className="text-[20px] sm:text-3xl md:text-4xl font-bold text-black leading-normal mb-1 tracking-wide">
   Your Trusted Partner in Sri Lankan Food Distribution
 </h3>
 
@@ -80,191 +81,187 @@ React.useEffect(() => {
 </p>
 
 
-          {/* Read More button - Mobile only */}
-          <div className="flex justify-center lg:hidden mt-8 mb-10">
-            <Link href="/About">
-              <button
-                type="button"
-                className="bg-[#D11417] text-white cursor-pointer px-6 py-2 rounded-full font-semibold border-2 border-[#D11417] transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 transform-gpu hover:bg-white hover:text-[#D11417]"
+            {/* Read More button - Mobile only */}
+            <div className="flex justify-center lg:hidden mt-8 mb-10">
+              <Link href="/About">
+                <button
+                  type="button"
+                  className="bg-[#D11417] text-white cursor-pointer px-6 py-2 rounded-full font-semibold border-2 border-[#D11417] transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 transform-gpu hover:bg-white hover:text-[#D11417]"
+                >
+                  Read More
+                </button>
+              </Link>
+            </div>
+
+            {/* Stats section - Mobile */}
+            <div className="flex lg:hidden justify-center gap-8 sm:gap-12 md:gap-14 px-4 sm:px-8 mb-2">
+              {/* 15+ Years Expertise */}
+              <div className="text-center flex-1">
+                <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
+                  25
+                </h4>
+                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                  YEARS
+                </p>
+                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                  EXPERTISE
+                </p>
+              </div>
+
+              {/* 30+ Partner Brands */}
+              <div className="text-center flex-1">
+                <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
+                  30+
+                </h4>
+                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                  PARTNER
+                </p>
+                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                  BRANDS
+                </p>
+              </div>
+
+              {/* 1000+ Happy Clients */}
+              <div className="text-center flex-1">
+                <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
+                  1000+
+                </h4>
+                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                  HAPPY
+                </p>
+                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                  CLIENTS
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Two-column section - Desktop only */}
+          <div className="relative hidden lg:block">
+            <div className="relative min-h-[620px] xl:min-h-[700px] 2xl:min-h-[760px]">
+              
+              {/* Left: image group */}
+              <div
+                ref={slowRef}
+                className="relative flex flex-nowrap gap-5 justify-start"
+                style={{ willChange: "transform" }}
               >
-                Read More
-              </button>
-            </Link>
+                {/* Market image */}
+                <div className="w-[230px] h-[420px] overflow-hidden">
+                  <Image
+                    src="/market.png"
+                    alt="Food market"
+                    width={243}
+                    height={442}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Rice image */}
+                <div className="w-[230px] h-[420px] overflow-hidden">
+                  <Image
+                    src="/Rice.png"
+                    alt="Rice"
+                    width={241}
+                    height={442}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Spices image */}
+                <div className="w-[230px] h-[270px] overflow-hidden rounded-tr-[50px]">
+                  <Image
+                    src="/Spices.png"
+                    alt="Spices"
+                    width={243}
+                    height={290}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Right: Read More button - Desktop */}
+              <div
+                className="absolute"
+                style={{
+                  top: "clamp(140px, 18vw, 190px)",
+                  right: "clamp(120px, 15vw, 280px)",
+                }}
+              >
+                <Link href="/About">
+                  <button
+                    type="button"
+                    className="bg-[#D11417] text-white cursor-pointer px-9 py-4 rounded-full font-semibold border-2 border-[#D11417] transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 transform-gpu hover:bg-white hover:text-[#D11417]"
+                  >
+                    Read More
+                  </button>
+                </Link>
+                </div>
+
+                {/* Stats section - Desktop */}
+                <div
+                  className="absolute w-full lg:max-w-[700px] mr-30 flex flex-wrap justify-end gap-16 px-10"
+                  style={{
+                    top: "clamp(240px, 32vw, 380px)",
+                    right: "clamp(10px, 2vw, 40px)",
+                  }}
+                >
+                  {/* 25 Years Expertise */}
+                  <div className="text-center lg:text-left">
+                    <h4
+                      className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
+                      style={{ letterSpacing: "20%" }}
+                    >
+                      25
+                    </h4>
+                    <p
+                      className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
+                      style={{ letterSpacing: "90%" }}
+                    >
+                      Y e a r s <br /> E x p e r t i s e
+                    </p>
+                  </div>
+
+                  {/* 30+ Partner Brands */}
+                  <div className="text-center lg:text-left">
+                    <h4
+                      className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
+                      style={{ letterSpacing: "20%" }}
+                    >
+                      30+
+                    </h4>
+                    <p
+                      className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
+                      style={{ letterSpacing: "43%" }}
+                    >
+                      P a r t n e r <br /> B r a n d s
+                    </p>
+                  </div>
+
+                  {/* 1000+ Happy Clients */}
+                  <div className="text-center lg:text-left">
+                    <h4
+                      className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
+                      style={{ letterSpacing: "0%" }}
+                    >
+                      1000+
+                    </h4>
+                    <p
+                      className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
+                      style={{ letterSpacing: "43%" }}
+                    >
+                      H a p p y <br /> C l i e n t s
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
 
-          {/* Stats section - Mobile */}
-          <div className="flex lg:hidden justify-center gap-8 sm:gap-12 md:gap-14 px-4 sm:px-8 mb-2">
-            {/* 15+ Years Expertise */}
-            <div className="text-center flex-1">
-              <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
-                25
-              </h4>
-              <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
-                YEARS
-              </p>
-              <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
-                EXPERTISE
-              </p>
-            </div>
-
-            {/* 30+ Partner Brands */}
-            <div className="text-center flex-1">
-              <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
-                30+
-              </h4>
-              <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
-                PARTNER
-              </p>
-              <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
-                BRANDS
-              </p>
-            </div>
-
-            {/* 1000+ Happy Clients */}
-            <div className="text-center flex-1">
-              <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
-                1000+
-              </h4>
-              <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
-                HAPPY
-              </p>
-              <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
-                CLIENTS
-              </p>
-            </div>
-          </div>
-        </div>
-
-{/* Two-column section - Desktop only */}
-<div className="relative mx-auto max-w-[1100px] px-1 hidden lg:block">
-  {/* IMPORTANT: gives the whole area a stable height so nothing overlaps/jumps */}
-  <div className="relative min-h-[620px] xl:min-h-[700px] 2xl:min-h-[760px]">
-    
-    {/* Left: image group */}
-    <div
-      ref={slowRef}
-      className="relative flex flex-nowrap gap-5 justify-start"
-      style={{ willChange: "transform" }}
-    >
-      {/* Market image */}
-      <div className="w-[230px] h-[420px] overflow-hidden">
-        <Image
-          src="/market.png"
-          alt="Food market"
-          width={243}
-          height={442}
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      {/* Rice image */}
-      <div className="w-[230px] h-[420px] overflow-hidden">
-        <Image
-          src="/Rice.png"
-          alt="Rice"
-          width={241}
-          height={442}
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      {/* Spices image */}
-      <div className="w-[230px] h-[270px] overflow-hidden rounded-tr-[50px]">
-        <Image
-          src="/Spices.png"
-          alt="Spices"
-          width={243}
-          height={290}
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-
-    {/* Right: Read More button - Desktop */}
-    <div
-      className="absolute"
-      style={{
-        top: "clamp(140px, 18vw, 190px)",
-        right: "clamp(10px, 2vw, 40px)",
-      }}
-    >
-      <Link href="/About">
-        <button
-          type="button"
-          className="bg-[#D11417] text-white cursor-pointer px-9 py-4 rounded-full font-semibold border-2 border-[#D11417] transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 transform-gpu hover:bg-white hover:text-[#D11417]"
-        >
-          Read More
-        </button>
-      </Link>
-    </div>
-
-    {/* Stats section - Desktop */}
-    <div
-      className="absolute w-full lg:max-w-[700px] flex flex-wrap justify-end gap-16 px-10"
-      style={{
-        top: "clamp(300px, 40vw, 400px)",
-        right: "0px",
-      }}
-    >
-      {/* 25 Years Expertise */}
-      <div className="text-center lg:text-left">
-        <h4
-          className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
-          style={{ letterSpacing: "20%" }}
-        >
-          25
-        </h4>
-        <p
-          className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
-          style={{ letterSpacing: "90%" }}
-        >
-          Y e a r s <br /> E x p e r t i s e
-        </p>
-      </div>
-
-      {/* 30+ Partner Brands */}
-      <div className="text-center lg:text-left">
-        <h4
-          className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
-          style={{ letterSpacing: "20%" }}
-        >
-          30+
-        </h4>
-        <p
-          className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
-          style={{ letterSpacing: "43%" }}
-        >
-          P a r t n e r <br /> B r a n d s
-        </p>
-      </div>
-
-      {/* 1000+ Happy Clients */}
-      <div className="text-center lg:text-left">
-        <h4
-          className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
-          style={{ letterSpacing: "0%" }}
-        >
-          1000+
-        </h4>
-        <p
-          className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
-          style={{ letterSpacing: "43%" }}
-        >
-          H a p p y <br /> C l i e n t s
-        </p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
-
-
-        {/* Spacer */}
-        <div className="mt-12" />
-      </div>
+          {/* Spacer */}
+          <div className="mt-12" />
+        </div>    
     </section>
   );
 }

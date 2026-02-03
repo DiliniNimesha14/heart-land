@@ -92,7 +92,8 @@ export default function Blog() {
 
   return (
     <section className="py-8 md:py-20 bg-black" style={{ fontFamily: 'Open Sans' }}>
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-full lg:max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="text-center mb-5 md:mb-16">
           <p className="text-white text-base md:text-sm tracking-[0.3em] uppercase mb-4 font-light"style={{ fontFamily: 'Open Sans' }}>
@@ -104,7 +105,7 @@ export default function Blog() {
         </div>
 
         {/* Desktop Layout - 3 cards in a row */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8" style={{ fontFamily: 'Open Sans' }}>
+        <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12" style={{ fontFamily: 'Open Sans' }}>
           {/* Card 1 */}
           <div className="group">
             <div className="relative overflow-hidden mb-6">
@@ -192,7 +193,7 @@ export default function Blog() {
                       alt={card.alt}
                       width={500}
                       height={400}
-                      className="w-full h-[280px] sm:h-[320px] object-cover"
+                      className="w-full h-[280px] sm:h-80 object-cover"
                     />
                   </div>
 
@@ -228,6 +229,7 @@ export default function Blog() {
               ))}
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

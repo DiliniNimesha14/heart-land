@@ -33,7 +33,7 @@ export default function Initiative() {
   }, []);
 
   return (
-    <section className="py-16 md:py-16 lg:pt-40 lg:pb-64 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-16 lg:pt-20 lg:pb-80 bg-white relative overflow-hidden">
       {/* Right side background image - Desktop only */}
       <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[700px] opacity-80 pointer-events-none">
         <Image
@@ -106,51 +106,43 @@ export default function Initiative() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden lg:grid max-w-7xl mx-auto px-4 sm:px-6 grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left Section - Images */}
-        <div
-          ref={imageRef}
-          className="relative mx-0 ml-20 -mt-30 w-[430px] h-[430px]"
-        >
-          <Image
-            src="/Group 69.png"
-            alt="Child Initiative"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
+      <div className="hidden lg:grid w-full px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
+        <div className="max-w-full lg:max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto grid grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24 items-center w-full">
+          {/* Left Section - Images */}
+          <div
+            ref={imageRef}
+            className="relative mx-0 w-[380px] lg:w-[430px] xl:w-[500px] 2xl:w-[580px] h-[380px] lg:h-[430px] xl:h-[500px] 2xl:h-[580px]"
+          >
+            <Image
+              src="/Group 69.png"
+              alt="Child Initiative"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
 
-        {/* Right Section - Text Content */}
-        <div className="space-y-8 text-left">
-          <p className="uppercase text-gray-400 text-[18px] tracking-[0.3em] font-normal">
-            C S R
-          </p>
+          {/* Right Section - Text Content */}
+          <div className="space-y-8 text-left">
+            <p className="uppercase text-gray-400 text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] tracking-[0.3em] font-normal">
+              C S R
+            </p>
 
-          <h2 className="text-[30px] font-bold text-black leading-[100%] tracking-normal" style={{ fontFamily: 'Open Sans' }}>
-            Our Commitment to Community
-          </h2>
+            <h2 className="text-[28px] lg:text-[30px] xl:text-[36px] 2xl:text-[42px] font-bold text-black leading-[100%] tracking-normal" style={{ fontFamily: 'Open Sans' }}>
+              Our Commitment to Community
+            </h2>
 
-          <p className="text-gray-600 text-[20px] font-nunito leading-[140%] tracking-normal max-w-xl">
-            At Heartland General Trading, we believe in making a positive impact. We’re dedicated to  supporting our communities and promoting sustainability in everything we do. Together, we  strive for a better future.
-          </p>
+            <p className="text-gray-600 text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] font-nunito leading-[140%] tracking-normal max-w-xl">
+              At Heartland General Trading, we believe in making a positive impact. We're dedicated to  supporting our communities and promoting sustainability in everything we do. Together, we  strive for a better future.
+            </p>
 
-          {/* Buttons */}
-          <div className="flex gap-4 pt-4">
-            {/* Learn More Button */}
-            <button className="font-nunito bg-black text-white text-xl px-16 py-4 rounded-full font-semibold border-2 border-black transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:bg-gray-900">
-              Learn More
-            </button>
-
-            {/* Watch Videos Button
-            <button className="font-nunito group flex items-center justify-center gap-3 border-[3px] border-[#D11417] text-black font-bold text-xl px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#D11417] hover:border-[#D11417] hover:scale-105 hover:shadow-xl">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-black transition-all duration-300 group-hover:bg-white">
-                <Play className="w-6 h-6 fill-white stroke-white transition-all duration-300 group-hover:fill-[#D11417] group-hover:stroke-[#D11417]" />
-              </div>
-              <span className="group-hover:text-white transition-colors duration-300">
-                Watch Videos
-              </span>
-            </button> */}
+            {/* Buttons */}
+            <div className="flex gap-4 pt-4">
+              {/* Learn More Button */}
+              <button className="font-nunito bg-black text-white text-lg lg:text-xl xl:text-2xl 2xl:text-3xl px-12 lg:px-16 xl:px-20 2xl:px-24 py-3 lg:py-4 xl:py-5 2xl:py-6 rounded-full font-semibold border-2 border-black transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:bg-gray-900">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </div>
