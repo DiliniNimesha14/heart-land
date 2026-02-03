@@ -75,24 +75,24 @@ export default function TeamMembers() {
   return (
     <>
       {/* Desktop Layout */}
-      <section className="hidden md:flex w-full flex-col items-center py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+      <section className="hidden md:flex w-full flex-col items-center py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 2xl:py-32 px-4 sm:px-6 lg:px-8 xl:px-10">
         {/* Heading */}
         <motion.div
           style={{ y: slowParallax }}
-          className={`text-center max-w-4xl mb-8 sm:mb-12 md:mb-16 px-4 ${nunito.className}`}
+          className={`text-center max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mb-8 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24 px-4 ${nunito.className}`}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8">Our Team Members</h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[64px] font-bold mb-4 sm:mb-6 md:mb-8 lg:mb-10">Our Team Members</h2>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl text-gray-700 leading-relaxed xl:leading-8">
             Our dedicated team at Heartland General Trading is committed to delivering the best Sri  Lankan food products. With a blend of expertise and a shared passion for quality, we strive to  enhance the culinary experience for our customers
           </p>
         </motion.div>
 
         {/* Arrows + scrollable container */}
-        <div className="relative w-full max-w-7xl">
+        <div className="relative w-full max-w-7xl xl:max-w-[1200px] 2xl:max-w-[1400px]">
           {/* Left Arrow */}
           <button
             onClick={scrollLeft}
-            className="absolute -top-8 sm:-top-10 md:-top-12 right-16 sm:right-20 md:right-24 z-10 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
+            className="absolute -top-8 sm:-top-10 md:-top-12 lg:-top-14 xl:-top-16 right-16 sm:right-20 md:right-24 lg:right-28 xl:right-32 z-10 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
           >
             <svg
               width="14"
@@ -100,7 +100,7 @@ export default function TeamMembers() {
               viewBox="0 0 24 24"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
-              className="sm:w-4 sm:h-4 md:w-[17px] md:h-[17px]"
+              className="sm:w-4 sm:h-4 md:w-[17px] md:h-[17px] xl:w-5 xl:h-5 2xl:w-6 2xl:h-6"
             >
               <path d="M9.53 6.47a.75.75 0 0 1 0 1.06L5.56 11.5H21a.75.75 0 0 1 0 1.5H5.56l3.97 3.97a.75.75 0 1 1-1.06 1.06l-5.25-5.25a.75.75 0 0 1 0-1.06l5.25-5.25a.75.75 0 0 1 1.06 0Z"/>
             </svg>
@@ -108,7 +108,7 @@ export default function TeamMembers() {
           {/* Right Arrow */}
           <button
             onClick={scrollRight}
-            className="absolute -top-8 sm:-top-10 md:-top-12 right-4 sm:right-6 md:right-7 z-10 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
+            className="absolute -top-8 sm:-top-10 md:-top-12 lg:-top-14 xl:-top-16 right-4 sm:right-6 md:right-7 lg:right-8 xl:right-10 z-10 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
           >
             <svg
               width="14"
@@ -116,7 +116,7 @@ export default function TeamMembers() {
               viewBox="0 0 24 24"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
-              className="sm:w-4 sm:h-4 md:w-[17px] md:h-[17px]"
+              className="sm:w-4 sm:h-4 md:w-[17px] md:h-[17px] xl:w-5 xl:h-5 2xl:w-6 2xl:h-6"
             >
               <path d="M14.47 6.47a.75.75 0 0 0 0 1.06L18.44 11.5H3a.75.75 0 0 0 0 1.5h15.44l-3.97 3.97a.75.75 0 1 0 1.06 1.06l5.25-5.25a.75.75 0 0 0 0-1.06l-5.25-5.25a.75.75 0 0 0-1.06 0Z"/>
             </svg>
@@ -125,7 +125,7 @@ export default function TeamMembers() {
           {/* Scrollable Team Grid */}
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto pb-2 sm:pb-3 md:pb-4 pt-12 sm:pt-16 md:pt-20 gap-0 no-scrollbar justify-center"
+            className="flex overflow-x-auto pb-2 sm:pb-3 md:pb-4 lg:pb-5 xl:pb-6 pt-12 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-28 gap-0 no-scrollbar justify-center"
           >
             {team.map((person, i) => {
               const getImageSize = () => {
@@ -133,7 +133,9 @@ export default function TeamMembers() {
                   if (window.innerWidth < 640) return person.size * 0.65;
                   if (window.innerWidth < 768) return person.size * 0.75;
                   if (window.innerWidth < 1024) return person.size * 0.85;
-                  return person.size;
+                  if (window.innerWidth < 1280) return person.size;
+                  if (window.innerWidth < 1536) return person.size * 1.15;
+                  return person.size * 1.3;
                 }
                 return person.size;
               };
@@ -143,7 +145,9 @@ export default function TeamMembers() {
                   if (window.innerWidth < 640) return person.offset * 0.65;
                   if (window.innerWidth < 768) return person.offset * 0.75;
                   if (window.innerWidth < 1024) return person.offset * 0.85;
-                  return person.offset;
+                  if (window.innerWidth < 1280) return person.offset;
+                  if (window.innerWidth < 1536) return person.offset * 1.15;
+                  return person.offset * 1.3;
                 }
                 return person.offset;
               };
@@ -152,7 +156,7 @@ export default function TeamMembers() {
                 <motion.div
                   key={i}
                   style={{ y: slowParallax }}
-                  className="shrink-0 flex flex-col items-center p-0 rounded-2xl -mr-10 sm:-mr-14 md:-mr-16 lg:-mr-20"
+                  className="shrink-0 flex flex-col items-center p-0 rounded-2xl -mr-10 sm:-mr-14 md:-mr-16 lg:-mr-20 xl:-mr-24 2xl:-mr-28"
                 >
                   <div
                     className="relative mb-0"
@@ -166,11 +170,11 @@ export default function TeamMembers() {
                   </div>
                   <div className="flex flex-col items-start">
                     <h3
-                      className={`${inter.className} font-semibold text-base sm:text-lg md:text-lg lg:text-xl text-[#564F4F] max-w-[80px] sm:max-w-[90px] md:max-w-[100px] lg:max-w-[110px]`}
+                      className={`${inter.className} font-semibold text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-[26px] text-[#564F4F] max-w-[80px] sm:max-w-[90px] md:max-w-[100px] lg:max-w-[110px] xl:max-w-[130px] 2xl:max-w-[150px]`}
                     >
                       {person.name}
                     </h3>
-                    <p className={`${inter.className} text-xs sm:text-sm md:text-[16px] lg:text-[16px] font-light text-[#ADADAD]`}>
+                    <p className={`${inter.className} text-xs sm:text-sm md:text-[16px] lg:text-[16px] xl:text-lg 2xl:text-xl font-light text-[#ADADAD]`}>
                       {person.role}
                     </p>
                   </div>
