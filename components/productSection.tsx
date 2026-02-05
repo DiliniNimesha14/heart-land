@@ -211,11 +211,11 @@ if (query.trim()) {
 
   return (
   <div
-className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-0 lg:pr-[calc(100vw-100%)] overflow-x-hidden`}
+className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5 lg:pr-6 overflow-x-hidden`}
 
 
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 justify-center min-w-0">
        
  {/* ================= MOBILE SEARCH BAR ================= */}
 <div className="lg:hidden mb-6">
@@ -326,7 +326,8 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-0
         </aside>
 
         {/* Product grid */}
-        <main>
+        <main className="min-w-0">
+
           <div className="mb-6 mt-9 text-center lg:text-left">
   <p className="uppercase text-black tracking-[0.5em] text-sm font-bold mb-5">
     Product
@@ -402,7 +403,7 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-0
           </div>
 
           {/* Slider Controls: arrows + dots */}
-<div className="w-full flex items-center justify-center gap-6 sm:gap-20 lg:gap-96 mt-10">
+<div className="w-full flex items-center justify-center gap-6 sm:gap-20 lg:gap-40 xl:gap-96 mt-10">
             {/* Left Arrow */}
             <button
               onClick={() => goToPage(page - 1)}

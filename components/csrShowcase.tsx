@@ -23,7 +23,7 @@ export default function CsrShowcase() {
   const parallax = (multiplier: number) => `translateY(${scrollY * multiplier}px)`;
 
   return (
-    <section className="w-full max-w-[1400px] mx-auto md:px-8 px-5 py-0">
+    <section className="w-full max-w-[1500px] mx-auto md:px-8 px-5 py-0">
       {/* DESKTOP ONLY */}
 <div className="hidden md:block">
   
