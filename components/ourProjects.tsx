@@ -16,7 +16,8 @@ const openSans = Open_Sans({
 export default function OurProjects() {
   return (
     <section className="w-full bg-white py-2 md:py-6">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-20">
+      <div className="max-w-7xl 2xl:max-w-[1700px] mx-auto px-5 sm:px-6 md:px-20">
+
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-14">
           {/* LEFT */}
           <div className="text-left  md:ml-20 ">

@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className={`${openSans.className} bg-[#1B1D21] text-white px-6 md:px-15 py-6 md:pb-10`}>
 
       {/* Container to center the content */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl 2xl:max-w-[1700px] mx-auto">
 
         {/* MOBILE LAYOUT */}
         <div className="block md:hidden">

@@ -23,7 +23,7 @@ export default function CsrShowcase() {
   const parallax = (multiplier: number) => `translateY(${scrollY * multiplier}px)`;
 
   return (
-    <section className="w-full max-w-[1500px] mx-auto md:px-8 px-5 py-0">
+<section className="w-full max-w-[1500px] 2xl:max-w-[1800px] mx-auto md:px-8 px-5 py-0">
       {/* DESKTOP ONLY */}
 <div className="hidden md:block">
   
@@ -205,7 +205,7 @@ export default function CsrShowcase() {
       </p>
 
 {/* Card 1 */}
-<div className="relative bg-[#8B0000] rounded-2xl p-9 text-white mt-5 mb-5 w-full py-6 max-w-sm max-h-max mx-auto">
+<div className="relative bg-[#8B0000] rounded-2xl p-9 text-white mt-5 mb-5 w-full py-6 max-w-full md:max-w-md lg:max-w-lg mx-auto">
   {/* Percentage */}
   <h3 className="text-4xl font-bold">95%</h3>
 

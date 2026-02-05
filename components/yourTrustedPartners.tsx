@@ -38,7 +38,8 @@ React.useEffect(() => {
   return (
     <section className="py-10 md:py-20 bg-white">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
-<div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
+<div className="mx-auto w-full max-w-[1440px] 2xl:max-w-[1700px] 3xl:max-w-[1900px] px-6 lg:px-12">
+
           {/* Full-width Gradient Section */}
 <div className="py-7">
 

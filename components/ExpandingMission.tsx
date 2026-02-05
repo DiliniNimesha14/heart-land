@@ -21,7 +21,7 @@ export default function ExpandingMission() {
         </div>
 
         {/* Images Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 lg:gap-8 max-w-[1200px] mx-auto">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 lg:gap-8 max-w-[1200px] 2xl:max-w-[1600px] mx-auto">
           {/* Image 1 */}
           <div className="relative w-full h-[300px] md:h-[350px] lg:h-[391px] overflow-hidden rounded-[20px] shadow-md">
             <Image
