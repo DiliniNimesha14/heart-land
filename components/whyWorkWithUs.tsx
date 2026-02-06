@@ -33,18 +33,18 @@ export default function WhyWorkWithUs() {
   return (
     <div className="w-full mt-8 min-h-screen bg-white text-gray-900 overflow-hidden">
       {/* Community Impact Box */}
-      <div className="w-full bg-[#D11417] py-10 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto rounded-2xl p-6 sm:p-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+      <div className="w-full bg-[#D11417] py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto rounded-2xl p-6 sm:p-8 lg:p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-8 items-start">
             {/* LEFT BIG BOX */}
-            <div className="bg-white items-center rounded-[10px] border border-[#EAEAEA] px-4 sm:px-8 py-2 sm:py-4 text-center">
+            <div className="bg-white rounded-[10px] border border-[#EAEAEA] px-4 sm:px-8 lg:px-6 xl:px-8 py-6 sm:py-4 lg:py-8 xl:py-10 flex flex-col justify-center">
               <h3
-                className={`${openSans.className} text-[20px] sm:text-[30px] font-bold text-black mb-3`}
+                className={`${openSans.className} text-[20px] sm:text-[30px] lg:text-[26px] xl:text-[32px] 2xl:text-[36px] font-bold text-black mb-3 lg:mb-4 text-center lg:text-center`}
               >
                 The Heart of the Community
               </h3>
               <p
-                className={`${nunito.className} text-[16px] sm:text-[20px] leading-[22px] sm:leading-6 text-black`}
+                className={`${nunito.className} text-[16px] sm:text-[20px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] leading-[22px] sm:leading-6 lg:leading-[1.4] xl:leading-[1.5] text-black text-center lg:text-center`}
               >
                 We believe in success with a soul. Through our Corporate Social
                 Responsibility initiative, we dedicate a portion of our annual
@@ -55,54 +55,54 @@ export default function WhyWorkWithUs() {
             </div>
 
             {/* RIGHT 2x2 BOX GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-25 gap-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5 place-items-center sm:place-items-stretch">
               {/* Box 1 */}
-              <div
-                className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-left gap-2.5 w-[293px] h-[97px] pt-[11px] pr-[29px] pb-[11px] pl-[29px]"
-              >
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-[300px] sm:w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="streamline-ultimate-color:award-trophy-1"
-                  width={34}
-                  height={34}
+                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
                 />
                 <p
-                  className={`${openSans.className} text-[15px] font-semibold text-black`}
+                  className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
                 >
                   ISO & HACCP Certified
                 </p>
               </div>
 
               {/* Box 2 */}
-              <div
-                className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-left gap-2.5 w-[293px] h-[97px] pt-[11px] pr-[29px] pb-[11px] pl-[29px]"
-              >
-                <Icon icon="noto-v1:man-farmer" width={34} height={34} />
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-[300px] sm:w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+                <Icon
+                  icon="noto-v1:man-farmer"
+                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
+                />
                 <p
-                  className={`${openSans.className} text-[15px] font-semibold text-black`}
+                  className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
                 >
                   Supporting Local Farmers
                 </p>
               </div>
 
               {/* Box 3 */}
-              <div
-                className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-left gap-2.5 w-[293px] h-[97px] pt-[11px] pr-[29px] pb-[11px] pl-[29px]"
-              >
-                <Icon icon="twemoji:handshake" width={34} height={34} />
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-[300px] sm:w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+                <Icon
+                  icon="twemoji:handshake"
+                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
+                />
                 <p
-                  className={`${openSans.className} text-[15px] font-semibold text-black`}
+                  className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
                 >
                   Community Partnership
                 </p>
               </div>
 
               {/* Box 4 */}
-              <div
-                className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-left gap-2.5 w-[293px] h-[97px] pt-[11px] pr-[29px] pb-[11px] pl-[29px]"
-              >
-                <Icon icon="noto:red-heart" width={34} height={34} />
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-[300px] sm:w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+                <Icon
+                  icon="noto:red-heart"
+                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
+                />
                 <p
-                  className={`${openSans.className} text-[15px] font-semibold text-black`}
+                  className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
                 >
                   CSR Health Projects
                 </p>
@@ -115,7 +115,7 @@ export default function WhyWorkWithUs() {
       {/* Parallax Header */}
       <motion.div
         style={{ y: y1 }}
-        className="pt-20 md:pt-32 pb-6 md:pb-10 text-center  px-4 sm:px-6"
+        className="pt-20 md:pt-32 pb-6 md:pb-10 text-center  px-4 sm:px-6 mt-10 lg:px-8 xl:px-10"
       >
         <motion.h4
           initial="hidden"
@@ -123,7 +123,7 @@ export default function WhyWorkWithUs() {
           viewport={{ once: true }}
           variants={fadeIn}
           style={{ letterSpacing: "5px" }}
-          className="text-[16px] sm:text-xs text-gray-500 uppercase"
+          className="text-[16px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-gray-500 uppercase"
         >
           About Us
         </motion.h4>
@@ -133,7 +133,7 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className={`${nunito.className} text-[18px] sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2`}
+          className={`${nunito.className} text-[18px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[64px] font-bold mt-2`}
         >
           Why Work With Us
         </motion.h1>
@@ -143,8 +143,8 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className={`${nunito.className} max-w-[980px] text-[12px] sm:text-base md:text-lg 
-        lg:text-xl mt-3 md:mt-10 mb-6 md:mb-10 mx-auto text-black leading-[29px] px-4`}
+          className={`${nunito.className} max-w-[1080px] xl:max-w-[1600px] text-[12px] sm:text-base md:text-lg
+        lg:text-xl xl:text-[24px] 2xl:text-3xl mt-3 md:mt-10 mb-6 md:mb-10 mx-auto text-black leading-[29px] lg:leading-8 xl:leading-9 px-4`}
         >
           At Heartland General Trading, we prioritize quality, freshness,
           authenticity, and community. As a premier distributor of Sri Lankan
@@ -157,7 +157,7 @@ export default function WhyWorkWithUs() {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto px-4 sm:px-6 pb-0 md:pb-20">
+      <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 max-w-7xl lg:max-w-[1200px] xl:max-w-[1500px] 2xl:max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 pb-0 md:pb-5 lg:pb-8">
         {/* CARD 1 */}
         <motion.div
           style={{ y: y1 }}
@@ -165,23 +165,23 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="p-4 sm:p-6 bg-gray-100 md:bg-white shadow-none rounded-2xl border border-transparent hover:border-gray-100 hover:shadow-2xl transition-all flex flex-col h-full"
+          className="p-4 sm:p-6 lg:p-8 xl:p-10 bg-gray-100 md:bg-white shadow-none rounded-2xl border border-transparent hover:border-gray-100 hover:shadow-2xl transition-all flex flex-col h-full"
         >
-          <div className="relative flex items-center justify-start h-14">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#D11417] flex items-center justify-center">
-              <span className="text-white text-[24px] sm:text-4xl font-inter font-bold">
+          <div className="relative flex items-center justify-start h-14 lg:h-16 xl:h-18 mb-2 sm:mb-5">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-full bg-[#D11417] flex items-center justify-center">
+              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-inter font-bold">
                 01
               </span>
             </div>
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[18px] sm:text-[22px] mb-2 mt-5`}
+            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mb-5 mt-5`}
           >
             Quality Products & Freshness
           </h3>
           <p
-            className={`${nunito.className} text-[#676767] text-[16px] leading-relaxed`}
+            className={`${nunito.className} text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7`}
           >
             At Heartland, we take quality seriously. We carefully select our
             products from trusted suppliers to ensure that each item from our
@@ -189,7 +189,7 @@ export default function WhyWorkWithUs() {
             authentic flavors of Sri Lanka.
           </p>
           <button
-            className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-[15px] hover:underline self-start`}
+            className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-[15px] lg:text-[16px] xl:text-[17px] hover:underline self-start`}
           >
             Explore more →
           </button>
@@ -202,23 +202,23 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="p-4 sm:p-6 bg-gray-100 md:bg-white shadow-none rounded-2xl border border-transparent hover:border-gray-100 hover:shadow-2xl transition-all flex flex-col h-full"
+          className="p-4 sm:p-6 lg:p-8 xl:p-10 bg-gray-100 md:bg-white shadow-none rounded-2xl border border-transparent hover:border-gray-100 hover:shadow-2xl transition-all flex flex-col h-full"
         >
-          <div className="relative flex items-center justify-start h-14">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#D11417] flex items-center justify-center">
-              <span className="text-white text-[24px] sm:text-4xl font-bold font-inter">
+          <div className="relative flex items-center justify-start h-14 lg:h-16 xl:h-18 mb-2 sm:mb-5">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-full bg-[#D11417] flex items-center justify-center">
+              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-bold font-inter">
                 02
               </span>
             </div>
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[18px] sm:text-[22px] mt-5 mb-2`}
+            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5`}
           >
             Extensive Supplier Network
           </h3>
           <p
-            className={`${nunito.className} text-[#676767] text-[16px] leading-relaxed`}
+            className={`${nunito.className} text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7`}
           >
             Our strong network of suppliers is key to maintaining the quality
             and availability of our products. By partnering closely with local
@@ -226,7 +226,7 @@ export default function WhyWorkWithUs() {
             selection but also support our agricultural community back home.
           </p>
           <button
-            className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm hover:underline self-start`}
+            className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm lg:text-[16px] xl:text-[17px] hover:underline self-start`}
           >
             Explore more →
           </button>
@@ -239,23 +239,23 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="p-4 sm:p-6 bg-gray-100 md:bg-white shadow-none rounded-2xl border border-transparent hover:border-gray-100 hover:shadow-2xl transition-all flex flex-col h-full"
+          className="p-4 sm:p-6 lg:p-8 xl:p-10 bg-gray-100 md:bg-white shadow-none rounded-2xl border border-transparent hover:border-gray-100 hover:shadow-2xl transition-all flex flex-col h-full"
         >
-          <div className="relative flex items-center justify-start h-14">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#D11417] flex items-center justify-center">
-              <span className="text-white text-[24px] sm:text-4xl font-bold font-inter">
+          <div className="relative flex items-center justify-start h-14 lg:h-16 xl:h-18 mb-2 sm:mb-5">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-full bg-[#D11417] flex items-center justify-center">
+              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-bold font-inter">
                 03
               </span>
             </div>
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[18px] sm:text-[22px] mt-5 mb-2`}
+            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5`}
           >
             Nationwide Distribution
           </h3>
           <p
-            className={`${nunito.className} text-[#676767] text-[16px] leading-relaxed`}
+            className={`${nunito.className} text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7`}
           >
             With over two decades of experience, Heartland General Trading has
             established a robust distribution network across the UAE. Our
@@ -264,7 +264,7 @@ export default function WhyWorkWithUs() {
             essentials.
           </p>
           <button
-            className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm hover:underline self-start`}
+            className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm lg:text-[16px] xl:text-[17px] hover:underline self-start`}
           >
             Explore more →
           </button>

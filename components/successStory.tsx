@@ -9,7 +9,10 @@ type ScrollableDescriptionProps = {
   textSize?: string;
 };
 
-function ScrollableDescription({ description, textSize = "text-sm" }: ScrollableDescriptionProps) {
+function ScrollableDescription({
+  description,
+  textSize = "text-sm",
+}: ScrollableDescriptionProps) {
   const containerRef = useRef<HTMLParagraphElement>(null);
   const [isScrollable, setIsScrollable] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
@@ -26,7 +29,8 @@ function ScrollableDescription({ description, textSize = "text-sm" }: Scrollable
   const handleScroll = () => {
     const el = containerRef.current;
     if (el) {
-      const atBottom = Math.abs(el.scrollHeight - el.clientHeight - el.scrollTop) < 5;
+      const atBottom =
+        Math.abs(el.scrollHeight - el.clientHeight - el.scrollTop) < 5;
       setIsAtBottom(atBottom);
     }
   };
@@ -67,9 +71,16 @@ function ScrollableDescription({ description, textSize = "text-sm" }: Scrollable
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            style={{ transform: isAtBottom ? "rotate(180deg)" : "rotate(0deg)" }}
+            style={{
+              transform: isAtBottom ? "rotate(180deg)" : "rotate(0deg)",
+            }}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
           </svg>
         </div>
       )}
@@ -117,18 +128,6 @@ const cards: Card[] = [
 
 export default function BlogsSuccessStory() {
   const router = useRouter();
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const scrollLeft = () => {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({ left: -321, behavior: "smooth" });
-  };
-
-  const scrollRight = () => {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({ left: 321, behavior: "smooth" });
-  };
 
   return (
     <section className="w-full max-w-[1440px] flex flex-col gap-6 py-8 px-4 md:py-[40px] md:px-[60px] mx-auto pb-8 md:pb-10 mb-8 md:mb-10">
@@ -136,137 +135,104 @@ export default function BlogsSuccessStory() {
       <header className="w-full flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-2">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2.5">
-            <span className="font-openSans text-sm md:text-lg text-[#666666] tracking-wide">
+            <span className="font-openSans text-[12px] md:text-lg text-[#666666] tracking-wide">
               Inspiring Voices, Real Change
             </span>
             <span className="hidden md:block w-[100px] h-[1px] bg-[#999999]" />
           </div>
-          <h2 className="font-nunito font-semibold text-[28px] md:text-[30px] text-black leading-tight">
+          <h2 className="font-nunito font-semibold text-[24px] md:text-[30px] text-black leading-tight">
             Inspiring Voices, Real Change
           </h2>
         </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-3">
-          <button
-            onClick={scrollLeft}
-            className="w-10 h-10 rounded-full bg-white border border-[#E5E5E5] cursor-pointer flex items-center justify-center hover:bg-gray-50 transition-colors"
-            aria-label="Scroll left"
-          >
-            <Image src="/leftArrow.png" alt="" width={20} height={20} />
-          </button>
-          <button
-            onClick={scrollRight}
-            className="w-10 h-10 rounded-full bg-white border border-[#E5E5E5] cursor-pointer flex items-center justify-center hover:bg-gray-50 transition-colors"
-            aria-label="Scroll right"
-          >
-            <Image src="/rightArrow.png" alt="" width={20} height={20} />
-          </button>
-        </nav>
       </header>
 
       {/* Cards Container */}
       <div className="relative">
-        {/* Mobile Single Card View */}
-        <div className="flex md:hidden justify-center w-full py-4">
-          <article className="w-[306px] h-[585px] rounded-[30px] bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.08)] overflow-hidden pb-[30px]">
-            {/* Image */}
-            <div className="relative h-[224px] overflow-hidden rounded-t-[24px]">
-              <Image
-                src={cards[currentIndex].image}
-                alt={cards[currentIndex].title}
-                fill
-                className="object-cover"
-              />
-              <button
-                onClick={() => router.push("/")}
-                className="absolute top-3 right-3 w-12 h-12 rounded-full bg-[#C4161C] cursor-pointer flex items-center justify-center"
-                aria-label="Read more"
-              >
-                <Image src="/whiteArrow.png" alt="" width={20} height={20} />
-              </button>
-            </div>
-
-            {/* Content */}
-            <div className="p-5 flex flex-col h-[calc(100%-224px)]">
-              <div className="flex items-center gap-2 mb-3">
-                <Image src="/building.png" alt="" width={16} height={16} />
-                <span className="font-openSans text-xs text-[#999999]">
-                  {cards[currentIndex].date}
-                </span>
+        {/* Mobile */}
+        <div className="flex md:hidden flex-col items-center gap-6 w-full py-4">
+          {cards.map((card, index) => (
+            <article
+              key={index}
+              className="w-full max-w-[306px] h-[585px] rounded-[30px] bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.08)] overflow-hidden pb-[30px]"
+            >
+              {/* Image */}
+              <div className="relative h-[224px] overflow-hidden rounded-t-[24px]">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover"
+                />
+                <button
+                  onClick={() => router.push("/")}
+                  className="absolute top-3 right-3 w-12 h-12 rounded-full bg-[#C4161C] cursor-pointer flex items-center justify-center"
+                  aria-label="Read more"
+                >
+                  <Image src="/whiteArrow.png" alt="" width={50} height={50} />
+                </button>
               </div>
-              <h3 className="font-nunito font-bold text-lg mb-2 text-black leading-tight">
-                {cards[currentIndex].title}
-              </h3>
-              <ScrollableDescription description={cards[currentIndex].description} textSize="text-sm" />
-            </div>
-          </article>
+
+              {/* Content */}
+              <div className="p-5 flex flex-col h-[calc(100%-224px)]">
+                <div className="flex items-center gap-2 mb-3">
+                  <Image src="/building.png" alt="" width={16} height={16} />
+                  <span className="font-openSans text-xs text-[#999999]">
+                    {card.date}
+                  </span>
+                </div>
+                <h3 className="font-nunito font-bold text-lg mb-2 text-black leading-tight">
+                  {card.title}
+                </h3>
+                <ScrollableDescription
+                  description={card.description}
+                  textSize="text-sm"
+                />
+              </div>
+            </article>
+          ))}
         </div>
 
-        {/* Mobile Navigation */}
-        <nav className="flex md:hidden justify-center gap-4 mt-6">
-          <button
-            onClick={() =>
-              setCurrentIndex((prev) => (prev === 0 ? cards.length - 1 : prev - 1))
-            }
-            className="w-12 h-12 rounded-full bg-white border border-[#E5E5E5] cursor-pointer flex items-center justify-center"
-            aria-label="Previous card"
-          >
-            <Image src="/wleftArrow.png" alt="" width={20} height={20} />
-          </button>
-          <button
-            onClick={() =>
-              setCurrentIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1))
-            }
-            className="w-12 h-12 rounded-full bg-white border border-[#E5E5E5] cursor-pointer flex items-center justify-center"
-            aria-label="Next card"
-          >
-            <Image src="/wrightArrow.png" alt="" width={20} height={20} />
-          </button>
-        </nav>
-
-        {/* Desktop Scrollable View */}
-        <div
-          ref={scrollRef}
-          className="hidden md:flex gap-[15px] overflow-x-auto scrollbar-hide scroll-smooth pb-8"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
+        {/* Desktop View */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 xl:gap-6 pb-8">
           {cards.map((card, index) => (
-              <article
-                key={index}
-                className="w-[306px] h-[585px] rounded-[30px] bg-white shadow-[0px_4px_30px_rgba(0,0,0,0.08)] shrink-0 overflow-hidden pb-[30px] transition-shadow duration-200 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)]"
-              >
-                {/* Image */}
-                <div className="relative h-[224px] overflow-hidden rounded-t-[24px]">
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <button
-                    onClick={() => router.push("/")}
-                    className="absolute top-3 right-3 w-12 h-12 rounded-full bg-[#C4161C] cursor-pointer flex items-center justify-center hover:bg-[#A01217] transition-colors"
-                    aria-label="Read more"
-                  >
-                    <Image src="/whiteArrow.png" alt="" width={50} height={50} />
-                  </button>
-                </div>
+            <article
+              key={index}
+              className="h-[585px] lg:h-[620px] xl:h-[660px] 2xl:h-[700px] rounded-[30px] bg-white shadow-[0px_4px_30px_rgba(0,0,0,0.08)] overflow-hidden pb-[30px] transition-shadow duration-200 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)]"
+            >
+              {/* Image */}
+              <div className="relative h-[224px] overflow-hidden rounded-t-[24px]">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover"
+                />
+                <button
+                  onClick={() => router.push("/")}
+                  className="absolute top-3 right-3 w-12 h-12 rounded-full bg-[#C4161C] cursor-pointer flex items-center justify-center hover:bg-[#A01217] transition-colors"
+                  aria-label="Read more"
+                >
+                  <Image src="/whiteArrow.png" alt="" width={50} height={50} />
+                </button>
+              </div>
 
-                {/* Content */}
-                <div className="p-5 flex flex-col h-[calc(100%-224px)]">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Image src="/building.png" alt="" width={16} height={16} />
-                    <span className="font-openSans text-xs text-[#999999]">
-                      {card.date}
-                    </span>
-                  </div>
-                  <h3 className="font-nunito font-bold text-xl mb-2 text-black leading-tight">
-                    {card.title}
-                  </h3>
-                  <ScrollableDescription description={card.description} textSize="text-[14px] leading-[10px]" />
+              {/* Content */}
+              <div className="p-5 flex flex-col h-[calc(100%-224px)]">
+                <div className="flex items-center gap-2 mb-3">
+                  <Image src="/building.png" alt="" width={16} height={16} />
+                  <span className="font-openSans text-xs text-[#999999]">
+                    {card.date}
+                  </span>
                 </div>
-              </article>
+                <h3 className="font-nunito font-bold text-xl mb-2 text-black leading-tight">
+                  {card.title}
+                </h3>
+                <ScrollableDescription
+                  description={card.description}
+                  textSize="text-[14px] leading-[10px]"
+                />
+              </div>
+            </article>
           ))}
         </div>
       </div>
