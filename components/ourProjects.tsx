@@ -16,11 +16,12 @@ const openSans = Open_Sans({
 export default function OurProjects() {
   return (
     <section className="w-full bg-white py-2 md:py-6">
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 md:px-10">
+      <div className="max-w-7xl 2xl:max-w-[1700px] mx-auto px-5 sm:px-6 md:px-20">
+
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-14">
           {/* LEFT */}
-          <div className="text-left">
-            <h2 className={`${nunito.className} text-[22px] sm:text-[25px] md:text-[40px] font-semibold text-black mb-12`}>
+          <div className="text-left  md:ml-20 ">
+            <h2 className={`${nunito.className} text-[22px] text-center md:text-left sm:text-[25px] md:text-[40px] font-semibold text-black mb-12`}>
               Our CSR Initiative
             </h2>
 
@@ -34,7 +35,7 @@ export default function OurProjects() {
                 }}
               />
 
-              <p className={`${openSans.className} text-[17px] text-black sm:text-[18px] md:text-[20px]
+              <p className={`${openSans.className} text-[17px] text-center md:text-left text-black sm:text-[18px] md:text-[20px]
                  leading-[22px] md:leading-7 md:min-w-[550px]`}>
                 Through our signature Corporate Social Responsibility (CSR) initiative, &ldquo;Heartland
                 <span className="text-[#D11417] font-semibold"> ♥ </span>
@@ -46,7 +47,7 @@ export default function OurProjects() {
           </div>
 
           {/* RIGHT */}
-          <div className="flex md:justify-end">
+          <div className="flex md:justify-end justify-center">
             <div className="relative w-full max-w-[340px] sm:max-w-[380px] md:max-w-[420px] h-[220px] sm:h-[240px] 
             md:h-[360px] rounded-2xl overflow-hidden">
               <Image

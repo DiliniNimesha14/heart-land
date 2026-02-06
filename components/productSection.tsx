@@ -5,6 +5,8 @@ import { openSans } from "@/app/fonts";
 import Image from "next/image";
 import { Search } from "lucide-react";
 import { SlidersHorizontal } from "lucide-react";
+import { useLayoutEffect, useRef } from "react";
+
 
 
 type Product = {
@@ -115,16 +117,17 @@ export default function ProductsSection() {
     const cat = p.category.trim();
     map.set(cat, (map.get(cat) ?? 0) + 1);
   });
+  
 
   const categoryImageMap: Record<string, string> = {
-  Jams: "/productImage1.png",
-  Rice: "/productImage3.png",
-  Noodles: "/productImage2.png",
-  Flour: "/productImage1.png",
-  "Bottled Items": "/productImage2.png",
-  "Dry Fish": "/productImage3.png",
-  Spices: "/productImage1.png",
-  Savoury: "/productImage2.png",
+  Jams: "/products/_DSC0228.JPG",
+  Rice: "/products/_DSC0208.JPG",
+  Noodles: "/products/_DSC0201.jpg",
+  Flour: "/products/_DSC0202.jpg",
+  "Bottled Items": "/products/_DSC0221.JPG",
+  "Dry Fish": "/products/_DSC0244.JPG",
+  Spices: "/products/_DSC0246.JPG",
+  Savoury: "/products/_DSC0238.JPG",
 };
 
 
@@ -135,20 +138,30 @@ export default function ProductsSection() {
   }));
 }, []);
 
+const scrollYRef = useRef(0);
+
+useLayoutEffect(() => {
+  window.scrollTo({ top: scrollYRef.current, behavior: "auto" });
+}, [selectedCategories, page]);
+
 
 
   // toggle category selection
-  function toggleCategory(cat: string) {
-    if (cat === "View All") {
-      setSelectedCategories([]); 
-      setPage(0);
-      return;
-    }
-    setSelectedCategories((prev) =>
-      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
-    );
+ function toggleCategory(cat: string) {
+  scrollYRef.current = window.scrollY;
+
+  if (cat === "View All") {
+    setSelectedCategories([]);
     setPage(0);
+    return;
   }
+
+  setSelectedCategories((prev) =>
+    prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+  );
+  setPage(0);
+}
+
 
   // filtered + sorted products
 const filtered = useMemo(() => {
@@ -197,11 +210,13 @@ if (query.trim()) {
 
 
   return (
-    <div
-  className={`${openSans.className} w-full max-w-[1200px] mx-auto py-8 px-4`}
->
-  <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 justify-center">
+  <div
+className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5 lg:pr-6 overflow-x-hidden`}
 
+
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 justify-center min-w-0">
+       
  {/* ================= MOBILE SEARCH BAR ================= */}
 <div className="lg:hidden mb-6">
   <div className="flex items-center gap-3">
@@ -223,9 +238,9 @@ if (query.trim()) {
     <button
   onClick={() => setShowFilters(!showFilters)}
   className="px-5 py-3 rounded-full bg-red-100 flex items-center justify-center"
->
+  >
   <SlidersHorizontal size={18} className="text-red-600" />
-</button>
+  </button>
 
   </div>
 
@@ -237,53 +252,41 @@ if (query.trim()) {
          
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        {categories.map((cat) => (
-          <button
-  key={cat.name}
-  onClick={() => {
-    toggleCategory(cat.name); 
-  }}
-  className={`flex items-center justify-between gap-3 p-3 rounded-2xl border shadow-sm transition
-  ${
-    selectedCategories.includes(cat.name)
-      ? "border-[#8B0000] bg-red-50"
-      : "border-gray-200 bg-gray-50"
-  }`}
-
->
-<div className="flex items-center justify-between gap-3 w-full">
-  
-  {/* TEXT */}
-  <div className="text-left flex-1 min-w-0">
-    <p className="text-sm font-bold truncate">
-      {cat.name}
-    </p>
-    <p className="text-xs text-gray-500 whitespace-nowrap">
-      {cat.count} products
-    </p>
-  </div>
-
-  {/* IMAGE */}
-  <div className="w-10 h-10 rounded-xl overflow-hidden shrink-0">
-    <Image
-      src={cat.image}
-      alt={cat.name}
-      width={40}
-      height={40}
-      className="object-cover"
-    />
-  </div>
-
-</div>
-
-  
-</button>
-
-        ))}
-      </div>
-    </div>
-  )}
+            <div className="grid grid-cols-2 gap-4">
+              {categories.map((cat) => (
+                <button
+                  key={cat.name}
+                  onClick={() => {
+                    toggleCategory(cat.name);
+                  }}
+                  className={`flex flex-row items-center justify-start gap-3 p-3 rounded-2xl border shadow-sm transition
+                  ${
+                    selectedCategories.includes(cat.name)
+                      ? "border-[#8B0000] bg-red-50"
+                      : "border-gray-200 bg-gray-50"
+                  }`}
+                  >
+                  {/* IMAGE */}
+                  <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0">
+                    <Image
+                      src={cat.image}
+                      alt={cat.name}
+                      width={48}
+                      height={48}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+      
+                  {/* TEXT */}
+                  <div className="text-left flex-1">
+                    <p className="text-sm font-bold">{cat.name}</p>
+                    <p className="text-xs text-gray-500">{cat.count} products</p>
+                  </div>
+                </button>
+               ))}
+            </div>
+     </div>
+    )}
 </div>
   
 
@@ -323,7 +326,8 @@ if (query.trim()) {
         </aside>
 
         {/* Product grid */}
-        <main>
+        <main className="min-w-0">
+
           <div className="mb-6 mt-9 text-center lg:text-left">
   <p className="uppercase text-black tracking-[0.5em] text-sm font-bold mb-5">
     Product
@@ -344,7 +348,7 @@ if (query.trim()) {
 
 
           {/* grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-8 md:px-0">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-8 md:px-0">
             {paginated.length === 0 ? (
               <div className="col-span-full text-center text-gray-500 py-20">No products found.</div>
             ) : (
@@ -354,33 +358,31 @@ if (query.trim()) {
                 className="bg-white rounded-xl shadow-sm p-2 md:p-0 hover:shadow-lg transition-shadow duration-200"
 >
 
-  <div
-  className="
-    rounded-2xl overflow-hidden mb-3
-    flex items-center justify-center 
-    w-[85%] mx-auto
-    h-[250px]
-    bg-white
-    md:w-full md:h-[350px] md:bg-black
-  "
->
-  <div
-    className="
-      relative w-full
-      h-[200px] md:h-[350px]
-      rounded-2xl overflow-hidden
-      flex items-center justify-center
-      bg-white md:bg-black
-    "
-  >
-    <Image
-      src={p.image}
-      alt={p.title}
-      fill
-      className="object-contain transition-transform duration-300 hover:scale-105"
-    />
+      <div
+        className="
+          rounded-t-2xl overflow-hidden mb-3 md:mb-0
+          flex items-center justify-center 
+          w-[85%] mx-auto
+          aspect-square
+          bg-white
+          md:w-full md:bg-black
+        "
+      >
+        <div
+          className="
+            relative w-full h-full rounded-t-2xl overflow-hidden
+            flex items-center justify-center
+            bg-white md:bg-black
+          "
+        >
+      <Image
+        src={p.image}
+        alt={p.title}
+        fill
+        className="object-cover transition-transform duration-300 hover:scale-105"
+      />
+    </div>
   </div>
-</div>
 
 
   {!showImageOnly ? (
@@ -401,7 +403,7 @@ if (query.trim()) {
           </div>
 
           {/* Slider Controls: arrows + dots */}
-          <div className="w-full flex items-center justify-center gap-96 mt-10">
+<div className="w-full flex items-center justify-center gap-6 sm:gap-20 lg:gap-40 xl:gap-96 mt-10">
             {/* Left Arrow */}
             <button
               onClick={() => goToPage(page - 1)}

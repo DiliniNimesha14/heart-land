@@ -4,7 +4,16 @@
 body {
   font-family: 'David Libre', serif;
 }
+
 html, body {
+  overflow-y: auto;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
   overflow-x: hidden;
 }
 
