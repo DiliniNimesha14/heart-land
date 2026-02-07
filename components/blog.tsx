@@ -107,7 +107,8 @@ export default function Blog() {
         {/* Desktop Layout - 3 cards in a row */}
         <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12" style={{ fontFamily: 'Open Sans' }}>
           {/* Card 1 */}
-          <div className="group">
+          <div className="group flex flex-col h-full">
+
             <div className="relative overflow-hidden mb-6">
               <Image
                 src="/Frame 61 (3).png"
@@ -117,20 +118,20 @@ export default function Blog() {
                 className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <p className="text-white text-base mb-4 leading-relaxed">
-              As a leading distributor of Sri Lankan food products in the UAE, we recognize the vital role that small and medium-scale entrepreneurs play in preserving the rich culinary heritage of our homeland. That&apos;s why we&apos;ve made it our mission to assist these dedicated farmers by facilitating the marketing of their products in Dubai.
-            </p>
-            {/* <Link
+<p className="text-white text-base mb-4 leading-relaxed flex-grow">
+Supporting Sri Lanka with Compassion and Purpose            </p>
+              <Link
               href="#"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
               <span className="ml-2 text-lg">›</span>
-            </Link> */}
+            </Link>  
           </div>
 
           {/* Card 2 */}
-          <div className="group">
+          <div className="group flex flex-col h-full">
+
             <div className="relative overflow-hidden mb-6">
               <Image
                 src="/Frame 62.png"
@@ -140,20 +141,20 @@ export default function Blog() {
                 className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <p className="text-white text-base mb-4 leading-relaxed">
-              At Heartland General Trading, we celebrate the incredible contributions of women in the food industry, particularly those who are redefining the landscape of food enterprises in Sri Lanka. From farmers to entrepreneurs, women are taking the lead, fostering innovation and resilience while preserving the rich culinary traditions of our homeland.
-            </p>
-            {/* <Link
+<p className="text-white text-base mb-4 leading-relaxed flex-grow">
+Empowering Smallholders, Cultivating Growth            </p>
+              <Link
               href="#"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
               <span className="ml-2 text-lg">›</span>
-            </Link> */}
+            </Link> 
           </div>
 
           {/* Card 3 */}
-          <div className="group">
+          <div className="group flex flex-col h-full">
+
             <div className="relative overflow-hidden mb-6">
               <Image
                 src="/Frame 63.png"
@@ -163,16 +164,15 @@ export default function Blog() {
                 className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <p className="text-white text-base mb-4 leading-relaxed">
-              Heartland General Trading has been a pioneer in the distribution of Sri Lankan food products since its establishment. With over 2 decades of experience, we have built a strong reputation for quality and authenticity, ensuring that every product reflects the rich culinary heritage of Sri Lanka. Our extensive network of suppliers and partnerships with local farmers allow us to source the highest quality ingredients. This commitment to excellence has made us the trusted choice for customers seeking genuine Sri Lankan flavors.
-            </p>
-            {/* <Link
+<p className="text-white text-base mb-4 leading-relaxed flex-grow">
+Heartland General Trading: A Leader in Quality and Authenticity            </p>
+              <Link
               href="#"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
               <span className="ml-2 text-lg">›</span>
-            </Link> */}
+            </Link> 
           </div>
         </div>
 

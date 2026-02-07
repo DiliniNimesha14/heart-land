@@ -337,13 +337,7 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5
     PICK YOUR FAVORITE FOOD
   </h3>
 
-  <p className="text-black mt-2 text-base lg:text-lg font-normal max-w-5xl leading-9 mx-auto lg:mx-0">
-    Discover our wide range of authentic Sri Lankan products, thoughtfully sourced
-    and carefully packaged to meet international standards. This section is designed to
-    help supermarket owners, distributors, and trade partners explore our product
-    portfolio and gain insight into the quality and variety we deliver across the UAE and
-    beyond.
-  </p>
+  
 </div>
 
 

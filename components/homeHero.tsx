@@ -125,19 +125,7 @@ export default function HomeHero() {
                           className="object-contain cursor-pointer transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-1 w-[32px] h-[32px]"
                         />
                       </a>
-                      <a
-                        href="https://web.facebook.com/HeartlandGeneralTrading"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image
-                          src="/youtube.png"
-                          alt="Youtube"
-                          width={40}
-                          height={40}
-                          className="object-contain cursor-pointer transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-1 w-[32px] h-[32px]"
-                        />
-                      </a>
+                      
                     </div>
                     <div className="h-px bg-slate-200 flex-1"></div>
                   </div>
@@ -238,19 +226,7 @@ export default function HomeHero() {
                             className="object-contain cursor-pointer transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-1 w-[32px] h-[32px] sm:w-[40px] sm:h-[40px]"
                           />
                         </a>
-                        <a
-                          href="https://www.facebook.com/p/Heartland-General-Trading-Co-LLC-61556223026571/?_rdc=2&_rdr#"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Image
-                            src="/youtube.png"
-                            alt="Youtube"
-                            width={40}
-                            height={40}
-                            className="object-contain cursor-pointer transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-1 w-[32px] h-[32px] sm:w-[40px] sm:h-[40px]"
-                          />
-                        </a>
+                        
                       </div>
                       <div className="h-px bg-slate-200 flex-1 hidden sm:block"></div>
                     </div>

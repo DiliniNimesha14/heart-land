@@ -64,7 +64,7 @@ export default function CsrShowcase() {
             fair trade and sustainable sourcing.
           </p>
           <div
-            className="absolute flex items-center justify-between px-4"
+className="absolute flex items-center justify-between px-4"
             style={{
               width: "210px",
               height: "60px",
@@ -75,10 +75,10 @@ export default function CsrShowcase() {
               backdropFilter: "blur(6px)",
             }}
           >
-            <span className={`${inter.className} text-white text-sm`}>Learn More</span>
-            <div className="w-12 h-12 rounded-full cursor-pointer flex items-center justify-center translate-x-2.5">
-              <Image src="/arrowY.png" alt="" fill className="object-cover" />
-            </div>
+<span className={`${inter.className} w-full text-white text-center text-sm`}>
+  Making a difference
+</span>
+             
           </div>
         </div>
 
@@ -103,10 +103,10 @@ export default function CsrShowcase() {
               backdropFilter: "blur(16px)",
             }}
           >
-            <span className={`${inter.className} text-white text-sm`}>See all our moments</span>
-            <div className="w-12 h-12 rounded-full cursor-pointer flex items-center justify-center translate-x-2.5">
-              <Image src="/arrowB.png" alt="" fill className="object-cover" />
-            </div>
+<span className={`${inter.className} block w-full text-white text-center text-sm`}>
+  Supporting Farmers
+</span>
+             
           </div>
         </div>
 
@@ -155,10 +155,8 @@ export default function CsrShowcase() {
               backdropFilter: "blur(6px)",
             }}
           >
-            <span className={`${inter.className} text-[#3A3232] text-sm`}>Join Community</span>
-            <div className="w-12 h-12 rounded-full cursor-pointer flex items-center justify-center translate-x-2.5">
-              <Image src="/arrowB.png" alt="" fill className="object-cover" />
-            </div>
+            <span className={`${inter.className} text-[#3A3232] block w-full text-center text-sm`}>Our Community</span>
+             
           </div>
         </div>
 
