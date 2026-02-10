@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heartland General Trading – Maintenance</title>
+
+<style>
+    :root {
+        --primary-red: #c62828;
+        --black: #111111;
+        --dark-gray: #33393d;
+        --medium-gray: #596063;
+        --light-bg: #efefef;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--light-bg);
+        color: var(--dark-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 720px;
+        background: #ffffff;
+        padding: 48px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        border-top: 6px solid var(--primary-red);
+        text-align: center;
+        margin: 20px;
+    }
+
+    .logo img {
+        max-width: 120px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 24px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 18px;
+        color: var(--primary-red);
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--medium-gray);
+        margin: 0;
+    }
+
+    .loader {
+        margin: 36px auto;
+        width: 56px;
+        height: 56px;
+        border: 6px solid var(--black);
+        border-top: 6px solid var(--primary-red);
+        border-radius: 50%;
+        animation: spin 1.2s linear infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    footer {
+        margin-top: 36px;
+        font-size: 14px;
+        color: var(--medium-gray);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+        .container {
+            padding: 32px 24px;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .logo img {
+            max-width: 140px;
+        }
+
+        .loader {
+            width: 42px;
+            height: 42px;
+            border-width: 5px;
+        }
+
+        footer {
+            font-size: 13px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <!-- Replace with the official Heartland General Trading logo -->
+        <img src="logo.png" alt="Heartland General Trading Logo">
+    </div>
+
+    <h1>Maintenance in Progress</h1>
+
+    <div class="loader"></div>
+
+    <p>
+        Even the best websites need a little <strong>“me time.”</strong><br>
+        We’re busy adding some new magic behind the scenes.
+    </p>
+
+    <footer>
+        © <span id="year"></span> Heartland General Trading. All rights reserved.
+    </footer>
+</div>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -60,7 +60,7 @@ export default function HeroBanner() {
                     className="mt-4 text-[16px] leading-6 text-[#FAFAFA] max-w-full font-openSans"
                     style={{ opacity: 1 }}
                   >
-                    We'd love to hear from you! Whether you have questions about
+                    We&apos;d love to hear from you! Whether you have questions about
                     our products or need assistance, our team is here to help.
                     Please fill out the contact form or reach out to us directly.
                     Your feedback is important to us!

@@ -133,7 +133,7 @@ export default function Initiative() {
             </h2>
 
             <p className="text-gray-600 text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] font-nunito leading-[140%] tracking-normal max-w-xl">
-              At Heartland General Trading, we believe in making a positive impact. We're dedicated to  supporting our communities and promoting sustainability in everything we do. Together, we  strive for a better future.
+              At Heartland General Trading, we believe in making a positive impact. We&apos;re dedicated to  supporting our communities and promoting sustainability in everything we do. Together, we  strive for a better future.
             </p>
 
             {/* Buttons */}
