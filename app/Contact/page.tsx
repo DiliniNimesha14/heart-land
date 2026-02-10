@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactGetInTouch from '@/components/contactGetInTouch';
 import ContactHeader from '@/components/contactHeader';
+import HomePagee from "@/components/maintenance";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -10,8 +11,8 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-    <ContactHeader />
-    <ContactGetInTouch />      
+    <HomePagee />
+
     </ >
   );
 }

@@ -3,6 +3,7 @@ import CsrShowcase from '@/components/csrShowcase';
 import ExpandingMission from '@/components/ExpandingMission';
 import OurProjects from '@/components/ourProjects';
 import PurchaseDifference from '@/components/Purchasedifference';
+import HomePagee from "@/components/maintenance";
 
 export const metadata: Metadata = {
   title: "CSR Initiatives",
@@ -12,10 +13,7 @@ export const metadata: Metadata = {
 export default function csr() {
   return (
     <>
-    <CsrShowcase />
-    <OurProjects />
-    <ExpandingMission />
-    <PurchaseDifference />
+    <HomePagee />
     </ >
   );
 }

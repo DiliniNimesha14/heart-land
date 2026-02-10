@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HomePagee from "./Homee/page";
+import HomePagee from "./Maintenance/page";
 
 export const metadata: Metadata = {
   title: "Heartland General Trading | Authentic Sri Lankan Products UAE",

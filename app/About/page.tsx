@@ -7,6 +7,7 @@ import TeamMembers from '@/components/teamMember';
 import VisionMission from '@/components/vision&Mission';
 import WhyWorkWithUs from '@/components/whyWorkWithUs';
 import HeartlandTrading from '@/components/HeartlandTrading';
+import HomePagee from "@/components/maintenance";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -16,14 +17,7 @@ export const metadata: Metadata = {
 export default function AboutPagee() {
   return (
     <>
-    <AboutHero />
-    <VisionMission />
-    <HeartlandTrading />
-    <WhyWorkWithUs />
-    <Founders />
-    <TeamMembers />
-    <CommunitySection />
-    <JoinWithUs />
+    <HomePagee/>
     </ >
   );
 }

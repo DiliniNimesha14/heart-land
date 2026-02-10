@@ -6,6 +6,7 @@ import Testimonials from '@/components/ourHappyCustomers';
 import Partners from '@/components/yourTrustedPartners';
 import HomeHero from '@/components/homeHero';
 import Blog from '@/components/blog';
+import HomePage from "@/components/maintenance";
 
 export const metadata: Metadata = {
   title: "Welcome",
@@ -15,13 +16,7 @@ export const metadata: Metadata = {
 export default function HomePagee() {
   return (
     <>
-    <HomeHero />
-    <Partners />
-    <Blog/>
-     <Initiative /> 
-    {/* <Testimonials />  - hide for now */}  {/* test */} 
-    <Faq />
-    <HeroBanner />    
+    <HomePage />  
     </> 
   );
 }

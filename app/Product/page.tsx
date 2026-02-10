@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ProductsSection from '@/components/productSection';
+import HomePage from "@/components/maintenance";
+
 
 export const metadata: Metadata = {
   title: "Our Products",
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
 export default function ProductPage() {
   return (
     <>
-    <ProductsSection />    
+    <HomePage />    
     </ >
   );
 }

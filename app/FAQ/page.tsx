@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FAQHeader from '@/components/faQheader';
 import Faqs from '@/components/generalFaqs';
 import HaveQ from '@/components/stillHaveQuestion';
+import HomePagee from "@/components/maintenance";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -11,9 +12,8 @@ export const metadata: Metadata = {
 export default function FAQ() {
   return (
     <>
-    <FAQHeader />
-    <Faqs />
-    <HaveQ />   
+    <HomePagee />
+
     </ >
   );
 }

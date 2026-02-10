@@ -59,13 +59,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${openSans.variable} ${davidLibre.variable} ${nunito.variable} ${inter.variable} ${roboto.variable}`}>
       <body>
-        <NavigationProvider>
-          <Navbar />
+       
           <FadeTransition>
             {children}
           </FadeTransition>
-          <Footer/>
-        </NavigationProvider>
+         
+       
       </body>
     </html>
   );

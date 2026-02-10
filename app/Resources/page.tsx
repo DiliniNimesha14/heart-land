@@ -5,6 +5,7 @@ import CommunityPillar from '@/components/CommunityPillar';
 import SchoolProfessionalities from '@/components/SchoolProfessionalities';
 import HeartlandB2BNetwork from '@/components/Heartlandb2bNetwork';
 import BrandsDistributionStrength from '@/components/brandsDistributionStrength';
+import HomePage from "@/components/maintenance";
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -14,14 +15,7 @@ export const metadata: Metadata = {
 export default function Resources() {
   return (
     <>
-    <BlogAndNews />
-    <SuccessStory />
-    {/* <LatestNews />
-    <BlogCards /> */}
-    <CommunityPillar/>
-    <SchoolProfessionalities/>
-    <BrandsDistributionStrength />
-    <HeartlandB2BNetwork/>
+    <HomePage />
     </ >
 
     
