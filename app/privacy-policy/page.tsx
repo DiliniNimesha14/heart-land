@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
       <h2 className="text-xl font-semibold mt-6 mb-2">Information We Collect</h2>
       <p className="mb-4">
         We may collect personal information such as your name, email address, phone number,
-        and delivery address when you use our "Inquire Now" forms, sign up for our newsletter,
+        and delivery address when you use our &quot;Inquire Now&quot; forms, sign up for our newsletter,
         or contact our support team.
       </p>
 

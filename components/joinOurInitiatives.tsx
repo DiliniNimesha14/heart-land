@@ -80,7 +80,7 @@ export default function Initiative() {
           </div>
 
           <p className="text-[#6A6969] text-[13px] sm:text-lg leading-relaxed max-w-lg mx-auto px-2">
-            At Heartland General Trading, we believe in making a positive impact. We’re dedicated to  
+            At Heartland General Trading, we believe in making a positive impact. We&apos;re dedicated to  
             supporting our communities and promoting sustainability in everything we do. Together, we  
             strive for a better future.
           </p>

@@ -24,7 +24,7 @@ export default function CookiePolicyPage() {
       <h2 className="text-xl font-semibold mt-6 mb-2">Managing Cookies</h2>
       <p className="mb-4">
         You can choose to accept or decline cookies through your browser settings. However,
-        disabling cookies may prevent you from taking full advantage of the website's features.
+        disabling cookies may prevent you from taking full advantage of the website&apos;s features.
       </p>
     </main>
   );
