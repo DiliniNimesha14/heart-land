@@ -121,7 +121,7 @@ export default function Blog() {
 <p className="text-white text-base mb-4 leading-relaxed flex-grow">
 Supporting Sri Lanka with Compassion and Purpose            </p>
               <Link
-              href="#"
+              href="/CSR"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
@@ -144,7 +144,7 @@ Supporting Sri Lanka with Compassion and Purpose            </p>
 <p className="text-white text-base mb-4 leading-relaxed flex-grow">
 Empowering Smallholders, Cultivating Growth            </p>
               <Link
-              href="#"
+              href="/CSR"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
@@ -167,7 +167,7 @@ Empowering Smallholders, Cultivating Growth            </p>
 <p className="text-white text-base mb-4 leading-relaxed flex-grow">
 Heartland General Trading: A Leader in Quality and Authenticity            </p>
               <Link
-              href="#"
+              href="/CSR"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
@@ -202,7 +202,7 @@ Heartland General Trading: A Leader in Quality and Authenticity            </p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <Link
-                      href="#"
+                      href="/CSR"
                       className="inline-flex items-center text-[#757575] text-[12px] tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
                     >
                       LEARN MORE

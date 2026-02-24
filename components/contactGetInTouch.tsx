@@ -41,6 +41,24 @@ export default function ContactGetInTouch() {
                   className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-300 text-sm sm:text-base text-black"
                 />
               </div>
+              <div>
+  <label className="block text-base sm:text-lg text-[#444444] mb-2">
+    Inquiry Type
+  </label>
+
+  <select
+    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 text-sm sm:text-base text-black"
+    defaultValue=""
+    required
+  >
+    <option value="" disabled className="text-gray-400">
+      Select inquiry type
+    </option>
+    <option value="retailers">Retailers</option>
+    <option value="products">Product Inquiry</option>
+    <option value="general">General Inquiry</option>
+  </select>
+</div>
 
               <div>
                 <label className="block text-base sm:text-lg text-[#444444] mb-2">Subject</label>
@@ -204,6 +222,23 @@ export default function ContactGetInTouch() {
                 className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-400 text-sm text-white"
               />
             </div>
+            <div>
+  <label className="block text-sm text-white mb-2">Inquiry Type</label>
+
+  <select
+    className="w-full bg-black border-0 border-b border-[#D11417] focus:outline-none 
+    focus:border-[#D11417] px-0 py-2 text-sm text-white"
+    defaultValue=""
+    required
+  >
+    <option value="" disabled className="text-gray-400">
+      Select inquiry type
+    </option>
+    <option value="retailers">Retailers</option>
+    <option value="products">Product Inquiry</option>
+    <option value="general">General Inquiry</option>
+  </select>
+</div>
 
             <div>
               <label className="block text-sm text-white mb-2">Subject</label>

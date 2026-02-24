@@ -188,11 +188,11 @@ export default function WhyWorkWithUs() {
             aromatic spices to our premium rice and tasty snacks captures the
             authentic flavors of Sri Lanka.
           </p>
-          <button
+          {/*<button
             className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-[15px] hover:underline self-start`}
           >
             Explore more →
-          </button>
+          </button>*/}
         </motion.div>
 
         {/* CARD 2 */}
@@ -225,11 +225,11 @@ export default function WhyWorkWithUs() {
             farmers and producers in Sri Lanka, we not only ensure a great
             selection but also support our agricultural community back home.
           </p>
-          <button
+           {/*<button
             className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm hover:underline self-start`}
           >
             Explore more →
-          </button>
+          </button>*/}
         </motion.div>
 
         {/* CARD 3 */}
@@ -263,11 +263,11 @@ export default function WhyWorkWithUs() {
             and grocery stores, ensuring easy access to your favorite Sri Lankan
             essentials.
           </p>
-          <button
+           {/* <button
             className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm hover:underline self-start`}
           >
             Explore more →
-          </button>
+          </button> */}
         </motion.div>
       </div>
     </div>

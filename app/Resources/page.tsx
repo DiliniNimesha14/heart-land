@@ -20,7 +20,7 @@ export default function Resources() {
     <BlogCards /> */}
     <CommunityPillar/>
     <SchoolProfessionalities/>
-    <BrandsDistributionStrength />
+    {/* <BrandsDistributionStrength /> */}
     <HeartlandB2BNetwork/>
     </ >
 

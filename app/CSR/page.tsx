@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function csr() {
   return (
-    <>
+    <>     {/* 
     <CsrShowcase />
     <OurProjects />
     <ExpandingMission />
-    <PurchaseDifference />
-    </ >
+    <PurchaseDifference /> */}
+    </ > 
   );
 }

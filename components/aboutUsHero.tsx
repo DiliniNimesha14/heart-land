@@ -43,7 +43,7 @@ useEffect(() => {
         {/* Text Content - Centered */}
         <div className="text-center mb-8 px-8">
           <p className="text-[16px] font-semibold text-[#BA5561] tracking-[3px] uppercase mb-5" style={{ fontFamily: 'Open Sans' }}>
-            A Bit
+             A BIT ABOUT US
           </p>
           <h1 className="text-[25px] font-bold mb-4 tracking-[4px]" style={{ fontFamily: 'Open Sans' }}>A 25-Year Legacy of Authenticity</h1>
           <p className="text-[14px] text-gray-700 mb-6 leading-8.5 font-nunito ">
