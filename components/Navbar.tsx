@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/About" },
     { name: "Products", href: "/Product" },
-    { name: "CSR", href: "/CSR" },
+    // { name: "CSR", href: "/CSR" },  
     { name: "Resources & Insights", href: "/Resources" },
     { name: "FAQ & Support", href: "/FAQ" },
   ];
@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* ===== Mobile Header ===== */}
         <div className="flex md:hidden items-center justify-between w-full">
           <Image
-            src="/logo.png"
+            src="/logoo.jpeg"
             alt="logo"
             width={80}
             height={80}
@@ -73,7 +73,7 @@ export default function Navbar() {
         {/* ===== Desktop Logo ===== */}
         <div className="hidden md:flex items-center ml-0 lg:ml-14">
           <Image
-            src="/logo.png"
+            src="/logoo.jpeg"
             alt="logo"
             width={100}
             height={130}

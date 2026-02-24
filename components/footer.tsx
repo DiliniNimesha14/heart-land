@@ -1,5 +1,6 @@
 import { Open_Sans } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const openSans = Open_Sans({
@@ -21,7 +22,7 @@ export default function Footer() {
 
           {/* Email */}
           <div className="flex items-center justify-between mb-4 cursor-pointer w-full">
-            <p className="text-sm break-all sm:break-normal">info@heartlandtrading.ae</p>
+            <p className="text-sm break-all sm:break-normal">info@heartlandgeneraltrading.com</p>
             <span className="text-2xl shrink-0 ml-10">⭧</span>
           </div>
          
@@ -66,14 +67,14 @@ export default function Footer() {
           </p>
 
           {/* Sri Lanka Office */}
-          <div className="text-sm text-white leading-6 mb-4">
+          {/*<div className="text-sm text-white leading-6 mb-4">
             <p className="font-semibold text-white text-[16px] mb-4">Sri Lanka Office</p>
             <p>No. 10, Palm Grove,<br/>
             Colombo 03, Sri Lanka</p>
-          </div>
+          </div> */}
 
           {/* Email */}
-          <p className="text-sm mb-2">info@heartlandtrading.ae</p>
+          <p className="text-sm mb-2">info@heartlandgeneraltrading.com</p>
 
           {/* Phone */}
           <p className="text-sm mb-2">+971 4 265 9072</p>
@@ -131,11 +132,17 @@ export default function Footer() {
           </p>
 
           {/* Terms Privacy Cookies */}
-          <div className="flex justify-start gap-6 text-sm text-white">
-            <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Terms</a>
-            <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Privacy</a>
-            <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Cookies</a>
-          </div>
+<div className="flex justify-start gap-6 text-sm text-white">
+  <Link href="/terms" className="hover:text-[#D11417] transition-colors duration-300">
+    Terms
+  </Link>
+  <Link href="/privacy-policy" className="hover:text-[#D11417] transition-colors duration-300">
+    Privacy
+  </Link>
+  <Link href="/cookie-policy" className="hover:text-[#D11417] transition-colors duration-300">
+    Cookies
+  </Link>
+</div>
         </div>
 
         {/* DESKTOP LAYOUT */}
@@ -147,7 +154,7 @@ export default function Footer() {
               <h3 className="text-lg md:text-xl font-semibold mb-4">Stay Connected With Heartland!</h3>
 
               <div className="flex items-center justify-between mb-4 cursor-pointer w-full lg:w-fit">
-                <p className="text-sm break-all sm:break-normal">info@heartlandtrading.ae</p>
+                <p className="text-sm break-all sm:break-normal">info@heartlandgeneraltrading.com</p>
                 <span className="text-2xl md:text-4xl lg:ml-auto shrink-0">⭧</span>
               </div>
               <div className="w-full lg:w-[600px] h-px bg-gray-600 mb-6 md:mb-7"></div>
@@ -195,13 +202,13 @@ export default function Footer() {
                   Al Qusais, Dubai, United Arab Emirates
                 </p>
 
-                <p className="text-sm text-gray-300 leading-6 mb-4">
+                {/* <p className="text-sm text-gray-300 leading-6 mb-4">
                   <span className="font-semibold">Sri Lanka Office</span><br/>
                   No. 10, Palm Grove,<br/>
                   Colombo 03, Sri Lanka
-                </p>
+                </p> */}
 
-                <p className="text-sm mb-1">info@heartlandtrading.ae</p>
+                <p className="text-sm mb-1">info@heartlandgeneraltrading.com</p>
                 <p className="text-sm mb-4">+971 4 265 9072</p>
                 <button className="text-sm underline transition-all duration-300 ease-out hover:scale-105 hover:text-[#D11417]  hover:-translate-y-1 transform-gpu">Inquire Now</button>
               </div>
@@ -214,11 +221,18 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center pt-6 gap-4 md:gap-0 text-sm text-gray-400">
             <p className="text-center md:text-left">© 2025 Heartland General Trading FZE. All Rights Reserved.</p>
 
-            <div className="flex gap-4 md:gap-6">
-              <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Terms</a>
-              <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Privacy</a>
-              <a href="#" className="hover:text-[#D11417] transition-colors duration-300">Cookies</a>
-            </div>
+            {/* Terms Privacy Cookies */}
+<div className="flex justify-start gap-6 text-sm text-white">
+  <Link href="/terms" className="hover:text-[#D11417] transition-colors duration-300">
+    Terms
+  </Link>
+  <Link href="/privacy-policy" className="hover:text-[#D11417] transition-colors duration-300">
+    Privacy
+  </Link>
+  <Link href="/cookie-policy" className="hover:text-[#D11417] transition-colors duration-300">
+    Cookies
+  </Link>
+</div>
 
             <div className="flex items-left gap-3 md:gap-4 md:mr-48">
               <a

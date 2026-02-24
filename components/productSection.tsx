@@ -330,20 +330,14 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5
 
           <div className="mb-6 mt-9 text-center lg:text-left">
   <p className="uppercase text-black tracking-[0.5em] text-sm font-bold mb-5">
-    Product
+    Products
   </p>
 
   <h3 className="text-xl lg:text-4xl font-bold tracking-tight">
     PICK YOUR FAVORITE FOOD
   </h3>
 
-  <p className="text-black mt-2 text-base lg:text-lg font-normal max-w-5xl leading-9 mx-auto lg:mx-0">
-    Discover our wide range of authentic Sri Lankan products, thoughtfully sourced
-    and carefully packaged to meet international standards. This section is designed to
-    help supermarket owners, distributors, and trade partners explore our product
-    portfolio and gain insight into the quality and variety we deliver across the UAE and
-    beyond.
-  </p>
+  
 </div>
 
 
@@ -413,26 +407,20 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5
              &#x2190;
             </button>
 
-            {/* Dots */}
-<div className="flex items-center gap-0">
+            {/* Numbers */}
+<div className="flex items-center gap-2">
   {Array.from({ length: totalPages }).map((_, i) => (
     <button
       key={i}
       onClick={() => goToPage(i)}
       aria-label={`Go to page ${i + 1}`}
-      className="relative w-4 h-4 flex items-center cursor-pointer justify-center"
+      className={`px-3 py-1 text-sm rounded-md transition 
+        ${i === page 
+          ? "bg-black text-white" 
+          : "bg-transparent text-black hover:bg-gray-200"
+        }`}
     >
-      {/* Outer Ring */}
-      <span
-        className={`absolute w-4 h-4 rounded-full transition 
-          ${i === page ? "border border-black" : "border border-transparent"}`}
-      />
-
-      {/* Inner Dot */}
-      <span
-        className={`absolute w-1 h-1 rounded-full transition cursor-pointer 
-          ${i === page ? "bg-black" : "bg-black"}`}
-      />
+      {i + 1}
     </button>
   ))}
 </div>

@@ -41,12 +41,9 @@ export default function AboutHero() {
         </div>
 
         {/* Text Content - Centered */}
-        <div className="text-center mb-30 px-12">
-          <p
-            className="text-[16px] font-semibold text-[#BA5561] tracking-[3px] uppercase mb-5"
-            style={{ fontFamily: "Open Sans" }}
-          >
-            A Bit
+        <div className="text-center mb-8 px-8">
+          <p className="text-[16px] font-semibold text-[#BA5561] tracking-[3px] uppercase mb-5" style={{ fontFamily: 'Open Sans' }}>
+             A BIT ABOUT US
           </p>
           <h1
             className="text-[25px] font-bold mb-4 tracking-[4px]"

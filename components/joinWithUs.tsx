@@ -20,8 +20,8 @@ export default function JoinWithUs() {
     <>
       {/* Desktop Layout */}
       <section
-        aria-label="Join With Us"
-        className="hidden md:flex relative w-full overflow-hidden h-auto lg:h-[660px] xl:h-[750px] 2xl:h-[850px] items-center justify-center mb:6 sm:mb-10"
+        aria-label="WORK WITH US"
+        className="hidden md:flex relative w-full overflow-hidden h-auto lg:h-[660px] items-center justify-center mb:6 sm:mb-10"
       >
         {/* Background Image Layer */}
         <div
@@ -44,7 +44,7 @@ export default function JoinWithUs() {
           <h2
             className={`text-[28px] md:text-[36px] lg:text-[36px] xl:text-[44px] 2xl:text-[52px] leading-tight sm:leading-9 xl:leading-tight font-semibold uppercase text-white mb-20 xl:mb-24 2xl:mb-28 ${nunito.className}`}
           >
-            JOIN WITH US
+            WORK WITH US
           </h2>
 
           <p
@@ -66,7 +66,7 @@ export default function JoinWithUs() {
 
       {/* Mobile Layout */}
       <section
-        aria-label="Join With Us"
+        aria-label="WORK WITH US"
         className="md:hidden relative w-full overflow-hidden flex items-center justify-center"
       >
         {/* Background Image Layer */}

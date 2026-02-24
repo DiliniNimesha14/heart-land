@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import PartnersMarquee from "@/components/PartnersMarquee";
 
 export default function Partners() {
   const slowRef = React.useRef<HTMLDivElement>(null);
@@ -41,25 +42,14 @@ React.useEffect(() => {
 <div className="mx-auto w-full max-w-[1440px] 2xl:max-w-[1700px] 3xl:max-w-[1900px] px-6 lg:px-12">
 
           {/* Full-width Gradient Section */}
-<div className="py-7">
+<div className="py-12">
+  <h2 className="text-center text-2xl sm:text-3xl md:text-[40px] font-bold text-black mb-10">
+    Our Trusted Partners
+  </h2>
 
-  {/* Content */}
-  <div className="text-center px-4">
-    <h2 className="text-2xl sm:text-3xl md:text-[40px] font-bold text-black mb-8 md:mb-12">
-      Our Trusted Partners
-    </h2>
-
-    <div className="flex justify-center mb-8 md:mb-10 -mx-8 sm:-mx-4 md:mx-0 md:px-4">
-      <Image
-        src="/Group 68.png"
-        alt="partners"
-        width={1900}
-        height={1000}
-        className="object-contain w-[220%] sm:w-[200%] md:w-full md:max-w-[1900px]"
-      />
-    </div>
+  <div className="mx-auto w-full max-w-6xl">
+    <PartnersMarquee />
   </div>
-
 </div>
 
 
@@ -199,62 +189,59 @@ React.useEffect(() => {
                 </Link>
                 </div>
 
-                {/* Stats section - Desktop */}
-                <div
-                  className="absolute w-full lg:max-w-[700px] mr-30 flex flex-wrap justify-end gap-16 px-10"
-                  style={{
-                    top: "clamp(240px, 32vw, 380px)",
-                    right: "clamp(10px, 2vw, 40px)",
-                  }}
-                >
-                  {/* 25 Years Expertise */}
-                  <div className="text-center lg:text-left">
-                    <h4
-                      className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
-                      style={{ letterSpacing: "20%" }}
-                    >
-                      25
-                    </h4>
-                    <p
-                      className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
-                      style={{ letterSpacing: "90%" }}
-                    >
-                      Y e a r s <br /> E x p e r t i s e
-                    </p>
-                  </div>
+               {/* Stats section - Desktop */}
+<div
+  className="absolute w-full lg:max-w-[750px] flex justify-end gap-28 px-10"
+  style={{
+    top: "clamp(240px, 32vw, 380px)",
+    right: "clamp(60px, 6vw, 120px)", // ← moved left
+  }}
+>
+  {/* 25 Years Expertise */}
+  <div className="text-left">
+    <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+      25+
+    </h4>
+    <div className="mt-4 space-y-1">
+      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+        Years
+      </p>
+      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+        Expertise
+      </p>
+    </div>
+  </div>
 
-                  {/* 30+ Partner Brands */}
-                  <div className="text-center lg:text-left">
-                    <h4
-                      className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
-                      style={{ letterSpacing: "20%" }}
-                    >
-                      30+
-                    </h4>
-                    <p
-                      className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
-                      style={{ letterSpacing: "43%" }}
-                    >
-                      P a r t n e r <br /> B r a n d s
-                    </p>
-                  </div>
+  {/* 30+ Partner Brands */}
+  <div className="text-left">
+    <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+      30+
+    </h4>
+    <div className="mt-4 space-y-1">
+      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+        Partner
+      </p>
+      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+        Brands
+      </p>
+    </div>
+  </div>
 
-                  {/* 1000+ Happy Clients */}
-                  <div className="text-center lg:text-left">
-                    <h4
-                      className="font-normal font-['Open_Sans'] text-[40px] leading-[120%] text-[#6D7D7D]"
-                      style={{ letterSpacing: "0%" }}
-                    >
-                      1000+
-                    </h4>
-                    <p
-                      className="mt-1 font-semibold font-['Open_Sans'] text-[16px] leading-[130%] uppercase text-[#000000]"
-                      style={{ letterSpacing: "43%" }}
-                    >
-                      H a p p y <br /> C l i e n t s
-                    </p>
-                  </div>
-                </div>
+  {/* 1000+ Happy Clients */}
+  <div className="text-left">
+    <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+      1000+
+    </h4>
+    <div className="mt-4 space-y-1">
+      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+        Happy
+      </p>
+      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+        Clients
+      </p>
+    </div>
+  </div>
+</div>
 
               </div>
             </div>

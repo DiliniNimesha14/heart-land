@@ -119,4 +119,45 @@ body {
 .animation-delay-800 {
   animation-delay: 700ms;
 }
+.partners-marquee {
+  width: 100%;
+  height: 160px;              /* ✅ makes the area tall */
+  display: flex;
+  align-items: center;         /* ✅ vertical center */
+  justify-content: center;     /* ✅ horizontal center */
+  overflow: hidden;
+}
 
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 90px;                   /* ✅ spacing between logos */
+  width: max-content;
+  animation: partnersScroll 18s linear infinite;
+  will-change: transform;
+}
+
+.partners-item {
+  flex: 0 0 auto;
+  width: 260px;                /* ✅ consistent logo block width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-logo {
+  height: 70px;                /* ✅ BIGGER logo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes partnersScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* pause on hover */
+.partners-marquee:hover .partners-track {
+  animation-play-state: paused;
+}
