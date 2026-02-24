@@ -42,16 +42,17 @@ export default function ContactGetInTouch() {
                 />
               </div>
               <div>
-  <label className="block text-base sm:text-lg text-[#444444] mb-2">
+  <label className="block text-base sm:text-lg text-[#444444] mb-3">
     Inquiry Type
   </label>
 
   <select
-    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 text-sm sm:text-base text-black"
+    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none 
+    focus:border-[#D11417] px-0 py-4 text-sm sm:text-base text-black"
     defaultValue=""
     required
   >
-    <option value="" disabled className="text-gray-400">
+    <option value="" disabled className="text-gray-500">
       Select inquiry type
     </option>
     <option value="retailers">Retailers</option>
@@ -71,8 +72,11 @@ export default function ContactGetInTouch() {
               <div>
                 <label className="block text-base sm:text-lg text-[#444444] mb-2">Message</label>
                 <textarea
-                  rows={4}
-                  className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-300 resize-none text-sm sm:text-base text-black"
+                  rows={1}   
+                               
+                  className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none
+                   focus:border-[#D11417] px-0 py-2 placeholder-gray-300 resize-none text-sm sm:text-base
+                    text-black"
                 />
               </div>
 
