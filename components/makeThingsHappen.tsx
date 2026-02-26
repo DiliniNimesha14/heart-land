@@ -60,16 +60,14 @@ export default function HeroBanner() {
                     className="mt-4 text-[16px] leading-6 text-[#FAFAFA] max-w-full font-openSans"
                     style={{ opacity: 1 }}
                   >
-                    Wed&apos; love to hear from you! Whether you have questions about
-                    our products or need assistance, our team is here to help.
-                    Please fill out the contact form or reach out to us directly.
-                    Your feedback is important to us!
+                    Wed&apos; love to hear from you! Whether you have questions
+                    about our products or need assistance, our team is here to
+                    help. Please fill out the contact form or reach out to us
+                    directly. Your feedback is important to us!
                   </p>
 
                   <Link href="/Contact">
-                    <button
-                      className="mt-6 inline-flex items-center justify-center cursor-pointer px-9 py-2 rounded-full border border-white text-white font-openSans font-semibold text-[16px] leading-4 tracking-[0.43em] transition-all duration-300 ease-out hover:scale-110 hover:shadow-[0_12px_24px_rgba(255,255,255,0.2)] hover:-translate-y-2 hover:bg-white hover:text-[#D11417] transform-gpu uppercase"
-                    >
+                    <button className="mt-6 inline-flex items-center justify-center cursor-pointer px-9 py-2 rounded-full border border-white text-white font-openSans font-semibold text-[16px] leading-4 tracking-[0.43em] transition-all duration-300 ease-out hover:scale-110 hover:shadow-[0_12px_24px_rgba(255,255,255,0.2)] hover:-translate-y-2 hover:bg-white hover:text-[#D11417] transform-gpu uppercase">
                       CONTACT US
                     </button>
                   </Link>
@@ -86,9 +84,11 @@ export default function HeroBanner() {
                     Let&apos;s make things happen
                   </h1>
 
-                  <p className="font-openSans text-[14px] sm:text-[15px] md:text-[16px] leading-[1.5] sm:leading-6 text-[#FAFAFA] mb-5 sm:mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <p className="font-openSans text-[14px]  leading-[1.5] sm:leading-6 text-[#FAFAFA] mb-5 sm:mb-6">
+                    Wed&apos; love to hear from you! Whether you have questions
+                    about our products or need assistance, our team is here to
+                    help. Please fill out the contact form or reach out to us
+                    directly. Your feedback is important to us!
                   </p>
 
                   <Link href="/Contact">
