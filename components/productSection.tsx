@@ -200,13 +200,17 @@ if (query.trim()) {
 }, [query, selectedCategories, sortBy]);
 // Reset page when filters/search change
 useEffect(() => {
-  setPage(0);
+  if (page !== 0) {
+    setPage(0);
+  }
 }, [query, selectedCategories, sortBy]);
 
 // Safety clamp in case filtered results shrink
 useEffect(() => {
+  if (page !== 0) {
   const maxPage = Math.max(0, Math.ceil(filtered.length / pageSize) - 1);
   setPage((prev) => Math.min(prev, maxPage));
+  }
 }, [filtered.length]);
 
 
