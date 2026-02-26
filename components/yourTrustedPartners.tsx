@@ -6,71 +6,67 @@ import PartnersMarquee from "@/components/PartnersMarquee";
 
 export default function Partners() {
   const slowRef = React.useRef<HTMLDivElement>(null);
-const mediumRef = React.useRef<HTMLDivElement>(null);
+  const mediumRef = React.useRef<HTMLDivElement>(null);
 
-React.useEffect(() => {
-  let raf = 0;
+  React.useEffect(() => {
+    let raf = 0;
 
-  const onScroll = () => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
-      const y = window.scrollY;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const y = window.scrollY;
 
-      if (slowRef.current) {
-        slowRef.current.style.transform = `translate3d(0, ${y * 0.04}px, 0)`;
-      }
+        if (slowRef.current) {
+          slowRef.current.style.transform = `translate3d(0, ${y * 0.04}px, 0)`;
+        }
 
-      if (mediumRef.current) {
-        mediumRef.current.style.transform = `translate3d(0, ${y * 0.08}px, 0)`;
-      }
-    });
-  };
+        if (mediumRef.current) {
+          mediumRef.current.style.transform = `translate3d(0, ${y * 0.08}px, 0)`;
+        }
+      });
+    };
 
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
 
-  return () => {
-    cancelAnimationFrame(raf);
-    window.removeEventListener("scroll", onScroll);
-  };
-}, []);
-
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
 
   return (
     <section className="py-10 md:py-20 bg-white">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
-<div className="mx-auto w-full max-w-[1440px] 2xl:max-w-[1700px] 3xl:max-w-[1900px] px-6 lg:px-12">
-
+        <div className="mx-auto w-full max-w-[1440px] 2xl:max-w-[1700px] 3xl:max-w-[1900px] px-6 lg:px-12">
           {/* Full-width Gradient Section */}
-<div className="py-12">
-  <h2 className="text-center text-2xl sm:text-3xl md:text-[40px] font-bold text-black mb-10">
-    Our Trusted Partners
-  </h2>
+          <div className="py-12">
+            <h2 className="text-center text-2xl sm:text-3xl md:text-[40px] font-bold text-black mb-10">
+              Our Trusted Partners
+            </h2>
 
-  <div className="mx-auto w-full max-w-6xl">
-    <PartnersMarquee />
-  </div>
-</div>
-
+            <div className="mx-auto w-full max-w-6xl">
+              <PartnersMarquee />
+            </div>
+          </div>
 
           {/* About Section   */}
-          <div className="mx-auto mb-0 mt-5 md:mt-20 px-4 md:px-8 text-center lg:text-left">
-
-            <p className="text-[#6D7D7D] text-[16px] sm:text-base md:text-lg lg:text-sm tracking-[0.4rem] uppercase mb-5 mt-8">
+          <div className="mx-auto mb-0 mt-1 md:mt-6 px-4 md:px-8 lg:px-0 text-center lg:text-left font-openSans">
+            <p className="text-[#6D7D7D] text-[13px] sm:text-[14px] lg:text-[16px] tracking-[0.4rem] uppercase mt-4 md:mt-6 lg:mt-8">
               About
             </p>
 
-            <h3 className="text-[20px] sm:text-3xl md:text-4xl font-bold text-black leading-normal mb-1 tracking-wide">
-  Your Trusted Partner in Sri Lankan Food Distribution
-</h3>
+            <h3 className="text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-bold text-black leading-normal mb-5 tracking-wide">
+              Your Trusted Partner in Sri Lankan Food Distribution
+            </h3>
 
-<p className="text-left text-[15px] sm:text-lg md:text-xl mt-1 mb-6 lg:mb-0 leading-relaxed -tracking-normal">
-  <span className="font-light lg:font-normal">
-    At Heartland General Trading, every product in our growing range is a testament to our dedication to 
-    authenticity and flavor. We invite you to explore the essence of Sri Lanka with us.
-  </span>
-</p>
-
+            <p className="text-center lg:text-left text-[14px] sm:text-[16px] md:text-lg lg:text-xl mt-1 mb-6 lg:mb-6 leading-relaxed -tracking-normal max-w-6xl">
+              <span className="font-openSans lg:font-normal">
+                At Heartland General Trading, every product in our growing range
+                is a testament to our dedication to authenticity and flavor. We
+                invite you to explore the essence of Sri Lanka with us.
+              </span>
+            </p>
 
             {/* Read More button - Mobile only */}
             <div className="flex justify-center lg:hidden mt-8 mb-10">
@@ -130,7 +126,6 @@ React.useEffect(() => {
           {/* Two-column section - Desktop only */}
           <div className="relative hidden lg:block">
             <div className="relative min-h-[620px] xl:min-h-[700px] 2xl:min-h-[760px]">
-              
               {/* Left: image group */}
               <div
                 ref={slowRef}
@@ -187,69 +182,68 @@ React.useEffect(() => {
                     Read More
                   </button>
                 </Link>
+              </div>
+
+              {/* Stats section - Desktop */}
+              <div
+                className="absolute w-full lg:max-w-[750px] flex justify-end gap-28 px-10"
+                style={{
+                  top: "clamp(240px, 32vw, 380px)",
+                  right: "clamp(60px, 6vw, 120px)", // ← moved left
+                }}
+              >
+                {/* 25 Years Expertise */}
+                <div className="text-left">
+                  <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+                    25+
+                  </h4>
+                  <div className="mt-4 space-y-1">
+                    <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+                      Years
+                    </p>
+                    <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+                      Expertise
+                    </p>
+                  </div>
                 </div>
 
-               {/* Stats section - Desktop */}
-<div
-  className="absolute w-full lg:max-w-[750px] flex justify-end gap-28 px-10"
-  style={{
-    top: "clamp(240px, 32vw, 380px)",
-    right: "clamp(60px, 6vw, 120px)", // ← moved left
-  }}
->
-  {/* 25 Years Expertise */}
-  <div className="text-left">
-    <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
-      25+
-    </h4>
-    <div className="mt-4 space-y-1">
-      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
-        Years
-      </p>
-      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
-        Expertise
-      </p>
-    </div>
-  </div>
+                {/* 30+ Partner Brands */}
+                <div className="text-left">
+                  <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+                    30+
+                  </h4>
+                  <div className="mt-4 space-y-1">
+                    <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+                      Partner
+                    </p>
+                    <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+                      Brands
+                    </p>
+                  </div>
+                </div>
 
-  {/* 30+ Partner Brands */}
-  <div className="text-left">
-    <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
-      30+
-    </h4>
-    <div className="mt-4 space-y-1">
-      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
-        Partner
-      </p>
-      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
-        Brands
-      </p>
-    </div>
-  </div>
-
-  {/* 1000+ Happy Clients */}
-  <div className="text-left">
-    <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
-      1000+
-    </h4>
-    <div className="mt-4 space-y-1">
-      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
-        Happy
-      </p>
-      <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
-        Clients
-      </p>
-    </div>
-  </div>
-</div>
-
+                {/* 1000+ Happy Clients */}
+                <div className="text-left">
+                  <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+                    1000+
+                  </h4>
+                  <div className="mt-4 space-y-1">
+                    <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+                      Happy
+                    </p>
+                    <p className="text-[11px] uppercase tracking-[0.45em] text-black/70">
+                      Clients
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Spacer */}
-          <div className="mt-12" />
-        </div>    
+        {/* Spacer */}
+        <div className="mt-12" />
+      </div>
     </section>
   );
 }
