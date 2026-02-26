@@ -50,7 +50,7 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-white">
                 <li><a href="/FAQ" className="hover:text-[#D11417] transition-colors duration-300">FAQ</a></li>
                 <li><a href="/Resources" className="hover:text-[#D11417] transition-colors duration-300">Blog</a></li>
-                <li><a href="#" className="hover:text-[#D11417] transition-colors duration-300">News</a></li>
+                <li><a href="/Resources#SuccessStory" className="hover:text-[#D11417] transition-colors duration-300">News</a></li>
               </ul>
             </div>
           </div>
@@ -80,9 +80,14 @@ export default function Footer() {
           <p className="text-sm mb-2">+971 4 265 9072</p>
 
           {/* Inquire Now Button */}
-          <button className="text-sm underline mb-8 transition-all duration-300 ease-out hover:scale-105 hover:text-[#D11417] hover:shadow-[0_8px_16px_rgba(209,20,23,0.2)] hover:-translate-y-1 transform-gpu">
-            Inquire Now
-          </button>
+         
+
+<Link
+  href="/Contact"
+  className="inline-block text-sm underline mb-8 transition-all duration-300 ease-out hover:scale-105 hover:text-[#D11417] hover:shadow-[0_8px_16px_rgba(209,20,23,0.2)] hover:-translate-y-1 transform-gpu"
+>
+  Inquire Now
+</Link>
 
           {/* Follow Us Section */}
           <div className="mb-6">
@@ -210,8 +215,12 @@ export default function Footer() {
 
                 <p className="text-sm mb-1">info@heartlandgeneraltrading.com</p>
                 <p className="text-sm mb-4">+971 4 265 9072</p>
-                <button className="text-sm underline transition-all duration-300 ease-out hover:scale-105 hover:text-[#D11417]  hover:-translate-y-1 transform-gpu">Inquire Now</button>
-              </div>
+<Link
+  href="/Contact"
+  className="inline-block cursor-pointer text-sm underline mb-8 transition-all duration-300 ease-out hover:scale-105 hover:text-[#D11417] hover:shadow-[0_8px_16px_rgba(209,20,23,0.2)] hover:-translate-y-1 transform-gpu"
+>
+  Inquire Now
+</Link>              </div>
 
             </div>
 
