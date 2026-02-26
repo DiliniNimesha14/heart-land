@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import React, { useEffect, useState } from "react";
 import { Nunito, Open_Sans } from "next/font/google";
@@ -54,13 +55,13 @@ export default function JoinWithUs() {
           </p>
 
           <div className="mt-5 sm:mt-6 xl:mt-8 2xl:mt-10">
-            <a
-              href="#careers"
-              className="inline-block bg-[#E60012] text-white px-5 sm:px-8 xl:px-10 2xl:px-12 py-1.5 sm:py-2 xl:py-3 2xl:py-4 rounded-xl text-xs sm:text-sm xl:text-base 2xl:text-lg font-light border-2 border-[#E60012] transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 transform-gpu hover:bg-white hover:text-[#E60012] hover:border-[#E60012] font-openSans"
-            >
-              See Current Openings
-            </a>
-          </div>
+  <Link
+    href="/careers"
+    className="inline-block bg-[#E60012] text-white px-5 sm:px-8 xl:px-10 2xl:px-12 py-1.5 sm:py-2 xl:py-3 2xl:py-4 rounded-xl text-xs sm:text-sm xl:text-base 2xl:text-lg font-light border-2 border-[#E60012] transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 transform-gpu hover:bg-white hover:text-[#E60012] hover:border-[#E60012] font-openSans"
+  >
+    See Current Openings
+  </Link>
+</div>
         </div>
       </section>
 
