@@ -10,8 +10,8 @@ import { div, section } from "framer-motion/client";
 export default function HomeHero() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="max-w-full lg:max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
+<        div className="w-full px-0 md:px-4 md:px-6 lg:px-8 xl:px-12">
+          <div className="max-w-full lg:max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
           {/* Your existing content here */}
           <div className="py-8 md:py-16 lg:py-20">
             {/* Add your hero content */}
@@ -25,7 +25,7 @@ export default function HomeHero() {
                   className="absolute opacity-80 pointer-events-none z-0"
                   style={{
                     left: "-300px",
-                    top: "-60px",
+                    top: "-140px",
                     width: "1000px",
                     height: "1200px",
                   }}
