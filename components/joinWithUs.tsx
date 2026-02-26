@@ -51,8 +51,7 @@ export default function JoinWithUs() {
           <p
             className={`mt-3 sm:mt-4 text-[13px] md:text-[16px] xl:text-[20px] 2xl:text-[24px] leading-5 sm:leading-6 xl:leading-8 2xl:leading-9 text-white mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl font-openSans font-light`}
           >
-            At Heartland General Trading, we are always looking for passionate individuals who share  our commitment to quality and community. If you&apos;re interested in contributing to a vibrant  team dedicated to bringing authentic Sri Lankan flavors to the UAE, we invite you to explore  opportunities with us. Join us in making a meaningful impact and celebrating our heritage  together.
-          </p>
+          At Heartland General Trading, we are always looking for passionate individuals who share  our commitment to quality and community. If you’re interested in contributing to a vibrant  team dedicated to bringing authentic Sri Lankan flavors to the UAE, we invite you to explore  opportunities with us. Join us in making a meaningful impact and celebrating our heritage  together.          </p>
 
           <div className="mt-5 sm:mt-6 xl:mt-8 2xl:mt-10">
   <Link
@@ -95,8 +94,7 @@ export default function JoinWithUs() {
           <p
             className={`text-[14px] leading-[24px] text-white mb-4 px-12 ${openSans.className}`}
           >
-            At Heartland General Trading, we believe in growing together — with our people, our partners, and our communities. Join a team that connects Sri Lankan excellence with global opportunity, promoting ethical trade, innovation, and sustainable growth.
-          </p>
+        At Heartland General Trading, we are always looking for passionate individuals who share  our commitment to quality and community. If you’re interested in contributing to a vibrant  team dedicated to bringing authentic Sri Lankan flavors to the UAE, we invite you to explore  opportunities with us. Join us in making a meaningful impact and celebrating our heritage  together.          </p>
 
           <div>
             <Link
