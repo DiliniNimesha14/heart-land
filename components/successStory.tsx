@@ -130,7 +130,7 @@ export default function BlogsSuccessStory() {
   const router = useRouter();
 
   return (
-    <section className="w-full max-w-[1440px] flex flex-col gap-6 py-8 px-4 md:py-[40px] md:px-[60px] mx-auto pb-8 md:pb-10 mb-8 md:mb-10">
+    <section id="SuccessStory" className="w-full max-w-[1440px] flex flex-col gap-6 py-8 px-4 md:py-[40px] md:px-[60px] mx-auto pb-8 md:pb-10 mb-8 md:mb-10">
       {/* Heading */}
       <header className="w-full flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-2">
         <div className="flex flex-col gap-1">

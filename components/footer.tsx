@@ -39,7 +39,7 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-white">
                 <li><a href="/About" className="hover:text-[#D11417] transition-colors duration-300">About Us</a></li>
                 <li><a href="/Product" className="hover:text-[#D11417] transition-colors duration-300">Our Products</a></li>
-                <li><a href="/CSR" className="hover:text-[#D11417] transition-colors duration-300">CSR Initiatives</a></li>
+               {/*  <li><a href="/CSR" className="hover:text-[#D11417] transition-colors duration-300">CSR Initiatives</a></li> */}
                 <li><a href="/About" className="hover:text-[#D11417] transition-colors duration-300">Careers</a></li>
                 <li><a href="/Contact" className="hover:text-[#D11417] transition-colors duration-300">Contact Us</a></li>
               </ul>
@@ -49,7 +49,7 @@ export default function Footer() {
               <h4 className="font-semibold text-[16px] mb-4">Information</h4>
               <ul className="space-y-3 text-sm text-white">
                 <li><a href="/FAQ" className="hover:text-[#D11417] transition-colors duration-300">FAQ</a></li>
-                <li><a href="#" className="hover:text-[#D11417] transition-colors duration-300">Blog</a></li>
+                <li><a href="/Resources" className="hover:text-[#D11417] transition-colors duration-300">Blog</a></li>
                 <li><a href="#" className="hover:text-[#D11417] transition-colors duration-300">News</a></li>
               </ul>
             </div>
@@ -178,7 +178,7 @@ export default function Footer() {
                 <ul className="space-y-5 lg:space-y-5 text-sm text-gray-300">
                   <li><a href="/About" className="hover:text-[#D11417] transition-colors duration-300">About Us</a></li>
                   <li><a href="/Product" className="hover:text-[#D11417] transition-colors duration-300">Our Products</a></li>
-                  <li><a href="/CSR" className="hover:text-[#D11417] transition-colors duration-300">CSR Initiatives</a></li>
+                  {/* <li><a href="/CSR" className="hover:text-[#D11417] transition-colors duration-300">CSR Initiatives</a></li>   */}
                   <li><a href="/About" className="hover:text-[#D11417] transition-colors duration-300">Careers</a></li>
                   <li><a href="/Contact" className="hover:text-[#D11417] transition-colors duration-300">Contact Us</a></li>
                 </ul>
@@ -188,8 +188,8 @@ export default function Footer() {
                 <h4 className="font-semibold mb-4 lg:-mt-24">Information</h4>
                 <ul className="space-y-3 lg:space-y-5 text-sm text-gray-300">
                   <li><a href="/FAQ" className="hover:text-[#D11417] transition-colors duration-300">FAQ</a></li>
-                  <li><a href="#" className="hover:text-[#D11417] transition-colors duration-300">Blog</a></li>
-                  <li><a href="#" className="hover:text-[#D11417] transition-colors duration-300">News</a></li>
+                  <li><a href="/Resources" className="hover:text-[#D11417] transition-colors duration-300">Blog</a></li>
+                  <li><a href="/Resources#SuccessStory" className="hover:text-[#D11417] transition-colors duration-300">News</a></li>
                 </ul>
               </div>
 
