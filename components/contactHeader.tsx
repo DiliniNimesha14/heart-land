@@ -71,7 +71,7 @@ export default function ContactHeader() {
                 />
               </a>
 
-              <a
+              {/*<a
                 href="https://web.facebook.com/HeartlandGeneralTrading"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,7 +83,7 @@ export default function ContactHeader() {
                   height={20}
                   className="transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-1 w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[19px] md:h-[19px] lg:w-[20px] lg:h-[20px]"
                 />
-              </a>
+              </a>*/}
             </div>
           </div>
         </div>

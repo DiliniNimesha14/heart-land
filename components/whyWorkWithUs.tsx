@@ -35,7 +35,7 @@ export default function WhyWorkWithUs() {
       {/* Community Impact Box */}
       <div className="w-full bg-[#D11417] py-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto rounded-2xl p-6 sm:p-8 lg:p-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-8 items-stretch">
             {/* LEFT BIG BOX */}
             <div className="bg-white rounded-[10px] border border-[#EAEAEA] px-4 sm:px-8 lg:px-6 xl:px-8 py-6 sm:py-4 lg:py-8 xl:py-10 flex flex-col justify-center">
               <h3
@@ -55,9 +55,11 @@ export default function WhyWorkWithUs() {
             </div>
 
             {/* RIGHT 2x2 BOX GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5 place-items-center sm:place-items-stretch">
+            <div className="flex h-full items-center">
+             <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5">
+ 
               {/* Box 1 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-[300px] sm:w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="streamline-ultimate-color:award-trophy-1"
                   className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
@@ -70,7 +72,7 @@ export default function WhyWorkWithUs() {
               </div>
 
               {/* Box 2 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-[300px] sm:w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="noto-v1:man-farmer"
                   className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
@@ -83,7 +85,7 @@ export default function WhyWorkWithUs() {
               </div>
 
               {/* Box 3 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-[300px] sm:w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2  w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="twemoji:handshake"
                   className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
@@ -96,7 +98,7 @@ export default function WhyWorkWithUs() {
               </div>
 
               {/* Box 4 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-[300px] sm:w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="noto:red-heart"
                   className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
@@ -107,7 +109,7 @@ export default function WhyWorkWithUs() {
                   CSR Health Projects
                 </p>
               </div>
-            </div>
+            </div></div>
           </div>
         </div>
       </div>
@@ -125,7 +127,7 @@ export default function WhyWorkWithUs() {
           style={{ letterSpacing: "5px" }}
           className="text-[16px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-gray-500 uppercase"
         >
-          About Us
+          Our Commitment
         </motion.h4>
 
         <motion.h1

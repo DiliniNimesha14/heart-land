@@ -89,7 +89,8 @@ export default function TeamMembers() {
 
         {/* Arrows + scrollable container */}
         <div className="relative w-full max-w-7xl xl:max-w-[1200px] 2xl:max-w-[1400px]">
-          {/* Left Arrow */}
+         {/* 
+         {/* Left Arrow 
           <button
             onClick={scrollLeft}
             className="absolute -top-8 sm:-top-10 md:-top-12 lg:-top-14 xl:-top-16 right-16 sm:right-20 md:right-24 lg:right-28 xl:right-32 z-10 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
@@ -105,7 +106,7 @@ export default function TeamMembers() {
               <path d="M9.53 6.47a.75.75 0 0 1 0 1.06L5.56 11.5H21a.75.75 0 0 1 0 1.5H5.56l3.97 3.97a.75.75 0 1 1-1.06 1.06l-5.25-5.25a.75.75 0 0 1 0-1.06l5.25-5.25a.75.75 0 0 1 1.06 0Z"/>
             </svg>
           </button>
-          {/* Right Arrow */}
+          {/* Right Arrow  
           <button
             onClick={scrollRight}
             className="absolute -top-8 sm:-top-10 md:-top-12 lg:-top-14 xl:-top-16 right-4 sm:right-6 md:right-7 lg:right-8 xl:right-10 z-10 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 cursor-pointer flex items-center justify-center rounded-full bg-[#EDEDED] shadow hover:bg-gray-400 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1"
@@ -120,7 +121,7 @@ export default function TeamMembers() {
             >
               <path d="M14.47 6.47a.75.75 0 0 0 0 1.06L18.44 11.5H3a.75.75 0 0 0 0 1.5h15.44l-3.97 3.97a.75.75 0 1 0 1.06 1.06l5.25-5.25a.75.75 0 0 0 0-1.06l-5.25-5.25a.75.75 0 0 0-1.06 0Z"/>
             </svg>
-          </button>
+          </button> */}
 
           {/* Scrollable Team Grid */}
           <div

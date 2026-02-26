@@ -284,6 +284,15 @@ export default function Footer() {
             </div>
 
           </div>
+          {/* Developer Credit Line */}
+<div className="border-t border-gray-700 mt-6 pt-4">
+  <p className="text-center text-sm text-gray-400">
+    Designed & Developed By –{" "}
+    <span className="text-white font-medium">
+      Ascend Digital (Pvt) Ltd
+    </span>
+  </p>
+</div>
         </div>
 
       </div>

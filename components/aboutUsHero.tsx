@@ -95,7 +95,7 @@ export default function AboutHero() {
             className="text-[clamp(11px,1.6vw,22px)] font-semibold text-[#BA5561] tracking-[clamp(1px,0.3vw,4px)] uppercase mb-[clamp(4px,0.8vw,12px)]"
             style={{ fontFamily: "Open Sans" }}
           >
-            A Bit
+          A BIT ABOUT US
           </p>
           <h1
             className="text-[clamp(16px,4.2vw,56px)] tracking-[clamp(1px,0.45vw,6px)] leading-[1.15] font-bold mb-[clamp(6px,2.2vw,32px)]"

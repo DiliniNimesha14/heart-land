@@ -44,7 +44,7 @@ export default function CommunitySection() {
               At Heartland, we believe in growing together. Our success is built on the hard work of local farmers and female entrepreneurs in Sri Lanka, and we are deeply committed to ensuring they thrive alongside us. By sourcing directly from these communities, we provide sustainable livelihoods and foster economic growth across the island. Beyond trade, we are incredibly proud of our signature &quot;Heartland <span className="text-red-600">♥</span> Homeland&quot; initiative.
             </p>
 
-            <Link href="/About">
+            <Link href="/Contact">
               <button
                 className={`${nunito.className} cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2 xl:py-3 2xl:py-4 px-3 xl:px-5 2xl:px-6 gap-[15px]
                 text-[#E60012] text-lg lg:text-2xl xl:text-[26px] 2xl:text-[28px] font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1`}
@@ -71,7 +71,7 @@ export default function CommunitySection() {
           </p>
 
           {/* Button */}
-          <Link href="/About">
+          <Link href="/Contact">
             <button
               className={`${nunito.className} cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2.5 px-8 gap-[15px]
               text-[#E60012] bg-white text-sm font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg`}
