@@ -81,7 +81,7 @@ export default function HeroBanner() {
                 {/* Content block - left side */}
                 <div className="relative z-20 flex flex-col items-start text-left text-white px-2 font-openSans max-w-[400px] sm:max-w-[55%] md:max-w-[70%]">
                   <h1 className="font-openSans font-bold text-[22px] sm:text-[28px] md:text-[32px] leading-[1.2] text-white mb-3 sm:mb-4">
-                    Let&apos;s make things happen
+                    Get in Touch
                   </h1>
 
                   <p className="font-openSans text-[14px]  leading-[1.5] sm:leading-6 text-[#FAFAFA] mb-5 sm:mb-6">
@@ -99,7 +99,7 @@ export default function HeroBanner() {
                 </div>
 
                 {/* Right decorative chili image - right side, positioned lower */}
-                <div className="absolute pointer-events-none -right-[15px] sm:-right-[20px] md:-right-[30px] top-[80%] sm:top-[65%] md:top-[60%] -translate-y-1/2 w-[90px] h-[180px] sm:w-[170px] sm:h-[320px] md:w-[220px] md:h-[400px]">
+                <div className="absolute pointer-events-none -right-[15px] sm:-right-[20px] md:-right-[30px] top-[85%] sm:top-[65%] md:top-[60%] -translate-y-1/2 w-[90px] h-[180px] sm:w-[170px] sm:h-[320px] md:w-[220px] md:h-[400px]">
                   <Image
                     src="/chili.png"
                     alt="chili splash"
