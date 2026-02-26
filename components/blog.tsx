@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function Blog() {
   const blogCarouselRef = useRef<HTMLDivElement | null>(null);
@@ -120,13 +120,13 @@ export default function Blog() {
             </div>
 <p className="text-white text-base mb-4 leading-relaxed flex-grow">
 Supporting Sri Lanka with Compassion and Purpose            </p>
-              <Link
+              {/* <Link
               href="/CSR"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
               <span className="ml-2 text-lg">›</span>
-            </Link>  
+            </Link> */}
           </div>
 
           {/* Card 2 */}
@@ -143,13 +143,13 @@ Supporting Sri Lanka with Compassion and Purpose            </p>
             </div>
 <p className="text-white text-base mb-4 leading-relaxed flex-grow">
 Empowering Smallholders, Cultivating Growth            </p>
-              <Link
+              {/* <Link
               href="/CSR"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
               <span className="ml-2 text-lg">›</span>
-            </Link> 
+            </Link> */}
           </div>
 
           {/* Card 3 */}
@@ -166,13 +166,13 @@ Empowering Smallholders, Cultivating Growth            </p>
             </div>
 <p className="text-white text-base mb-4 leading-relaxed flex-grow">
 Heartland General Trading: A Leader in Quality and Authenticity            </p>
-              <Link
+              {/* <Link
               href="/CSR"
               className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
             >
               LEARN MORE
               <span className="ml-2 text-lg">›</span>
-            </Link> 
+            </Link> */}
           </div>
         </div>
 
@@ -201,12 +201,12 @@ Heartland General Trading: A Leader in Quality and Authenticity            </p>
                     <p className="text-white text-md sm:text-lg mb-3 leading-relaxed font-light" style={{ fontFamily: 'Open Sans' }}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
-                    <Link
+                    {/* <Link
                       href="/CSR"
                       className="inline-flex items-center text-[#757575] text-[12px] tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
                     >
                       LEARN MORE
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               ))}
