@@ -184,7 +184,7 @@ export default function ContactGetInTouch() {
                 <span className="font-bold">Email</span>
               </p>
               <p className="text-white text-xs mt-1">
-                accounts@heartlandtrdng.com
+                info@heartlandgeneraltrading.com
               </p>
             </div>
 
@@ -193,7 +193,7 @@ export default function ContactGetInTouch() {
                 <span className="font-bold mt-3">Telephone</span>
               </p>
               <p className="text-white text-xs font-light mt-2">
-                +971 5 0388 4543
+                +971 4 265 9072
               </p>
             </div>
 
@@ -201,32 +201,23 @@ export default function ContactGetInTouch() {
               <p className="text-white text-xs font-bold mb-5">Follow Us</p>
               <div className="flex gap-5 justify-center">
                 <a
-                  href="#"
-                  className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                >
-                  <Facebook size={16} className="text-black" />
-                </a>
-
+  href="https://www.facebook.com/p/Heartland-General-Trading-Co-LLC-61556223026571/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit our Facebook page"
+  className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+>
+  <Facebook size={16} className="text-black" />
+</a>
                 <a
-                  href="#"
-                  className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                >
-                  <Twitter size={16} className="text-black" />
-                </a>
-
-                <a
-                  href="#"
+                  href="https://www.instagram.com/heartlandgeneral/"
+                  target="_blank"
+  rel="noopener noreferrer"
                   className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
                 >
                   <Instagram size={16} className="text-black" />
                 </a>
-
-                <a
-                  href="#"
-                  className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                >
-                  <Youtube size={16} className="text-black" />
-                </a>
+ 
               </div>
             </div>
           </div>
@@ -240,8 +231,7 @@ export default function ContactGetInTouch() {
             Get In Touch
           </h3>
           <p className="text-gray-300 text-xs text-center mb-6 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor.
+            Our team is always ready to listen, guide, and help you take the next step
           </p>
 
           <form className="space-y-5 max-w-md mx-auto">
