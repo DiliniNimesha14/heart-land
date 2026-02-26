@@ -99,12 +99,12 @@ export default function JoinWithUs() {
           </p>
 
           <div>
-            <a
-              href="#careers"
+            <Link
+              href="/careers"
               className={`inline-block bg-[#E60012] text-white px-6 py-2 -mb-5 rounded-lg text-[12px] font-medium ${nunito.className}`}
             >
               See Current Openings
-            </a>
+            </Link>
           </div>
         </div>
       </section>
