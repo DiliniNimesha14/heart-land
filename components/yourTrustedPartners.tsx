@@ -51,16 +51,26 @@ export default function Partners() {
           </div>
 
           {/* About Section   */}
-          <div className="mx-auto mb-0 mt-1 md:mt-6 px-4 md:px-8 lg:px-0 text-center lg:text-left font-openSans">
-            <p className="text-[#6D7D7D] text-[13px] sm:text-[14px] lg:text-[16px] tracking-[0.4rem] uppercase mt-4 md:mt-6 lg:mt-8">
+          <div className="mx-auto mb-0 mt-1 md:mt-6 px-1 md:px-8 lg:px-0 text-center lg:text-left font-openSans">
+            <p className="text-[#6D7D7D] text-[16px] lg:text-[16px] tracking-[0.4rem] uppercase mt-1 md:mt-6 lg:mt-8 mb-6 md:mb-0">
               About
             </p>
 
-            <h3 className="text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-bold text-black leading-normal mb-5 tracking-wide">
+            <h3 className="text-[16px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-bold text-black leading-normal mb-4 lg:mb-5 tracking-wide">
               Your Trusted Partner in Sri Lankan Food Distribution
             </h3>
 
-            <p className="text-center lg:text-left text-[14px] sm:text-[16px] md:text-lg lg:text-xl mt-1 mb-6 lg:mb-6 leading-relaxed -tracking-normal max-w-6xl">
+            <p className="block lg:hidden text-center text-[12px] mt-1 mb-6 leading-relaxed w-full mx-auto text-[#6A6969]">
+              <span className="font-bold">
+                Heartland General Trading Co. LLC
+              </span>{" "}
+              is a leading importer and distributor of premium Sri Lankan food
+              products in the UAE. Based in Dubai, we connect authentic Sri
+              Lankan flavors with global markets through trusted partnerships
+              and modern logistics.
+            </p>
+
+            <p className="hidden lg:block lg:text-left md:text-lg lg:text-xl mt-1 mb-6 lg:mb-6 leading-relaxed -tracking-normal max-w-6xl lg:mx-0">
               <span className="font-openSans lg:font-normal">
                 At Heartland General Trading, every product in our growing range
                 is a testament to our dedication to authenticity and flavor. We
@@ -87,10 +97,10 @@ export default function Partners() {
                 <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
                   25
                 </h4>
-                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
                   YEARS
                 </p>
-                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
                   EXPERTISE
                 </p>
               </div>
@@ -100,10 +110,10 @@ export default function Partners() {
                 <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
                   30+
                 </h4>
-                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
                   PARTNER
                 </p>
-                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
                   BRANDS
                 </p>
               </div>
@@ -113,10 +123,10 @@ export default function Partners() {
                 <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
                   1000+
                 </h4>
-                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
                   HAPPY
                 </p>
-                <p className="font-light text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
+                <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
                   CLIENTS
                 </p>
               </div>
