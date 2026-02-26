@@ -70,13 +70,21 @@ export default function VisionMission() {
             Our Identity Vision and Mission
           </h2>
 
-          <p className="mt-4 font-medium text-[14px] sm:text-lg md:text-xl lg:text-[22px] xl:text-[24px] max-w-6xl xl:max-w-7xl mx-auto leading-relaxed px-4 mb-15 md:mb-20">
-            We are dedicated to redefining the way Sri Lankan food products
-            reach international markets. With a focus on quality, authenticity,
-            and trust, we aim to represent the rich heritage of Sri Lankan
-            flavors through modern, reliable distribution and sustainable
-            partnerships.
-          </p>
+          <p className="
+  mt-4 font-medium
+  text-[14px] sm:text-lg md:text-xl lg:text-[22px] xl:text-[24px]
+  max-w-2xl md:max-w-6xl xl:max-w-7xl mx-auto
+  leading-[1.7] sm:leading-relaxed
+  px-6 sm:px-4
+  text-justify sm:text-center
+  mb-12 md:mb-20
+">
+  We are dedicated to redefining the way Sri Lankan food products
+  reach international markets. With a focus on quality, authenticity,
+  and trust, we aim to represent the rich heritage of Sri Lankan
+  flavors through modern, reliable distribution and sustainable
+  partnerships.
+</p>
         </div>
 
         {/* Cards */}

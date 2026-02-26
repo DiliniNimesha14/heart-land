@@ -1,4 +1,5 @@
 "use client";
+import { ArrowRight } from "lucide-react";
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
@@ -59,31 +60,25 @@ export default function AboutHero() {
             becoming a household name, we offer a masterfully curated selection
             of spices, premium rice varieties, condiments, snacks, and more.
           </p>
-          <button
-            onClick={() => {
-              document
-                .getElementById("evolution-section")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="
-              inline-block  font-semibold text-[14px]
-              bg-[#D11417] text-white px-8 py-3
-              shadow-2xl transition-all duration-300 ease-out
-              relative overflow-hidden
-              hover:scale-[1.02] 
-              hover:-translate-y-1 transform-gpu
-              cursor-pointer
-            "
-            style={{
-              borderTopLeftRadius: "20px",
-              borderBottomRightRadius: "20px",
-              borderTopRightRadius: "5px",
-              borderBottomLeftRadius: "5px",
-              fontFamily: "David Libre",
-            }}
-          >
-            Explore More
-          </button>
+
+<button
+  onClick={() => {
+    document
+      .getElementById("evolution-section")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="
+    group inline-flex items-center gap-2
+    text-[#D11417] font-semibold text-[14px]
+    transition-all duration-300 ease-out
+    hover:gap-3
+  "
+  style={{ fontFamily: "David Libre" }}
+>
+  Explore More  &gt;&gt;
+
+  
+</button>
         </div>
       </section>
 
