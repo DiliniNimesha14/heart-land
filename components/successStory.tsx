@@ -136,7 +136,7 @@ export default function BlogsSuccessStory() {
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2.5">
             <span className="font-openSans text-[12px] md:text-lg text-[#666666] tracking-wide">
-              Inspiring Voices, Real Change
+              Change Begins with a Voice
             </span>
             <span className="hidden md:block w-[100px] h-[1px] bg-[#999999]" />
           </div>
@@ -175,10 +175,10 @@ export default function BlogsSuccessStory() {
               {/* Content */}
               <div className="p-5 flex flex-col h-[calc(100%-224px)]">
                 <div className="flex items-center gap-2 mb-3">
-                  <Image src="/building.png" alt="" width={16} height={16} />
-                  <span className="font-openSans text-xs text-[#999999]">
+                  {/* <Image src="/building.png" alt="" width={16} height={16} /> */}
+                  {/* <span className="font-openSans text-xs text-[#999999]">
                     {card.date}
-                  </span>
+                  </span> */}
                 </div>
                 <h3 className="font-nunito font-bold text-lg mb-2 text-black leading-tight">
                   {card.title}
@@ -219,10 +219,10 @@ export default function BlogsSuccessStory() {
               {/* Content */}
               <div className="p-5 flex flex-col h-[calc(100%-224px)]">
                 <div className="flex items-center gap-2 mb-3">
-                  <Image src="/building.png" alt="" width={16} height={16} />
-                  <span className="font-openSans text-xs text-[#999999]">
+                  {/* <Image src="/building.png" alt="" width={16} height={16} /> */}
+                  {/* <span className="font-openSans text-xs text-[#999999]">
                     {card.date}
-                  </span>
+                  </span> */}
                 </div>
                 <h3 className="font-nunito font-bold text-xl mb-2 text-black leading-tight">
                   {card.title}

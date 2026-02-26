@@ -49,11 +49,17 @@ export default function Initiative() {
       <div className="lg:hidden max-w-2xl mx-auto px-6 relative">
         {/* Content */}
         <div className="relative z-10 text-center space-y-6">
-          <p className="uppercase text-[18px] text-gray-400 text-sm tracking-[0.2em]" style={{ fontFamily: 'Open Sans' }}>
+          <p
+            className="uppercase text-[18px] text-gray-400 text-sm tracking-[0.2em]"
+            style={{ fontFamily: "Open Sans" }}
+          >
             C S R
           </p>
 
-          <h2 className="text-[20px] sm:text-5xl font-bold text-black leading-tight" style={{ fontFamily: 'Open Sans' }}>
+          <h2
+            className="text-[20px] sm:text-5xl font-bold text-black leading-tight"
+            style={{ fontFamily: "Open Sans" }}
+          >
             Our Commitment to Community
           </h2>
 
@@ -80,17 +86,18 @@ export default function Initiative() {
           </div>
 
           <p className="text-[#6A6969] text-[13px] sm:text-lg leading-relaxed max-w-lg mx-auto px-2">
-            At Heartland General Trading, we believe in making a positive impact. We&apos;re dedicated to  
-            supporting our communities and promoting sustainability in everything we do. Together, we  
-            strive for a better future.
+            At Heartland General Trading, we believe in making a positive
+            impact. We&apos;re dedicated to supporting our communities and
+            promoting sustainability in everything we do. Together, we strive
+            for a better future.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-row gap-3 pt-4 px-4 justify-center items-center">
             {/* Learn More Button */}
-            <button className="font-nunito bg-black text-white text-base sm:text-lg font-semibold px-10 sm:px-12 py-2.5 sm:py-3 rounded-full border-2 border-black transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 whitespace-nowrap">
+            {/* <button className="font-nunito bg-black text-white text-base sm:text-lg font-semibold px-10 sm:px-12 py-2.5 sm:py-3 rounded-full border-2 border-black transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:bg-gray-900 whitespace-nowrap">
               Learn More
-            </button>
+            </button> */}
 
             {/* Watch Videos Button 
             <button className="font-nunito group flex items-center justify-center gap-1.5 border-2 border-[#D11417] text-black font-semibold text-base sm:text-lg px-4 sm:px-6 py-2 sm:py-2 rounded-full transition-all duration-300 hover:bg-[#D11417] hover:border-[#D11417] hover:scale-105 hover:shadow-xl whitespace-nowrap">
@@ -128,20 +135,26 @@ export default function Initiative() {
               C S R
             </p>
 
-            <h2 className="text-[28px] lg:text-[30px] xl:text-[36px] 2xl:text-[42px] font-bold text-black leading-[100%] tracking-normal" style={{ fontFamily: 'Open Sans' }}>
+            <h2
+              className="text-[28px] lg:text-[30px] xl:text-[36px] 2xl:text-[42px] font-bold text-black leading-[100%] tracking-normal"
+              style={{ fontFamily: "Open Sans" }}
+            >
               Our Commitment to Community
             </h2>
 
             <p className="text-gray-600 text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] font-nunito leading-[140%] tracking-normal max-w-xl">
-              At Heartland General Trading, we believe in making a positive impact. We&apos;re dedicated to  supporting our communities and promoting sustainability in everything we do. Together, we  strive for a better future.
+              At Heartland General Trading, we believe in making a positive
+              impact. We&apos;re dedicated to supporting our communities and
+              promoting sustainability in everything we do. Together, we strive
+              for a better future.
             </p>
 
             {/* Buttons */}
             <div className="flex gap-4 pt-4">
               {/* Learn More Button */}
-              <button className="font-nunito bg-black text-white text-lg lg:text-xl xl:text-2xl 2xl:text-3xl px-12 lg:px-16 xl:px-20 2xl:px-24 py-3 lg:py-4 xl:py-5 2xl:py-6 rounded-full font-semibold border-2 border-black transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:bg-gray-900">
+              {/* <button className="font-nunito bg-black text-white text-lg lg:text-xl xl:text-2xl 2xl:text-3xl px-12 lg:px-16 xl:px-20 2xl:px-24 py-3 lg:py-4 xl:py-5 2xl:py-6 rounded-full font-semibold border-2 border-black transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:bg-gray-900">
                 Learn More
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
