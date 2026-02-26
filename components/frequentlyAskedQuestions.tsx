@@ -59,43 +59,49 @@ export default function Faq() {
 </div>
 <div className="max-w-7xl 2xl:max-w-[1700px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
 
-        {/* Left Side Images */}
-        <div className="hidden lg:flex justify-center order-2 lg:order-1">
-          <div className="flex gap-2 sm:gap-3 md:gap-4">
-            <div className="w-16 sm:w-20 md:w-24 h-[280px] sm:h-[400px] md:h-[580px] top-6 sm:top-10 md:top-14 relative overflow-hidden rounded-lg">
-              <Image
-                src="/Frame 987.png"
-                alt="spices"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="w-16 sm:w-20 md:w-24 h-[280px] sm:h-[400px] md:h-[580px] relative overflow-hidden rounded-lg">
-              <Image
-                src="/Frame 988.png"
-                alt="spices"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="w-16 sm:w-20 md:w-24 h-[280px] sm:h-[400px] md:h-[580px] top-6 sm:top-10 md:top-14 relative overflow-hidden rounded-lg">
-              <Image
-                src="/Frame 989.png"
-                alt="spices"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="w-16 sm:w-20 md:w-24 h-[280px] sm:h-[400px] md:h-[580px] relative overflow-hidden rounded-lg">
-              <Image
-                src="/Frame 990.png"
-                alt="spices"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
+{/* Left Side Images */}
+<div className="hidden lg:flex justify-center order-2 lg:order-1">
+  <div className="relative">
+     
+    <div
+      aria-hidden
+      className="absolute inset-0 -z-10 blur-3xl opacity-60"
+      style={{
+        background:
+          "radial-gradient(circle at 50% 40%, rgba(0,0,0,0.15), transparent 60%)",
+      }}
+    />
+
+    <div className="flex gap-2 sm:gap-3 md:gap-4">
+      {[
+        { src: "/Frame 987.png", offset: true },
+        { src: "/Frame 988.png", offset: false },
+        { src: "/Frame 989.png", offset: true },
+        { src: "/Frame 990.png", offset: false },
+      ].map((img, idx) => (
+        <div
+  key={idx}
+  className={[
+    "relative overflow-hidden rounded-lg leading-none",  
+    "w-16 sm:w-20 md:w-24",
+    "h-[280px] sm:h-[400px] md:h-[580px]",
+    "bg-transparent",
+    "drop-shadow-[0_20px_30px_rgba(0,0,0,0.18)]",  
+    img.offset ? "top-6 sm:top-10 md:top-14" : "",
+  ].join(" ")}
+>
+  <Image
+    src={img.src}
+    alt="spices"
+    fill
+    className="object-cover !absolute !inset-0"
+    sizes="(min-width: 768px) 96px, 80px"
+  />
+</div>
+      ))}
+    </div>
+  </div>
+</div>
 
 
         {/* Right Side FAQ Section */}
