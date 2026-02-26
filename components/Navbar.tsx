@@ -3,37 +3,34 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useNavigation } from "@/contexts/NavigationContext";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const links = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/About" },
     { name: "Products", href: "/Product" },
-    // { name: "CSR", href: "/CSR" },  
+    // { name: "CSR", href: "/CSR" },
     { name: "Resources & Insights", href: "/Resources" },
     { name: "FAQ & Support", href: "/FAQ" },
   ];
 
   const pathname = usePathname();
-  const router = useRouter();
-  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  const { isNavigating, setIsNavigating } = useNavigation();
 
+  //   prevents  stuck  overlay when route changes
   useEffect(() => {
-    const timer = setTimeout(() => setMounted(true), 0);
-    return () => clearTimeout(timer);
-  }, []);
+    setIsOpen(false);
+    setIsClosing(false);
+  }, [pathname]);
 
   const handleClose = () => {
     setIsClosing(true);
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
-    }, 300); // Match animation duration
+    }, 250);
   };
 
   const getActiveLink = (href: string) => {
@@ -41,29 +38,22 @@ export default function Navbar() {
     return pathname.startsWith(href);
   };
 
-  const handleNavigation = (href: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    if (href === pathname) return;
-    router.push(href);
-  };
-
   return (
     <>
       {/* ================= HEADER ================= */}
       <header className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 pt-1 sm:pt-6 lg:pt-8 flex items-center justify-between bg-transparent md:bg-white">
-        
         {/* ===== Mobile Header ===== */}
         <div className="flex md:hidden items-center justify-between w-full">
-          <Image
-            src="/logoo.jpeg"
-            alt="logo"
-            width={80}
-            height={80}
-            className="object-contain"
-          />
-
-          {/* Hamburger */}
-          <button onClick={() => setIsOpen(true)} className="space-y-1.5">
+             <Image
+              src="/logoo.jpeg"
+              alt="logo"
+              width={80}
+              height={80}
+              className="object-contain"
+              priority
+            />
+ 
+          <button onClick={() => setIsOpen(true)} className="space-y-1.5" aria-label="Open menu">
             <span className="block w-6 h-0.5 bg-black"></span>
             <span className="block w-6 h-0.5 bg-black"></span>
             <span className="block w-6 h-0.5 bg-black"></span>
@@ -72,47 +62,46 @@ export default function Navbar() {
 
         {/* ===== Desktop Logo ===== */}
         <div className="hidden md:flex items-center ml-0 lg:ml-14">
-          <Image
-            src="/logoo.jpeg"
-            alt="logo"
-            width={100}
-            height={130}
-            className="object-contain w-20 h-auto md:w-24 lg:w-28"
-          />
-        </div>
+             <Image
+              src="/logoo.jpeg"
+              alt="logo"
+              width={100}
+              height={130}
+              className="object-contain w-20 h-auto md:w-24 lg:w-28"
+              priority
+            />
+         </div>
 
-        {/* ===== Desktop Navigation ===== */}
-        {mounted && (
-          <nav className="hidden md:flex gap-4 lg:gap-8 xl:gap-12 items-center text-sm md:text-base lg:text-lg xl:text-xl font-semibold leading-tight lg:leading-10 tracking-[-0.5px] lg:tracking-[-1px] font-sans flex-wrap justify-center">
-            {links.map((link) => (
-              <div key={link.name} className="relative group">
-                <a
-                  href={link.href}
-                  onClick={(e) => handleNavigation(link.href, e)}
-                  className={`cursor-pointer inline-block transition-all duration-300 hover:scale-105 whitespace-nowrap ${
-                    getActiveLink(link.href)
-                      ? "text-[#D11417]"
-                      : "text-gray-800 hover:text-[#D11417]"
-                  }`}
-                >
-                  {link.name}
-                </a>
+        {/*   Desktop Navigation (NO mounted delay)  */}
+        <nav className="hidden md:flex gap-4 lg:gap-8 xl:gap-12 items-center text-sm md:text-base lg:text-lg xl:text-xl font-semibold leading-tight lg:leading-10 tracking-[-0.5px] lg:tracking-[-1px] font-sans flex-wrap justify-center">
+          {links.map((link) => (
+            <div key={link.name} className="relative group">
+              <Link
+                href={link.href}
+                prefetch
+                className={`cursor-pointer inline-block transition-all duration-300 hover:scale-105 whitespace-nowrap ${
+                  getActiveLink(link.href)
+                    ? "text-[#D11417]"
+                    : "text-gray-800 hover:text-[#D11417]"
+                }`}
+              >
+                {link.name}
+              </Link>
 
-                <span
-                  className={`absolute left-0 -bottom-1 h-[2px] lg:h-[3px] transition-all duration-500 ease-out ${
-                    getActiveLink(link.href)
-                      ? "w-full bg-[#D11417] shadow-lg"
-                      : "w-0 bg-[#D11417] group-hover:w-full group-hover:shadow-md"
-                  }`}
-                ></span>
-              </div>
-            ))}
-          </nav>
-        )}
+              <span
+                className={`absolute left-0 -bottom-1 h-[2px] lg:h-[3px] transition-all duration-500 ease-out ${
+                  getActiveLink(link.href)
+                    ? "w-full bg-[#D11417] shadow-lg"
+                    : "w-0 bg-[#D11417] group-hover:w-full group-hover:shadow-md"
+                }`}
+              />
+            </div>
+          ))}
+        </nav>
 
         {/* ===== Desktop Contact Button ===== */}
         <div className="hidden md:block shrink-0">
-          <Link href="/Contact">
+          <Link href="/Contact" prefetch>
             <button className="relative mr-0 lg:mr-3.5 px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 bg-[#D11417] text-white cursor-pointer font-normal text-sm md:text-base lg:text-lg rounded-xl lg:rounded-2xl border-2 border-[#D11417] transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 transform-gpu hover:bg-white hover:text-[#D11417] whitespace-nowrap">
               Contact Us
             </button>
@@ -120,7 +109,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* ================= MOBILE MENU ================= */}
+       {/* ================= MOBILE MENU ================= */}
       {isOpen && (
         <div className={`fixed inset-0 z-50 bg-[#D11417] text-white flex flex-col px-8 py-6 md:hidden ${isClosing ? 'animate-slideUp' : 'animate-slideDown'}`}>
 
