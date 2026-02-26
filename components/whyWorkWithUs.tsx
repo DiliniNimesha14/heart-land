@@ -55,11 +55,12 @@ export default function WhyWorkWithUs() {
             </div>
 
             {/* RIGHT 2x2 BOX GRID */}
-            <div className="flex h-full items-center">
-             <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5">
+            {/* RIGHT 2x2 BOX GRID */}
+<div className="flex h-full items-center">
+  <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5 md:gap-5">
  
               {/* Box 1 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="streamline-ultimate-color:award-trophy-1"
                   className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
@@ -72,7 +73,7 @@ export default function WhyWorkWithUs() {
               </div>
 
               {/* Box 2 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="noto-v1:man-farmer"
                   className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
@@ -85,7 +86,7 @@ export default function WhyWorkWithUs() {
               </div>
 
               {/* Box 3 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2  w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2  w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="twemoji:handshake"
                   className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
@@ -98,7 +99,7 @@ export default function WhyWorkWithUs() {
               </div>
 
               {/* Box 4 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-4 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
                 <Icon
                   icon="noto:red-heart"
                   className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
