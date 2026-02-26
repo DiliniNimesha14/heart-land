@@ -17,8 +17,8 @@ const team = [
 const mobileTeam = [
   { name: "Manoj Kumar", role: "Senior Sales Manager", img: "/Manoj Kumar1.png" },
   { name: "Rizvi Farook", role: "General Manager", img: "/Rizvi Farook1.png" },
-  { name: "Alexis Jensen", role: "Export Logistics Coordinator", img: "/fcf5dbf8a60f8660b370b432520d1e7ddd3cf12b.jpg" },
-  { name: "Alexis Jensen", role: "Export Logistics Coordinator", img: "/fcf5dbf8a60f8660b370b432520d1e7ddd3cf12b.jpg" },
+  // { name: "Alexis Jensen", role: "Export Logistics Coordinator", img: "/fcf5dbf8a60f8660b370b432520d1e7ddd3cf12b.jpg" },
+  // { name: "Alexis Jensen", role: "Export Logistics Coordinator", img: "/fcf5dbf8a60f8660b370b432520d1e7ddd3cf12b.jpg" },
 ];
 
 export default function TeamMembers() {
@@ -83,7 +83,7 @@ export default function TeamMembers() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[64px] font-bold mb-4 sm:mb-6 md:mb-8 lg:mb-10">Our Team Members</h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl text-gray-700 leading-relaxed xl:leading-8">
-            Our dedicated team at Heartland General Trading is committed to delivering the best Sri  Lankan food products. With a blend of expertise and a shared passion for quality, we strive to  enhance the culinary experience for our customers
+            Our dedicated team at Heartland General Trading is committed to delivering the best Sri  Lankan food products. With a blend of expertise and a shared passion for quality, we strive to  enhance the culinary experience for our customers.
           </p>
         </motion.div>
 
@@ -208,8 +208,8 @@ export default function TeamMembers() {
         >
           <h2 className="text-[18px] font-bold mb-2">Our Team Members</h2>
           <p className={`text-[12px] leading-[20px] px-5 ${openSans.className}`}>
-            Our diverse team of professionals brings together expertise in food technology, marketing, logistics, and sustainability — all united by a common purpose:
-          </p>
+              Our dedicated team at Heartland General Trading is committed to delivering the best Sri  Lankan food products. With a blend of expertise and a shared passion for quality, we strive to  enhance the culinary experience for our customers.
+                        </p>
         </motion.div>
 
         {/* Slider */}

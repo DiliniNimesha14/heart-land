@@ -164,7 +164,7 @@ export default function AboutHero() {
               />
               <div>
                 <Image
-                  src="/25years.png"
+                  src="/25yrs.png"
                   alt="25 Years Experience"
                   width={220}
                   height={220}

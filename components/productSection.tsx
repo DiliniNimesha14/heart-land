@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { openSans } from "@/app/fonts";
 import Image from "next/image";
 import { Search } from "lucide-react";
@@ -124,7 +124,7 @@ export default function ProductsSection() {
   Rice: "/products/_DSC0208.JPG",
   Noodles: "/products/_DSC0201.jpg",
   Flour: "/products/_DSC0202.jpg",
-  "Bottled Items": "/products/_DSC0221.JPG",
+  "Bottled Items": "/products/_DSC0222.JPG",
   "Dry Fish": "/products/_DSC0244.JPG",
   Spices: "/products/_DSC0246.JPG",
   Savoury: "/products/_DSC0238.JPG",
@@ -198,6 +198,16 @@ if (query.trim()) {
 
   return list;
 }, [query, selectedCategories, sortBy]);
+// Reset page when filters/search change
+useEffect(() => {
+  setPage(0);
+}, [query, selectedCategories, sortBy]);
+
+// Safety clamp in case filtered results shrink
+useEffect(() => {
+  const maxPage = Math.max(0, Math.ceil(filtered.length / pageSize) - 1);
+  setPage((prev) => Math.min(prev, maxPage));
+}, [filtered.length]);
 
 
   // pagination helpers

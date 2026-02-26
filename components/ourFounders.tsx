@@ -92,10 +92,7 @@ export default function Founders() {
             Meet Our Founders
           </h2>
           <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl leading-relaxed xl:leading-8">
-            Heartland General Trading was founded by Mohamed Fazal Mawjood, who
-            envisioned a connection between the Sri Lankan community in the UAE
-            and authentic food products from home. Their passion for quality and
-            service drives our success.
+            Heartland General Trading was founded by Mohamed Fazal Mawjood, who envisioned a  connection between the Sri Lankan community in the UAE and authentic food products from  home. Their passion for quality and service drives our success.
           </p>
         </div>
 
@@ -159,11 +156,7 @@ export default function Founders() {
             Meet Our Founders
           </h2>
           <p className="text-white text-[12px] leading-[22px] mb-10 text-center">
-            At <span className="font-bold">Heartland General Trading</span>, we
-            take pride in offering more than just quality products — we deliver
-            trust, consistency, and a commitment to excellence in every
-            partnership. Here&apos;s what makes us stand out in Sri Lanka&apos;s
-            food industry
+           Heartland General Trading was founded by Mohamed Fazal Mawjood, who envisioned a  connection between the Sri Lankan community in the UAE and authentic food products from  home. Their passion for quality and service drives our success.
           </p>
         </motion.div>
 

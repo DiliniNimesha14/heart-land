@@ -41,7 +41,7 @@ export default function CommunitySection() {
             </h2>
 
             <p className="text-base lg:text-lg xl:text-[22px] 2xl:text-[26px] text-[#000000] font-normal leading-relaxed xl:leading-8 2xl:leading-9 mb-12 xl:mb-14 2xl:mb-16">
-              At Heartland, we believe in growing together. Our success is built on the hard work of local farmers and female entrepreneurs in Sri Lanka, and we are deeply committed to ensuring they thrive alongside us. By sourcing directly from these communities, we provide sustainable livelihoods and foster economic growth across the island. Beyond trade, we are incredibly proud of our signature &quot;Heartland <span className="text-red-600">♥</span> Homeland&quot; initiative.
+              At Heartland, we believe in growing together. Our success is built on the hard work of local  farmers and female entrepreneurs in Sri Lanka, and we are deeply committed to ensuring they  thrive alongside us. By sourcing directly from these communities, we provide sustainable  livelihoods and foster economic growth across the island. Beyond trade, we are incredibly proud of our signature &quot;Heartland <span className="text-red-600">♥</span> Homeland&quot; initiative.
             </p>
 
             <Link href="/Contact">
@@ -67,7 +67,7 @@ export default function CommunitySection() {
 
           {/* Description */}
           <p className="text-sm text-[#000000] font-normal leading-relaxed mb-6 max-w-md">
-            At Heartland, we believe in growing together. Our success is built on the hard work of local farmers and female entrepreneurs in Sri Lanka, and we are deeply committed to ensuring they thrive alongside us. By sourcing directly from these communities, we provide sustainable livelihoods and foster economic growth across the island. Beyond trade, we are incredibly proud of our signature &quot;Heartland <span className="text-red-600">♥</span> Homeland&quot; initiative.
+              At Heartland, we believe in growing together. Our success is built on the hard work of local  farmers and female entrepreneurs in Sri Lanka, and we are deeply committed to ensuring they  thrive alongside us. By sourcing directly from these communities, we provide sustainable  livelihoods and foster economic growth across the island. Beyond trade, we are incredibly proud of our signature &quot;Heartland <span className="text-red-600">♥</span> Homeland&quot; initiative.
           </p>
 
           {/* Button */}
