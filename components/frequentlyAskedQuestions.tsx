@@ -1,12 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-
+import Link from "next/link";
 
 export default function Faq() {
-  
- 
   const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
@@ -36,77 +33,81 @@ export default function Faq() {
         "We offer a variety of shipping options to suit your needs, including both standard and expedited delivery services across the UAE.",
     },
     {
-      question:"How can I reach your team?",
-      answer: "We’re always here to help! You can reach our friendly customer support team via email, phone, or by using the contact form right here on our website."
+      question: "How can I reach your team?",
+      answer:
+        "We’re always here to help! You can reach our friendly customer support team via email, phone, or by using the contact form right here on our website.",
     },
     {
-      question:"What should I do if there's an issue with my order?",
-      answer: "If something isn’t quite right, please let us know immediately. We are fully committed to resolving any concerns and making sure you have a great experience with us."
-    }
+      question: "What should I do if there's an issue with my order?",
+      answer:
+        "If something isn’t quite right, please let us know immediately. We are fully committed to resolving any concerns and making sure you have a great experience with us.",
+    },
   ];
 
-  
-
   return (
-    <section className="py-10 md:py-20 bg-white" style={{ fontFamily: 'Open Sans' }}>
-        <div className="text-center px-4">
-  <p className="uppercase text-[#6D7D7D] tracking-[0.2em] sm:tracking-[0.2em] text-[16px] sm:text-sm mb-3" style={{ fontFamily: 'Open Sans' }}>
-    F A Q
-  </p>
-  <h2 className="text-[16px] sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-10" style={{ fontFamily: 'Open Sans' }}>
-    Frequently Asked Questions
-  </h2>
-</div>
-<div className="max-w-7xl 2xl:max-w-[1700px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+    <section
+      className="py-10 md:py-20 bg-white"
+      style={{ fontFamily: "Open Sans" }}
+    >
+      <div className="text-center px-4">
+        <p
+          className="uppercase text-[#6D7D7D] tracking-[0.2em] sm:tracking-[0.2em] text-[16px] sm:text-sm mb-3"
+          style={{ fontFamily: "Open Sans" }}
+        >
+          F A Q
+        </p>
+        <h2
+          className="text-[16px] sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-10"
+          style={{ fontFamily: "Open Sans" }}
+        >
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <div className="max-w-7xl 2xl:max-w-[1700px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+        {/* Left Side Images */}
+        <div className="hidden lg:flex justify-center order-2 lg:order-1">
+          <div className="relative isolate">
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-10 blur-2xl opacity-50"
+              style={{
+                background:
+                  "radial-gradient(circle at 50% 50%, rgba(180,180,180,0.6), transparent 75%)",
+              }}
+            />
 
-{/* Left Side Images */}
-<div className="hidden lg:flex justify-center order-2 lg:order-1">
-  <div className="relative">
-     
-    <div
-      aria-hidden
-      className="absolute inset-0 -z-10 blur-3xl opacity-60"
-      style={{
-        background:
-          "radial-gradient(circle at 50% 40%, rgba(0,0,0,0.15), transparent 60%)",
-      }}
-    />
-
-    <div className="flex gap-2 sm:gap-3 md:gap-4">
-      {[
-        { src: "/Frame 987.png", offset: true },
-        { src: "/Frame 988.png", offset: false },
-        { src: "/Frame 989.png", offset: true },
-        { src: "/Frame 990.png", offset: false },
-      ].map((img, idx) => (
-        <div
-  key={idx}
-  className={[
-    "relative overflow-hidden rounded-lg leading-none",  
-    "w-16 sm:w-20 md:w-24",
-    "h-[280px] sm:h-[400px] md:h-[580px]",
-    "bg-transparent",
-    "drop-shadow-[0_20px_30px_rgba(0,0,0,0.18)]",  
-    img.offset ? "top-6 sm:top-10 md:top-14" : "",
-  ].join(" ")}
->
-  <Image
-    src={img.src}
-    alt="spices"
-    fill
-    className="object-cover !absolute !inset-0"
-    sizes="(min-width: 768px) 96px, 80px"
-  />
-</div>
-      ))}
-    </div>
-  </div>
-</div>
-
+            <div className="flex gap-1 sm:gap-1.5 md:gap-2">
+              {[
+                { src: "/Frame 987.png", offset: true },
+                { src: "/Frame 988.png", offset: false },
+                { src: "/Frame 989.png", offset: true },
+                { src: "/Frame 990.png", offset: false },
+              ].map((img, idx) => (
+                <div
+                  key={idx}
+                  className={[
+                    "relative overflow-hidden leading-none",
+                    "w-16 sm:w-20 md:w-24",
+                    "h-[280px] sm:h-[400px] md:h-[580px]",
+                    "bg-transparent",
+                    img.offset ? "top-6 sm:top-10 md:top-14" : "",
+                  ].join(" ")}
+                >
+                  <Image
+                    src={img.src}
+                    alt="spices"
+                    fill
+                    className="object-cover !absolute !inset-0"
+                    sizes="(min-width: 768px) 96px, 80px"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Right Side FAQ Section */}
         <div className="order-1 lg:order-2">
-
           <div className="space-y-4 sm:space-y-5">
             {faqs.map((faq, index) => (
               <div
@@ -116,15 +117,13 @@ export default function Faq() {
                 } pb-3 sm:pb-4 transition-all duration-300`}
               >
                 <button
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? -1 : index)
-                  }
+                  onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
                   className={`w-full text-left text-[14px] sm:text-lg px-2 cursor-pointer font-medium transition-colors duration-300 ${
                     openIndex === index
                       ? "text-[#D11417]"
                       : "text-gray-800 hover:text-[#ff0004]"
                   }`}
-                  style={{ fontFamily: 'Open Sans' }}
+                  style={{ fontFamily: "Open Sans" }}
                 >
                   {faq.question}
                 </button>
@@ -145,9 +144,14 @@ export default function Faq() {
           </div>
 
           <div className="mt-8 sm:mt-10 flex justify-start lg:justify-start">
-            <button className="px-9 sm:px-9 py-2 sm:py-3 border-2 text-[14px] sm:text-lg cursor-pointer bg-black lg:bg-transparent text-white lg:text-[#D11417] border-black lg:border-[#D11417] rounded-full hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300 font-bold hover:scale-[1.02] hover:-translate-y-1" style={{ fontFamily: 'Open Sans' }}>
-              View More
-            </button>
+            <Link href="/FAQ">
+              <button
+                className="px-9 sm:px-9 py-2 sm:py-3 border-2 text-[14px] sm:text-lg cursor-pointer bg-black lg:bg-transparent text-white lg:text-[#D11417] border-black lg:border-[#D11417] rounded-full hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300 font-bold hover:scale-[1.02] hover:-translate-y-1"
+                style={{ fontFamily: "Open Sans" }}
+              >
+                View More
+              </button>
+            </Link>
           </div>
         </div>
       </div>
