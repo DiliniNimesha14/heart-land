@@ -33,10 +33,9 @@ export default function WhyWorkWithUs() {
   return (
     <div className="w-full mt-8 min-h-screen bg-white text-gray-900 overflow-hidden">
       {/* Community Impact Box */}
-      <div className="w-full bg-[#D11417] py-4 px-4 sm:px-6 lg:px-8">
+      {/* <div className="w-full bg-[#D11417] py-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto rounded-2xl p-6 sm:p-8 lg:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-8 items-stretch">
-            {/* LEFT BIG BOX */}
             <div className="bg-white rounded-[10px] border border-[#EAEAEA] px-4 sm:px-8 lg:px-6 xl:px-8 py-6 sm:py-4 lg:py-8 xl:py-10 flex flex-col justify-center">
               <h3
                 className={`${openSans.className} text-[20px] sm:text-[30px] lg:text-[26px] xl:text-[32px] 2xl:text-[36px] font-bold text-black mb-3 lg:mb-4 text-center lg:text-center`}
@@ -54,66 +53,60 @@ export default function WhyWorkWithUs() {
               </p>
             </div>
 
-            {/* RIGHT 2x2 BOX GRID */}
-            {/* RIGHT 2x2 BOX GRID */}
-<div className="flex h-full items-center">
-  <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5 md:gap-5">
- 
-              {/* Box 1 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
-                <Icon
-                  icon="streamline-ultimate-color:award-trophy-1"
-                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
-                />
-                <p
-                  className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
-                >
-                  ISO & HACCP Certified
-                </p>
-              </div>
-
-              {/* Box 2 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
-                <Icon
-                  icon="noto-v1:man-farmer"
-                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
-                />
-                <p
-                  className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
-                >
-                  Supporting Local Farmers
-                </p>
-              </div>
-
-              {/* Box 3 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2  w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
-                <Icon
-                  icon="twemoji:handshake"
-                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
-                />
-                <p
-                  className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
-                >
-                  Community Partnership
-                </p>
-              </div>
-
-              {/* Box 4 */}
-              <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
-                <Icon
-                  icon="noto:red-heart"
-                  className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
-                />
-                <p
-                  className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
-                >
-                  CSR Health Projects
-                </p>
-              </div>
-            </div></div>
-          </div>
-        </div>
-      </div>
+            <div className="flex h-full items-center">
+              <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5 md:gap-5">
+             
+                          <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+                            <Icon
+                              icon="streamline-ultimate-color:award-trophy-1"
+                              className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
+                            />
+                            <p
+                              className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
+                            >
+                              ISO & HACCP Certified
+                            </p>
+                          </div>
+            
+                          <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+                            <Icon
+                              icon="noto-v1:man-farmer"
+                              className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
+                            />
+                            <p
+                              className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
+                            >
+                              Supporting Local Farmers
+                            </p>
+                          </div>
+            
+                          <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2  w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+                            <Icon
+                              icon="twemoji:handshake"
+                              className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
+                            />
+                            <p
+                              className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
+                            >
+                              Community Partnership
+                            </p>
+                          </div>
+            
+                          <div className="bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm flex flex-col items-center sm:items-start gap-2 w-full px-5 py-5 min-h-[110px] sm:min-h-0 lg:px-4 lg:py-4 xl:px-5 xl:py-5">
+                            <Icon
+                              icon="noto:red-heart"
+                              className="w-8 h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-11 2xl:h-11"
+                            />
+                            <p
+                              className={`${openSans.className} text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] font-semibold text-black leading-tight`}
+                            >
+                              CSR Health Projects
+                            </p>
+                          </div>
+                        </div></div>
+                      </div>
+                    </div>
+                  </div> */}
 
       {/* Parallax Header */}
       <motion.div

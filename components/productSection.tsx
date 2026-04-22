@@ -106,112 +106,112 @@ export default function ProductsSection() {
   const [showImageOnly, setShowImageOnly] = useState(false);
 
   // pagination state
-  const pageSize = 9; 
+  const pageSize = 9;
   const [page, setPage] = useState(0);
 
   // derive categories from product data
- const categories = useMemo<CategoryItem[]>(() => {
-  const map = new Map<string, number>();
+  const categories = useMemo<CategoryItem[]>(() => {
+    const map = new Map<string, number>();
 
-  initialProducts.forEach((p) => {
-    const cat = p.category.trim();
-    map.set(cat, (map.get(cat) ?? 0) + 1);
-  });
-  
-
-  const categoryImageMap: Record<string, string> = {
-  Jams: "/products/_DSC0228.JPG",
-  Rice: "/products/_DSC0208.JPG",
-  Noodles: "/products/_DSC0201.jpg",
-  Flour: "/products/_DSC0202.jpg",
-  "Bottled Items": "/products/_DSC0222.JPG",
-  "Dry Fish": "/products/_DSC0244.JPG",
-  Spices: "/products/_DSC0246.JPG",
-  Savoury: "/products/_DSC0238.JPG",
-};
+    initialProducts.forEach((p) => {
+      const cat = p.category.trim();
+      map.set(cat, (map.get(cat) ?? 0) + 1);
+    });
 
 
-  return Array.from(map.entries()).map(([name, count]) => ({
-    image: categoryImageMap[name] || "/productImage1.png",
-    name,
-    count,
-  }));
-}, []);
+    const categoryImageMap: Record<string, string> = {
+      Jams: "/products/_DSC0228.JPG",
+      Rice: "/products/_DSC0208.JPG",
+      Noodles: "/products/_DSC0201.jpg",
+      Flour: "/products/_DSC0202.jpg",
+      "Bottled Items": "/products/_DSC0222.JPG",
+      "Dry Fish": "/products/_DSC0244.JPG",
+      Spices: "/products/_DSC0246.JPG",
+      Savoury: "/products/_DSC0238.JPG",
+    };
 
-const scrollYRef = useRef(0);
 
-useLayoutEffect(() => {
-  window.scrollTo({ top: scrollYRef.current, behavior: "auto" });
-}, [selectedCategories, page]);
+    return Array.from(map.entries()).map(([name, count]) => ({
+      image: categoryImageMap[name] || "/productImage1.png",
+      name,
+      count,
+    }));
+  }, []);
+
+  const scrollYRef = useRef(0);
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: scrollYRef.current, behavior: "auto" });
+  }, [selectedCategories, page]);
 
 
 
   // toggle category selection
- function toggleCategory(cat: string) {
-  scrollYRef.current = window.scrollY;
+  function toggleCategory(cat: string) {
+    scrollYRef.current = window.scrollY;
 
-  if (cat === "View All") {
-    setSelectedCategories([]);
+    if (cat === "View All") {
+      setSelectedCategories([]);
+      setPage(0);
+      return;
+    }
+
+    setSelectedCategories((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+    );
     setPage(0);
-    return;
   }
-
-  setSelectedCategories((prev) =>
-    prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
-  );
-  setPage(0);
-}
 
 
   // filtered + sorted products
-const filtered = useMemo(() => {
-  let list = initialProducts.slice();
+  const filtered = useMemo(() => {
+    let list = initialProducts.slice();
 
-  //   Category filter
-  if (selectedCategories.length > 0) {
-  list = list.filter((p) =>
-    selectedCategories.includes(p.category.trim())
-  );
-}
+    //   Category filter
+    if (selectedCategories.length > 0) {
+      list = list.filter((p) =>
+        selectedCategories.includes(p.category.trim())
+      );
+    }
 
 
-  //   Search filter
-if (query.trim()) {
-  const q = query.toLowerCase();
-  list = list.filter(
-    (p) =>
-      p.title.toLowerCase().includes(q) ||
-      p.category.toLowerCase().includes(q)
-  );
-}
+    //   Search filter
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      list = list.filter(
+        (p) =>
+          p.title.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q)
+      );
+    }
 
-  //   Sorting
-  if (sortBy === "bestselling") {
-    list = list.sort((a, b) => (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0));
-  } else if (sortBy === "price-asc") {
-    list = list.sort((a, b) => a.price - b.price);
-  } else if (sortBy === "price-desc") {
-    list = list.sort((a, b) => b.price - a.price);
-  } else if (sortBy === "alpha") {
-    list = list.sort((a, b) => a.title.localeCompare(b.title));
-  }
+    //   Sorting
+    if (sortBy === "bestselling") {
+      list = list.sort((a, b) => (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0));
+    } else if (sortBy === "price-asc") {
+      list = list.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "price-desc") {
+      list = list.sort((a, b) => b.price - a.price);
+    } else if (sortBy === "alpha") {
+      list = list.sort((a, b) => a.title.localeCompare(b.title));
+    }
 
-  return list;
-}, [query, selectedCategories, sortBy]);
-// Reset page when filters/search change
-useEffect(() => {
-  if (page !== 0) {
-    setPage(0);
-  }
-}, [query, selectedCategories, sortBy]);
+    return list;
+  }, [query, selectedCategories, sortBy]);
+  // Reset page when filters/search change
+  useEffect(() => {
+    if (page !== 0) {
+      setPage(0);
+    }
+  }, [query, selectedCategories, sortBy]);
 
-// Safety clamp in case filtered results shrink
-useEffect(() => {
-  if (page !== 0) {
-  const maxPage = Math.max(0, Math.ceil(filtered.length / pageSize) - 1);
-  setPage((prev) => Math.min(prev, maxPage));
-  }
-}, [filtered.length]);
+  // Safety clamp in case filtered results shrink
+  useEffect(() => {
+    if (page !== 0) {
+      const maxPage = Math.max(0, Math.ceil(filtered.length / pageSize) - 1);
+      setPage((prev) => Math.min(prev, maxPage));
+    }
+  }, [filtered.length]);
 
 
   // pagination helpers
@@ -224,87 +224,86 @@ useEffect(() => {
 
 
   return (
-  <div
-className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5 lg:pr-6 overflow-x-hidden`}
+    <div
+      className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5 lg:pr-6 overflow-x-hidden`}
 
 
     >
       <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 justify-center min-w-0">
-       
- {/* ================= MOBILE SEARCH BAR ================= */}
-<div className="lg:hidden mb-6">
-  <div className="flex items-center gap-3">
-    <div className="relative flex-1">
-      <input
-        type="text"
-        placeholder="Search category"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="w-full rounded-full border px-4 py-3 pr-10 text-sm"
-      />
 
-      <Search
-        size={19}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-[#8B0000]"
-      />
-    </div>
+        {/* ================= MOBILE SEARCH BAR ================= */}
+        <div className="lg:hidden mb-6">
+          <div className="flex items-center gap-3">
+            <div className="relative flex-1">
+              <input
+                type="text"
+                placeholder="Search category"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                className="w-full rounded-full border px-4 py-3 pr-10 text-sm"
+              />
 
-    <button
-  onClick={() => setShowFilters(!showFilters)}
-  className="px-5 py-3 rounded-full bg-red-100 flex items-center justify-center"
-  >
-  <SlidersHorizontal size={18} className="text-red-600" />
-  </button>
-
-  </div>
-
-  {/* Filter panel inline under search bar */}
-  {showFilters && (
-    <div className="bg-white rounded-2xl p-5 shadow-md mt-4">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold">All categories</h3>
-         
-      </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {categories.map((cat) => (
-                <button
-                  key={cat.name}
-                  onClick={() => {
-                    toggleCategory(cat.name);
-                  }}
-                  className={`flex flex-row items-center justify-start gap-3 p-3 rounded-2xl border shadow-sm transition
-                  ${
-                    selectedCategories.includes(cat.name)
-                      ? "border-[#8B0000] bg-red-50"
-                      : "border-gray-200 bg-gray-50"
-                  }`}
-                  >
-                  {/* IMAGE */}
-                  <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0">
-                    <Image
-                      src={cat.image}
-                      alt={cat.name}
-                      width={48}
-                      height={48}
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-      
-                  {/* TEXT */}
-                  <div className="text-left flex-1">
-                    <p className="text-sm font-bold">{cat.name}</p>
-                    <p className="text-xs text-gray-500">{cat.count} products</p>
-                  </div>
-                </button>
-               ))}
+              <Search
+                size={19}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-[#8B0000]"
+              />
             </div>
-     </div>
-    )}
-</div>
-  
 
-    {/* Categories (left) */}
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="px-5 py-3 rounded-full bg-red-100 flex items-center justify-center"
+            >
+              <SlidersHorizontal size={18} className="text-red-600" />
+            </button>
+
+          </div>
+
+          {/* Filter panel inline under search bar */}
+          {showFilters && (
+            <div className="bg-white rounded-2xl p-5 shadow-md mt-4">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold">All categories</h3>
+
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.name}
+                    onClick={() => {
+                      toggleCategory(cat.name);
+                    }}
+                    className={`flex flex-row items-center justify-start gap-3 p-3 rounded-2xl border shadow-sm transition
+                  ${selectedCategories.includes(cat.name)
+                        ? "border-[#8B0000] bg-red-50"
+                        : "border-gray-200 bg-gray-50"
+                      }`}
+                  >
+                    {/* IMAGE */}
+                    <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0">
+                      <Image
+                        src={cat.image}
+                        alt={cat.name}
+                        width={48}
+                        height={48}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+
+                    {/* TEXT */}
+                    <div className="text-left flex-1">
+                      <p className="text-sm font-bold">{cat.name}</p>
+                      <p className="text-xs text-gray-500">{cat.count} products</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+
+        {/* Categories (left) */}
         <aside className="hidden lg:block mt-5  leading-14">
           <div className="space-y-3">
             <div className="flex items-center  justify-between ">
@@ -313,27 +312,27 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5
 
             <div className="flex flex-col gap-9">
               {categories
-  .filter((c) => c.name !== "View All")
-  .map((cat) => {
-    const checked = selectedCategories.includes(cat.name);
+                .filter((c) => c.name !== "View All")
+                .map((cat) => {
+                  const checked = selectedCategories.includes(cat.name);
 
-    return (
-      <label
-        key={cat.name}
-        className="flex items-center gap-6 text-lg cursor-pointer select-none"
-      >
-        <input
-          type="checkbox"
-          checked={checked}
-          onChange={() => toggleCategory(cat.name)}
-          className="w-4 h-4 cursor-pointer"
-        />
-        <span className={checked ? "font-medium" : "text-[#495057]"}>
-          {cat.name}
-        </span>
-      </label>
-    );
-  })}
+                  return (
+                    <label
+                      key={cat.name}
+                      className="flex items-center gap-6 text-lg cursor-pointer select-none"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => toggleCategory(cat.name)}
+                        className="w-4 h-4 cursor-pointer"
+                      />
+                      <span className={checked ? "font-medium" : "text-[#495057]"}>
+                        {cat.name}
+                      </span>
+                    </label>
+                  );
+                })}
 
             </div>
           </div>
@@ -343,31 +342,31 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5
         <main className="min-w-0">
 
           <div className="mb-6 mt-9 text-center lg:text-left">
-  <p className="uppercase text-black tracking-[0.5em] text-sm font-bold mb-5">
-    Products
-  </p>
+            <p className="uppercase text-black tracking-[0.5em] text-sm font-bold mb-5">
+              Products
+            </p>
 
-  <h3 className="text-xl lg:text-4xl font-bold tracking-tight">
-    PICK YOUR FAVORITE FOOD
-  </h3>
+            <h3 className="text-xl lg:text-4xl font-bold tracking-tight">
+              BROWSE OUR CATALOG
+            </h3>
 
-  
-</div>
+
+          </div>
 
 
           {/* grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-8 md:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-8 md:px-0">
             {paginated.length === 0 ? (
               <div className="col-span-full text-center text-gray-500 py-20">No products found.</div>
             ) : (
               paginated.map((p) => (
                 <article
-                key={p.id}
-                className="bg-white rounded-xl shadow-sm p-2 md:p-0 hover:shadow-lg transition-shadow duration-200"
->
+                  key={p.id}
+                  className="bg-white rounded-xl shadow-sm p-2 md:p-0 hover:shadow-lg transition-shadow duration-200"
+                >
 
-      <div
-        className="
+                  <div
+                    className="
           rounded-t-2xl overflow-hidden mb-3 md:mb-0
           flex items-center justify-center 
           w-[85%] mx-auto
@@ -375,35 +374,35 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5
           bg-white
           md:w-full md:bg-black
         "
-      >
-        <div
-          className="
+                  >
+                    <div
+                      className="
             relative w-full h-full rounded-t-2xl overflow-hidden
             flex items-center justify-center
             bg-white md:bg-black
           "
-        >
-      <Image
-        src={p.image}
-        alt={p.title}
-        fill
-        className="object-cover transition-transform duration-300 hover:scale-105"
-      />
-    </div>
-  </div>
+                    >
+                      <Image
+                        src={p.image}
+                        alt={p.title}
+                        fill
+                        className="object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                  </div>
 
 
-  {!showImageOnly ? (
-  <div className="bg-gray-100 rounded-b-xl p-4">
-    <div className="flex items-center justify-between mb-2">
-      <h4 className="font-semibold text-sm">{p.title}</h4>
-    </div>
-    {/* Price Was removed  */}
-    <div className="text-3xl font-bold"></div> 
-  </div>
-) : (
-  <div className="h-0 m-0 p-0"></div>
-)}
+                  {!showImageOnly ? (
+                    <div className="bg-gray-100 rounded-b-xl p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-semibold text-sm">{p.title}</h4>
+                      </div>
+                      {/* Price Was removed  */}
+                      <div className="text-3xl font-bold"></div>
+                    </div>
+                  ) : (
+                    <div className="h-0 m-0 p-0"></div>
+                  )}
 
                 </article>
               ))
@@ -411,33 +410,33 @@ className={`${openSans.className} w-full mx-auto py-8 px-5 sm:px-6 lg:px-10 pr-5
           </div>
 
           {/* Slider Controls: arrows + dots */}
-<div className="w-full flex items-center justify-center gap-6 sm:gap-20 lg:gap-40 xl:gap-96 mt-10">
+          <div className="w-full flex items-center justify-center gap-6 sm:gap-20 lg:gap-40 xl:gap-96 mt-10">
             {/* Left Arrow */}
             <button
               onClick={() => goToPage(page - 1)}
               className="text-xl font-bold px-4 py-2 cursor-pointer transition-all duration-300 ease-out hover:scale-120 hover:-translate-y-1"
               aria-label="Previous page"
             >
-             &#x2190;
+              &#x2190;
             </button>
 
             {/* Numbers */}
-<div className="flex items-center gap-2">
-  {Array.from({ length: totalPages }).map((_, i) => (
-    <button
-      key={i}
-      onClick={() => goToPage(i)}
-      aria-label={`Go to page ${i + 1}`}
-      className={`px-3 py-1 text-sm rounded-md transition 
-        ${i === page 
-          ? "bg-black text-white" 
-          : "bg-transparent text-black hover:bg-gray-200"
-        }`}
-    >
-      {i + 1}
-    </button>
-  ))}
-</div>
+            <div className="flex items-center gap-2">
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => goToPage(i)}
+                  aria-label={`Go to page ${i + 1}`}
+                  className={`px-3 py-1 text-sm rounded-md transition 
+        ${i === page
+                      ? "bg-black text-white"
+                      : "bg-transparent text-black hover:bg-gray-200"
+                    }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+            </div>
 
 
             {/* Right Arrow */}

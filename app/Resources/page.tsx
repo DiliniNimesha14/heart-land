@@ -15,7 +15,7 @@ export default function Resources() {
   return (
     <>
     <BlogAndNews />
-    <SuccessStory />
+    {/* <SuccessStory /> */}
     {/* <LatestNews />
     <BlogCards /> */}
     <CommunityPillar/>

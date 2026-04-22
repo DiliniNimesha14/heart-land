@@ -33,7 +33,7 @@ export default function AboutHero() {
         {/* Top Image - Rectangle 91 - Full Width */}
         <div className="w-full mb-8">
           <Image
-            src="/Rectangle 91.png"
+            src="/Rectangle 93.png"
             alt="About Hero"
             width={400}
             height={300}
@@ -44,7 +44,7 @@ export default function AboutHero() {
         {/* Text Content - Centered */}
         <div className="text-center mb-8 px-8">
           <p className="text-[16px] font-semibold text-[#BA5561] tracking-[3px] uppercase mb-5" style={{ fontFamily: 'Open Sans' }}>
-             A BIT ABOUT US
+            A BIT ABOUT US
           </p>
           <h1
             className="text-[25px] font-bold mb-4 tracking-[4px]"
@@ -61,24 +61,24 @@ export default function AboutHero() {
             of spices, premium rice varieties, condiments, snacks, and more.
           </p>
 
-<button
-  onClick={() => {
-    document
-      .getElementById("evolution-section")
-      ?.scrollIntoView({ behavior: "smooth" });
-  }}
-  className="
+          <button
+            onClick={() => {
+              document
+                .getElementById("evolution-section")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="
     group inline-flex items-center gap-2
     text-[#D11417] font-semibold text-[14px]
     transition-all duration-300 ease-out
     hover:gap-3
   "
-  style={{ fontFamily: "David Libre" }}
->
-  Explore More  &gt;&gt;
+            style={{ fontFamily: "David Libre" }}
+          >
+            Explore More  &gt;&gt;
 
-  
-</button>
+
+          </button>
         </div>
       </section>
 
@@ -90,7 +90,7 @@ export default function AboutHero() {
             className="text-[clamp(11px,1.6vw,22px)] font-semibold text-[#BA5561] tracking-[clamp(1px,0.3vw,4px)] uppercase mb-[clamp(4px,0.8vw,12px)]"
             style={{ fontFamily: "Open Sans" }}
           >
-          A BIT ABOUT US
+            A BIT ABOUT US
           </p>
           <h1
             className="text-[clamp(16px,4.2vw,56px)] tracking-[clamp(1px,0.45vw,6px)] leading-[1.15] font-bold mb-[clamp(6px,2.2vw,32px)]"

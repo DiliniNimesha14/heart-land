@@ -71,17 +71,7 @@ export default function Faqs() {
         },
       ],
     },
-    {
-      title: "Community Commitments",
-      intro: "",
-      faqs: [
-        {
-          question: "What initiatives do you support?",
-          answer:
-            (<>We are dedicated to supporting local farmers and women entrepreneurs in Sri Lanka. Additionally, we have launched our &ldquo;Heartland <span className="">❤️</span> Homeland&rdquo; initiative, which contributes a percentage of our annual profits to a Cancer Project in Sri Lanka. This initiative not only aids in raising awareness and funding for cancer treatment and research but also empowers our community to make a meaningful impact back home. Through our efforts, we aim to foster community development and sustainability while supporting those in need.</>),
-        },
-      ],
-    },
+
   ];
 
   //  One open item per section 
@@ -89,7 +79,6 @@ export default function Faqs() {
     0: 0,
     1: null,
     2: null,
-    3: null,
   });
 
   const toggleFaq = (sectionIndex: number, faqIndex: number) => {

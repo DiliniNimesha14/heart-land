@@ -20,7 +20,7 @@ export default function HomePagee() {
       <HomeHero />
       <Partners />
       <Blog />
-      <Initiative />
+      {/* <Initiative /> */}
       {/* <Testimonials />  - hide for now */} {/* test */}
       <Faq />
       <HeroBanner />
