@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import { Open_Sans, Nunito } from "next/font/google";
 
 const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"] });
-const openSans = Open_Sans({ subsets: ["latin"], weight: ["400", "600", "700"] });
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
 
 export default function CommunitySection() {
   const [offset, setOffset] = useState(0);
@@ -19,9 +22,10 @@ export default function CommunitySection() {
   return (
     <>
       {/* Desktop Layout */}
-      <section className={`hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white ${openSans.className}`}>
+      <section
+        className={`hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white ${openSans.className}`}
+      >
         <div className="flex flex-row gap-0 items-center w-full">
-
           {/* LEFT SIDE IMAGE */}
           <div className="relative w-[50%] lg:w-[55%] xl:w-[806px] 2xl:w-[900px] h-[350px] lg:h-[380px] xl:h-[450px] 2xl:h-[520px] shrink-0">
             <Image
@@ -36,12 +40,19 @@ export default function CommunitySection() {
 
           {/* TEXT */}
           <div className="px-4 lg:px-6 xl:px-10 2xl:px-14 ml-0 lg:ml-1 xl:ml-4 2xl:ml-6 pt-12 lg:pt-16 xl:pt-20 2xl:pt-24">
-            <h2 className={`${openSans.className} text-[36px] lg:text-[42px] xl:text-[52px] 2xl:text-[58px] font-bold text-black mb-6 lg:mb-8 xl:mb-10 leading-tight`}>
+            <h2
+              className={`${openSans.className} text-[36px] lg:text-[42px] xl:text-[52px] 2xl:text-[58px] font-bold text-black mb-6 lg:mb-8 xl:mb-10 leading-tight`}
+            >
               Be part of our journey
             </h2>
 
             <p className="text-base lg:text-lg xl:text-[22px] 2xl:text-[26px] text-[#000000] font-normal leading-relaxed xl:leading-8 2xl:leading-9 mb-12 xl:mb-14 2xl:mb-16">
-              At Heartland, we believe in growing together. Our success is built on the hard work of local  farmers and female entrepreneurs in Sri Lanka, and we are deeply committed to ensuring they  thrive alongside us. By sourcing directly from these communities, we provide sustainable  livelihoods and foster economic growth across the island. Beyond trade, we are incredibly proud of our signature &quot;Heartland <span className="text-red-600">♥</span> Homeland&quot; initiative.
+              At Heartland, we believe in growing together. Our success is built
+              on the hard work of local farmers and female entrepreneurs in Sri
+              Lanka, and we are deeply committed to ensuring they thrive
+              alongside us. By sourcing directly from these communities, we
+              provide sustainable livelihoods and foster economic growth across
+              the island.
             </p>
 
             <Link href="/Contact">
@@ -57,17 +68,25 @@ export default function CommunitySection() {
       </section>
 
       {/* Mobile Layout */}
-      <section className={`md:hidden w-full py-8 bg-[#F5F5F5] ${openSans.className}`}>
+      <section
+        className={`md:hidden w-full py-8 bg-[#F5F5F5] ${openSans.className}`}
+      >
         <div className="flex flex-col items-center text-center px-6">
-
           {/* Heading */}
-          <h2 className={`${nunito.className} text-2xl font-bold text-black mb-4 leading-tight`}>
+          <h2
+            className={`${nunito.className} text-2xl font-bold text-black mb-4 leading-tight`}
+          >
             Be part of our journey
           </h2>
 
           {/* Description */}
           <p className="text-sm text-[#000000] font-normal leading-relaxed mb-6 max-w-md">
-              At Heartland, we believe in growing together. Our success is built on the hard work of local  farmers and female entrepreneurs in Sri Lanka, and we are deeply committed to ensuring they  thrive alongside us. By sourcing directly from these communities, we provide sustainable  livelihoods and foster economic growth across the island. Beyond trade, we are incredibly proud of our signature &quot;Heartland <span className="text-red-600">♥</span> Homeland&quot; initiative.
+            At Heartland, we believe in growing together. Our success is built
+            on the hard work of local farmers and female entrepreneurs in Sri
+            Lanka, and we are deeply committed to ensuring they thrive alongside
+            us. By sourcing directly from these communities, we provide
+            sustainable livelihoods and foster economic growth across the
+            island.
           </p>
 
           {/* Button */}
