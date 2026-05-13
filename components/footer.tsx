@@ -186,10 +186,10 @@ export default function Footer() {
             </div>
 
             {/* RIGHT 3 COLUMNS */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:col-span-3 gap-8 lg:gap-10 lg:flex lg:justify-center lg:items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:col-span-3 gap-8 lg:gap-10 lg:flex lg:justify-center lg:items-start">
 
               <div className="md:row-span-2">
-                <h4 className="font-semibold mb-4 lg:-mt-5">Quick Link</h4>
+                <h4 className="font-semibold mb-4">Quick Link</h4>
                 <ul className="space-y-5 lg:space-y-5 text-sm text-gray-300">
                   <li><a href="/About" className="hover:text-[#D11417] transition-colors duration-300">About Us</a></li>
                   <li><a href="/Product" className="hover:text-[#D11417] transition-colors duration-300">Our Products</a></li>
@@ -200,7 +200,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <h4 className="font-semibold mb-4 lg:-mt-24">Information</h4>
+                <h4 className="font-semibold mb-4">Information</h4>
                 <ul className="space-y-3 lg:space-y-5 text-sm text-gray-300">
                   <li><a href="/FAQ" className="hover:text-[#D11417] transition-colors duration-300">FAQ</a></li>
                   <li><a href="/Resources" className="hover:text-[#D11417] transition-colors duration-300">Blog</a></li>
