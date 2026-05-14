@@ -43,7 +43,10 @@ export default function AboutHero() {
 
         {/* Text Content - Centered */}
         <div className="text-center mb-8 px-8">
-          <p className="text-[16px] font-semibold text-[#BA5561] tracking-[3px] uppercase mb-5" style={{ fontFamily: 'Open Sans' }}>
+          <p
+            className="text-[16px] font-semibold text-[#BA5561] tracking-[3px] uppercase mb-5"
+            style={{ fontFamily: "Open Sans" }}
+          >
             A BIT ABOUT US
           </p>
           <h1
@@ -75,9 +78,7 @@ export default function AboutHero() {
   "
             style={{ fontFamily: "David Libre" }}
           >
-            Explore More  &gt;&gt;
-
-
+            Explore More &gt;&gt;
           </button>
         </div>
       </section>
@@ -151,15 +152,16 @@ export default function AboutHero() {
               style={{ bottom: "clamp(-150px, -10vw, -50px)" }}
             >
               <Image
-                src="/Rectangle 90.png"
+                src="/Rectangle 93.png"
                 alt="food 1"
                 width={400}
-                height={340}
-                className="rounded-lg h-auto"
+                height={400}
+                className="rounded-xl object-cover h-auto"
                 style={{
                   marginLeft: "clamp(-140px, -9vw, -40px)",
-                  marginBottom: "clamp(-30px, 1vw, -6px)",
+                  marginBottom: "clamp(-30px, 1vw, 1px)",
                   width: "clamp(180px, 24vw, 380px)",
+                  height: "clamp(180px, 24vw, 380px)",
                 }}
               />
               <div>
