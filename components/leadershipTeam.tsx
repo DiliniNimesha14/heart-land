@@ -49,9 +49,9 @@ export default function LeadershipTeam() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 pt-16">
           {team.map((person, index) => (
-            <div key={index} className="flex flex-col group relative">
+            <div key={index} className="flex flex-col group relative mx-12 lg:mx-0">
               {/* Card Container with Pop-out Effect */}
               <div className="relative aspect-[4/5] mb-8 flex items-end justify-center">
                 {/* 1. The Red Background Box (the "Card") */}
