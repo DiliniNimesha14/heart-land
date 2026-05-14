@@ -2,18 +2,6 @@
 import Link from "next/link";
 
 import React, { useEffect, useState } from "react";
-import { Nunito, Open_Sans } from "next/font/google";
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-nunito",
-});
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-open-sans",
-});
 
 export default function JoinWithUs() {
   const bgPath = "/Rectangle 4585.png";
@@ -50,9 +38,7 @@ export default function JoinWithUs() {
 
         {/* Content */}
         <div className="relative max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center z-10">
-          <h2
-            className={`text-[28px] md:text-[36px] lg:text-[36px] xl:text-[44px] 2xl:text-[52px] leading-tight sm:leading-9 xl:leading-tight font-semibold uppercase text-white mb-20 xl:mb-24 2xl:mb-28 ${nunito.className}`}
-          >
+          <h2 className="text-[28px] md:text-[36px] lg:text-[36px] xl:text-[44px] 2xl:text-[52px] leading-tight sm:leading-9 xl:leading-tight font-nunito font-semibold uppercase text-white mb-20 xl:mb-24 2xl:mb-28">
             WORK WITH US
           </h2>
 
@@ -99,15 +85,11 @@ export default function JoinWithUs() {
 
         {/* Content */}
         <div className="relative w-full mx-auto px-4 py-8 text-center z-10">
-          <h2
-            className={`text-[18px] leading-tight font-normal uppercase text-white mb-5 -mt-2 ${nunito.className}`}
-          >
+          <h2 className="text-[18px] leading-tight font-nunito font-normal uppercase text-white mb-5 -mt-2">
             WORK WITH US
           </h2>
 
-          <p
-            className={`text-[14px] leading-[24px] text-white mb-4 px-12 ${openSans.className}`}
-          >
+          <p className="text-[14px] leading-[24px] text-white mb-4 px-12 font-openSans">
             At Heartland General Trading, we are always looking for passionate
             individuals who share our commitment to quality and community. If
             you’re interested in contributing to a vibrant team dedicated to
@@ -119,7 +101,7 @@ export default function JoinWithUs() {
           <div>
             <Link
               href="/careers"
-              className={`inline-block bg-[#E60012] text-white px-6 py-2 -mb-5 rounded-lg text-[12px] font-medium ${nunito.className}`}
+              className="inline-block bg-[#E60012] text-white px-6 py-2 -mb-5 rounded-lg text-[12px] font-openSans font-medium"
             >
               See Current Openings
             </Link>

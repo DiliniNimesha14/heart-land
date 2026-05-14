@@ -49,17 +49,11 @@ export default function Initiative() {
       <div className="lg:hidden max-w-2xl mx-auto px-6 relative">
         {/* Content */}
         <div className="relative z-10 text-center space-y-6">
-          <p
-            className="uppercase text-[18px] text-gray-400 text-sm tracking-[0.2em]"
-            style={{ fontFamily: "Open Sans" }}
-          >
+          <p className="uppercase text-[18px] text-gray-400 text-sm tracking-[0.2em] font-openSans">
             C S R
           </p>
 
-          <h2
-            className="text-[20px] sm:text-5xl font-bold text-black leading-tight"
-            style={{ fontFamily: "Open Sans" }}
-          >
+          <h2 className="text-[20px] sm:text-5xl font-nunito font-bold text-black leading-tight">
             Our Commitment to Community
           </h2>
 
@@ -135,14 +129,11 @@ export default function Initiative() {
               C S R
             </p>
 
-            <h2
-              className="text-[28px] lg:text-[30px] xl:text-[36px] 2xl:text-[42px] font-bold text-black leading-[100%] tracking-normal"
-              style={{ fontFamily: "Open Sans" }}
-            >
+            <h2 className="text-[28px] lg:text-[30px] xl:text-[36px] 2xl:text-[42px] font-nunito font-bold text-black leading-[100%] tracking-normal">
               Our Commitment to Community
             </h2>
 
-            <p className="text-gray-600 text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] font-nunito leading-[140%] tracking-normal max-w-xl">
+            <p className="text-gray-600 text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] font-openSans leading-[140%] tracking-normal max-w-xl">
               At Heartland General Trading, we believe in making a positive
               impact. We&apos;re dedicated to supporting our communities and
               promoting sustainability in everything we do. Together, we strive

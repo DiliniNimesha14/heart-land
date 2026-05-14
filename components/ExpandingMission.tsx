@@ -6,16 +6,10 @@ export default function ExpandingMission() {
 <div className="w-full mx-auto px-4 sm:px-6 lg:px-[120px] max-w-none">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
-          <h2 
-            className="text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] font-semibold text-black mb-4 md:mb-8"
-            style={{ fontFamily: 'Nunito, sans-serif' }}
-          >
+          <h2 className="text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] font-nunito font-semibold text-black mb-4 md:mb-8">
             Expanding Our Mission
           </h2>
-          <p 
-            className="text-base md:text-lg lg:text-[24px]  max-w-[1000px] mx-auto leading-relaxed"
-            style={{ fontFamily: 'Nunito, sans-serif', fontWeight: 400 }}
-          >
+          <p className="text-base md:text-lg lg:text-[24px] max-w-[1000px] mx-auto leading-relaxed font-openSans">
             Looking ahead, we are proud to be expanding this mission. We are currently in the process of partnering with prominent Sri Lankan cricketers who lead dedicated cancer projects, ensuring our contributions provide maximum impact and support to those who need it most.
           </p>
         </div>

@@ -63,33 +63,21 @@ export default function Blog() {
   }, []);
 
   return (
-    <section
-      className="py-8 md:py-20 bg-black"
-      style={{ fontFamily: "Open Sans" }}
-    >
+    <section className="py-8 md:py-20 bg-black font-openSans">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="max-w-full lg:max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
           {/* Header */}
           <div className="text-center mb-5 md:mb-16">
-            <p
-              className="text-white text-base md:text-sm tracking-[0.3em] uppercase mb-4 font-light"
-              style={{ fontFamily: "Open Sans" }}
-            >
+            <p className="text-white text-base md:text-sm tracking-[0.3em] uppercase mb-4 font-light">
               BLOG
             </p>
-            <h2
-              className="text-white text-[16px] md:text-4xl lg:text-5xl font-bold"
-              style={{ fontFamily: "Open Sans" }}
-            >
+            <h2 className="text-white text-[16px] md:text-4xl lg:text-5xl font-nunito font-bold">
               The latest article
             </h2>
           </div>
 
           {/* Desktop Layout - 3 cards in a row */}
-          <div
-            className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12"
-            style={{ fontFamily: "Open Sans" }}
-          >
+          <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12">
             {/* Card 1 */}
             <div className="group flex flex-col h-full">
               <div className="relative overflow-hidden mb-6">
@@ -101,7 +89,7 @@ export default function Blog() {
                   className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <p className="text-white text-base mb-4 leading-relaxed flex-grow">
+              <p className="text-white text-base mb-4 leading-relaxed flex-grow font-openSans">
                 Supporting Sri Lanka with Compassion and Purpose{" "}
               </p>
               {/* <Link
@@ -124,7 +112,7 @@ export default function Blog() {
                   className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <p className="text-white text-base mb-4 leading-relaxed flex-grow">
+              <p className="text-white text-base mb-4 leading-relaxed flex-grow font-openSans">
                 Empowering Smallholders, Cultivating Growth{" "}
               </p>
               {/* <Link
@@ -147,7 +135,7 @@ export default function Blog() {
                   className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <p className="text-white text-base mb-4 leading-relaxed flex-grow">
+              <p className="text-white text-base mb-4 leading-relaxed flex-grow font-openSans">
                 Heartland General Trading: A Leader in Quality and
                 Authenticity{" "}
               </p>
@@ -186,10 +174,7 @@ export default function Blog() {
                     </div>
 
                     <div className="text-center px-4 mt-6">
-                      <p
-                        className="text-white text-base mb-3 leading-relaxed"
-                        style={{ fontFamily: "Open Sans" }}
-                      >
+                      <p className="text-white text-base mb-3 leading-relaxed">
                         {card.topic}
                       </p>
                       {/* <Link

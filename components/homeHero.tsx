@@ -65,8 +65,7 @@ export default function HomeHero() {
                 <div className="relative z-20 pl-4 pr-4 pb-4 pt-[300px]">
                   {/* H1 */}
                   <h1
-                    className="font-extrabold text-[32px] leading-[45px] tracking-[0.02em] mb-4 max-w-[250px]"
-                    style={{ fontFamily: "'David Libre', serif" }}
+                    className="font-nunito font-extrabold text-[32px] leading-[45px] tracking-[0.02em] mb-4 max-w-[250px]"
                   >
                     Welcome to Heartland General Trading
                   </h1>
@@ -175,9 +174,8 @@ export default function HomeHero() {
                   {/* Left content */}
                   <div className="md:col-span-7 lg:col-span-6 z-10 px-4">
                     <h1
-                      className="font-extrabold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[36px] sm:leading-[44px] md:leading-[56px] lg:leading-[70px] tracking-[0.02em]"
-                      style={{ fontFamily: "'David Libre', serif" }}
-                    >
+                      className="font-nunito font-extrabold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[36px] sm:leading-[44px] md:leading-[56px] lg:leading-[70px] tracking-[0.02em]"
+                      >
                       Welcome to Heartland General Trading
                     </h1>
 

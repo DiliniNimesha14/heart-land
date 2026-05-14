@@ -54,7 +54,7 @@ export default function WhatPeopleSays() {
   return (
     <section className="w-full flex flex-col items-center py-20 bg-white">
       {/* Title */}
-      <h2 className="md:text-4xl text-xl font-bold mb-12" style={{ fontFamily: "Nunito" }}>
+      <h2 className="md:text-4xl text-xl font-nunito font-bold mb-12">
         What People Says About Us
       </h2>
 
@@ -75,10 +75,10 @@ export default function WhatPeopleSays() {
                 className="rounded-full"
               />
               <div>
-                <p className="text-[15px]" style={{ fontFamily: "Georgia", fontWeight: 600 }}>
+                <p className="text-[15px] font-openSans font-semibold">
                   {item.name}
                 </p>
-                <p className="text-sm text-gray-600" style={{ fontFamily: "Arial" }}>
+                <p className="text-sm text-gray-600 font-openSans">
                   {item.role}
                 </p>
               </div>
@@ -91,7 +91,7 @@ export default function WhatPeopleSays() {
               />
             </div>
 
-            <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "Open Sans" }}>
+            <p className="text-sm text-gray-700 leading-relaxed font-openSans">
               {item.text}
             </p>
           </div>

@@ -12,7 +12,7 @@ export default function Article() {
           <p className="text-gray-400 uppercase tracking-widest text-sm mb-2">
             B l o g
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold">The latest article</h2>
+          <h2 className="text-3xl md:text-4xl font-nunito font-bold">The latest article</h2>
         </div>
 
         {/* Article Cards */}
@@ -28,12 +28,12 @@ export default function Article() {
                 className="object-cover w-full h-60  mb-3 transform group-hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <p className="text-gray-300 text-sm ml-4 mb-6 mr-4 leading-relaxed">
+            <p className="text-gray-300 font-openSans text-sm ml-4 mb-6 mr-4 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <a
   href="#"
-  className="text-sm ml-4 mb-8 tracking-[0.5em] text-gray-200 hover:text-red-500 uppercase font-semibold transition-colors font-open-sans"
+  className="text-sm ml-4 mb-8 tracking-[0.5em] text-gray-200 hover:text-red-500 uppercase font-semibold transition-colors font-openSans"
 >
   Learn More &gt;
 </a>
@@ -50,12 +50,12 @@ export default function Article() {
                 className="object-cover w-full h-60 mb-3  transform group-hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <p className="text-gray-300 text-sm mb-6 ml-4 mr-4  leading-relaxed">
+            <p className="text-gray-300 font-openSans text-sm mb-6 ml-4 mr-4  leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <a
               href="#"
-              className="text-sm ml-4 tracking-[0.5em] text-gray-200 hover:text-red-500 uppercase font-semibold transition-colors"
+              className="text-sm ml-4 tracking-[0.5em] text-gray-200 hover:text-red-500 uppercase font-openSans font-semibold transition-colors"
             >
               Learn More &gt;
             </a>
@@ -72,7 +72,7 @@ export default function Article() {
                 className="object-cover w-full h-60 mb-3 transform group-hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <p className="text-gray-300 text-sm mb-8 ml-4  mr-4 leading-relaxed">
+            <p className="text-gray-300 font-openSans text-sm mb-8 ml-4  mr-4 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <a

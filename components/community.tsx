@@ -2,13 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Open_Sans, Nunito } from "next/font/google";
-
-const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"] });
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
 
 export default function CommunitySection() {
   const [offset, setOffset] = useState(0);
@@ -23,7 +16,7 @@ export default function CommunitySection() {
     <>
       {/* Desktop Layout */}
       <section
-        className={`hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white ${nunito.className}`}
+        className={`hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white font-nunito`}
       >
         <div className="flex flex-row gap-0 items-center w-full">
           {/* LEFT SIDE IMAGE */}
@@ -41,7 +34,7 @@ export default function CommunitySection() {
           {/* TEXT */}
           <div className="px-4 lg:px-6 xl:px-10 2xl:px-14 ml-0 lg:ml-1 xl:ml-4 2xl:ml-6 pt-12 lg:pt-16 xl:pt-20 2xl:pt-24">
             <h2
-              className={`${nunito.className} text-[36px] lg:text-[42px] xl:text-[52px] 2xl:text-[58px] font-bold text-black mb-6 lg:mb-8 xl:mb-10 leading-tight`}
+              className={`font-nunito text-[36px] lg:text-[42px] xl:text-[52px] 2xl:text-[58px] font-bold text-black mb-6 lg:mb-8 xl:mb-10 leading-tight`}
             >
               Be part of our journey
             </h2>
@@ -57,7 +50,7 @@ export default function CommunitySection() {
 
             <Link href="/Contact">
               <button
-                className={`${nunito.className} cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2 xl:py-3 2xl:py-4 px-3 xl:px-5 2xl:px-6 gap-[15px]
+                className={`font-nunito cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2 xl:py-3 2xl:py-4 px-3 xl:px-5 2xl:px-6 gap-[15px]
                 text-[#E60012] text-lg lg:text-2xl xl:text-[26px] 2xl:text-[28px] font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1`}
               >
                 Initiatives to partner with us
@@ -69,12 +62,12 @@ export default function CommunitySection() {
 
       {/* Mobile Layout */}
       <section
-        className={`md:hidden w-full py-8 bg-[#F5F5F5] ${nunito.className}`}
+        className={`md:hidden w-full py-8 bg-[#F5F5F5] font-nunito`}
       >
         <div className="flex flex-col items-center text-center px-6">
           {/* Heading */}
           <h2
-            className={`${nunito.className} text-2xl font-bold text-black mb-4 leading-tight`}
+            className={`font-nunito text-2xl font-bold text-black mb-4 leading-tight`}
           >
             Be part of our journey
           </h2>
@@ -92,7 +85,7 @@ export default function CommunitySection() {
           {/* Button */}
           <Link href="/Contact">
             <button
-              className={`${nunito.className} cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2.5 px-8 gap-[15px]
+              className={`font-nunito cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2.5 px-8 gap-[15px]
               text-[#E60012] bg-white text-sm font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg`}
             >
               Initiatives to partner with us

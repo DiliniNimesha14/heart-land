@@ -1,24 +1,18 @@
-import { Open_Sans } from "next/font/google";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { contactDetails } from "@/data/contactDetails";
 
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-open-sans",
-});
-
 export default function Footer() {
   return (
     <footer
-      className={`${openSans.className} bg-[#1B1D21] text-white px-6 md:px-15 py-6 md:pb-10`}
+      className="font-openSans bg-[#1B1D21] text-white px-6 md:px-15 py-6 md:pb-10"
     >
       {/* Container to center the content */}
       <div className="max-w-7xl 2xl:max-w-[1700px] mx-auto">
         {/* MOBILE LAYOUT */}
         <div className="block md:hidden">
           {/* Stay Connected With Heartland */}
-          <h3 className="text-[20px] font-normal mb-4">
+          <h3 className="text-[20px] font-nunito font-normal mb-4">
             Stay Connected With Heartland!
           </h3>
 
@@ -40,7 +34,7 @@ export default function Footer() {
           {/* Quick Link and Information in one row */}
           <div className="grid grid-cols-2 gap-8 mb-8">
             <div>
-              <h4 className="font-semibold text-[16px] mb-4">Quick Link</h4>
+              <h4 className="font-nunito font-semibold text-[16px] mb-4">Quick Link</h4>
               <ul className="space-y-3 text-sm text-white">
                 <li>
                   <a
@@ -79,7 +73,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-[16px] mb-4">Information</h4>
+              <h4 className="font-nunito font-semibold text-[16px] mb-4">Information</h4>
               <ul className="space-y-3 text-sm text-white">
                 <li>
                   <a
@@ -110,7 +104,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Us */}
-          <h2 className="font-bold text-[24px] mb-4">Contact Us</h2>
+          <h2 className="font-nunito font-bold text-[24px] mb-4">Contact Us</h2>
 
           {/* Corporate Office */}
           <p className="text-sm text-white leading-6 mb-4">
@@ -157,7 +151,7 @@ export default function Footer() {
 
           {/* Follow Us Section */}
           <div className="mb-6">
-            <h4 className="font-semibold mb-4">Follow Us</h4>
+            <h4 className="font-nunito font-semibold mb-4">Follow Us</h4>
             <div className="flex items-center gap-4 mb-6">
               <a
                 href="https://www.facebook.com/p/Heartland-General-Trading-Co-LLC-61556223026571/?_rdc=2&_rdr#"
@@ -241,7 +235,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10 border-b border-gray-700 pb-8 md:pb-10">
             {/* LEFT SECTION */}
             <div className="md:col-span-2">
-              <h3 className="text-lg md:text-xl font-semibold mb-4">
+              <h3 className="text-lg md:text-xl font-nunito font-semibold mb-4">
                 Stay Connected With Heartland!
               </h3>
 
@@ -278,7 +272,7 @@ export default function Footer() {
             {/* RIGHT 3 COLUMNS */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:col-span-3 gap-8 lg:gap-10 lg:flex lg:justify-center lg:items-start">
               <div className="md:row-span-2">
-                <h4 className="font-semibold mb-4">Quick Link</h4>
+                <h4 className="font-nunito font-semibold mb-4">Quick Link</h4>
                 <ul className="space-y-5 lg:space-y-5 text-sm text-gray-300">
                   <li>
                     <a
@@ -317,7 +311,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <h4 className="font-semibold mb-4">Information</h4>
+                <h4 className="font-nunito font-semibold mb-4">Information</h4>
                 <ul className="space-y-3 lg:space-y-5 text-sm text-gray-300">
                   <li>
                     <a
@@ -347,7 +341,7 @@ export default function Footer() {
               </div>
 
               <div className="lg:-mr-44">
-                <h4 className="font-bold text-lg lg:text-xl mb-4">
+                <h4 className="font-nunito font-bold text-lg lg:text-xl mb-4">
                   Contact Us
                 </h4>
                 <p className="text-sm text-gray-300 leading-6 mb-4">

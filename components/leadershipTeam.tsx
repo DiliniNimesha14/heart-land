@@ -2,10 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { Nunito, Open_Sans } from "next/font/google";
-
-const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
-const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" });
 
 const team = [
   {
@@ -39,11 +35,11 @@ export default function LeadershipTeam() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className={`text-center mb-16 ${nunito.className}`}>
-          <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-nunito font-bold text-black mb-6">
             Our Team
           </h2>
-          <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
+          <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto font-openSans">
             With decades of combined experience, our dedicated team at Heartland General Trading is at the helm, committed to delivering the best Sri Lankan food products.
           </p>
         </div>
@@ -74,11 +70,11 @@ export default function LeadershipTeam() {
               </div>
 
               {/* Info */}
-              <div className={openSans.className}>
-                <h3 className="text-xl font-bold text-black mb-1 group-hover:text-[#E60012] transition-colors">
+              <div>
+                <h3 className="text-xl font-nunito font-bold text-black mb-1 group-hover:text-[#E60012] transition-colors">
                   {person.name}
                 </h3>
-                <p className="text-gray-500 text-xs uppercase tracking-widest font-semibold">
+                <p className="text-gray-500 text-xs uppercase tracking-widest font-openSans font-semibold">
                   {person.role}
                 </p>
               </div>
