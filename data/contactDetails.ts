@@ -1,9 +1,9 @@
 export const contactDetails = {
   email: "accounts@heartlandtrdng.com",
-  officePhone: "+97142273376",
-  warehousePhone: "+97142593820",
-  mobileHotline: "+971504545684",
-  fax: "+97142273382",
+  officePhone: "+971 4 227 3376",
+  warehousePhone: "+971 4 259 3820",
+  mobileHotline: "+971 50 454 5684",
+  fax: "+971 4 227 3382",
   corporateAddress: {
     company: "Heartland General Trading FZE",
     line1: "Office 203A, Sheikha Maryam Building,",
