@@ -172,7 +172,7 @@ export default function WhyWorkWithUs() {
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mb-5 mt-5`}
+            className={`${nunito.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mb-5 mt-5`}
           >
             Quality Products & Freshness
           </h3>
@@ -209,7 +209,7 @@ export default function WhyWorkWithUs() {
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5`}
+            className={`${nunito.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5`}
           >
             Extensive Supplier Network
           </h3>
@@ -221,7 +221,7 @@ export default function WhyWorkWithUs() {
             farmers and producers in Sri Lanka, we not only ensure a great
             selection but also support our agricultural community back home.
           </p>
-           {/*<button
+          {/*<button
             className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm hover:underline self-start`}
           >
             Explore more →
@@ -246,7 +246,7 @@ export default function WhyWorkWithUs() {
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5`}
+            className={`${nunito.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5`}
           >
             Nationwide Distribution
           </h3>
@@ -259,7 +259,7 @@ export default function WhyWorkWithUs() {
             and grocery stores, ensuring easy access to your favorite Sri Lankan
             essentials.
           </p>
-           {/* <button
+          {/* <button
             className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm hover:underline self-start`}
           >
             Explore more →

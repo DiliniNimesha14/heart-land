@@ -96,7 +96,7 @@ export default function HeartlandTrading() {
           >
             <h2
               className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-bold leading-tight sm:leading-12 mb-4 sm:mb-6 md:mb-8 lg:mb-12"
-              style={{ fontFamily: "Open Sans, sans-serif" }}
+              style={{ fontFamily: "Nunito, sans-serif" }}
             >
               Uncompromising Quality & Standards
             </h2>
@@ -145,7 +145,7 @@ export default function HeartlandTrading() {
           >
             <h2
               className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-bold leading-tight sm:leading-none mb-4 sm:mb-6 md:mb-8 lg:mb-12"
-              style={{ fontFamily: "Open Sans, sans-serif" }}
+              style={{ fontFamily: "Nunito  , sans-serif" }}
             >
               The Heart of the <br className="hidden sm:block" />
               Community
@@ -172,7 +172,7 @@ export default function HeartlandTrading() {
           >
             <h2
               className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-bold leading-tight sm:leading-none mb-5 sm:mb-10 md:mb-15 lg:mb-25"
-              style={{ fontFamily: "Open Sans, sans-serif" }}
+              style={{ fontFamily: "Nunito  , sans-serif" }}
             >
               Sourcing with Purpose
             </h2>

@@ -23,7 +23,7 @@ export default function CommunitySection() {
     <>
       {/* Desktop Layout */}
       <section
-        className={`hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white ${openSans.className}`}
+        className={`hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white ${nunito.className}`}
       >
         <div className="flex flex-row gap-0 items-center w-full">
           {/* LEFT SIDE IMAGE */}
@@ -41,7 +41,7 @@ export default function CommunitySection() {
           {/* TEXT */}
           <div className="px-4 lg:px-6 xl:px-10 2xl:px-14 ml-0 lg:ml-1 xl:ml-4 2xl:ml-6 pt-12 lg:pt-16 xl:pt-20 2xl:pt-24">
             <h2
-              className={`${openSans.className} text-[36px] lg:text-[42px] xl:text-[52px] 2xl:text-[58px] font-bold text-black mb-6 lg:mb-8 xl:mb-10 leading-tight`}
+              className={`${nunito.className} text-[36px] lg:text-[42px] xl:text-[52px] 2xl:text-[58px] font-bold text-black mb-6 lg:mb-8 xl:mb-10 leading-tight`}
             >
               Be part of our journey
             </h2>
@@ -69,7 +69,7 @@ export default function CommunitySection() {
 
       {/* Mobile Layout */}
       <section
-        className={`md:hidden w-full py-8 bg-[#F5F5F5] ${openSans.className}`}
+        className={`md:hidden w-full py-8 bg-[#F5F5F5] ${nunito.className}`}
       >
         <div className="flex flex-col items-center text-center px-6">
           {/* Heading */}
