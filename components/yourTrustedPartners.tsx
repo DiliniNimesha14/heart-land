@@ -41,7 +41,7 @@ export default function Partners() {
         <div className="mx-auto w-full max-w-[1440px] 2xl:max-w-[1700px] 3xl:max-w-[1900px] px-6 lg:px-12">
           {/* Full-width Gradient Section */}
           <div className="py-12">
-            <h2 className="text-center text-2xl sm:text-3xl md:text-[40px] font-bold text-black mb-10">
+            <h2 className="text-center text-2xl sm:text-3xl md:text-[40px] font-nunito font-bold text-black mb-10">
               Our Trusted Partners
             </h2>
 
@@ -56,7 +56,7 @@ export default function Partners() {
               About
             </p>
 
-            <h3 className="text-[16px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-bold text-black leading-normal mb-4 lg:mb-5 tracking-wide">
+            <h3 className="text-[16px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-nunito font-bold text-black leading-normal mb-4 lg:mb-5 tracking-wide">
               Your Trusted Partner in Sri Lankan Food Distribution
             </h3>
 
@@ -94,7 +94,7 @@ export default function Partners() {
             <div className="flex lg:hidden justify-center gap-8 sm:gap-12 md:gap-14 px-4 sm:px-8 mb-2">
               {/* 15+ Years Expertise */}
               <div className="text-center flex-1">
-                <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
+                <h4 className="font-nunito font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
                   25
                 </h4>
                 <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
@@ -107,7 +107,7 @@ export default function Partners() {
 
               {/* 30+ Partner Brands */}
               <div className="text-center flex-1">
-                <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
+                <h4 className="font-nunito font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
                   30+
                 </h4>
                 <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
@@ -120,7 +120,7 @@ export default function Partners() {
 
               {/* 1000+ Happy Clients */}
               <div className="text-center flex-1">
-                <h4 className="font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
+                <h4 className="font-nunito font-semibold text-[25px] sm:text-[40px] leading-tight text-black mb-2">
                   1000+
                 </h4>
                 <p className="font-normal text-[12px] sm:text-[10px] leading-tight uppercase text-black tracking-[0.4em] whitespace-nowrap">
@@ -204,7 +204,7 @@ export default function Partners() {
               >
                 {/* 25 Years Expertise */}
                 <div className="text-left">
-                  <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+                  <h4 className="font-nunito font-normal text-[36px] leading-none text-[#6D7D7D]">
                     25+
                   </h4>
                   <div className="mt-4 space-y-1">
@@ -219,7 +219,7 @@ export default function Partners() {
 
                 {/* 30+ Partner Brands */}
                 <div className="text-left">
-                  <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+                  <h4 className="font-nunito font-normal text-[36px] leading-none text-[#6D7D7D]">
                     30+
                   </h4>
                   <div className="mt-4 space-y-1">
@@ -234,7 +234,7 @@ export default function Partners() {
 
                 {/* 1000+ Happy Clients */}
                 <div className="text-left">
-                  <h4 className="font-normal font-['Open_Sans'] text-[36px] leading-none text-[#6D7D7D]">
+                  <h4 className="font-nunito font-normal text-[36px] leading-none text-[#6D7D7D]">
                     1000+
                   </h4>
                   <div className="mt-4 space-y-1">

@@ -29,17 +29,15 @@ export default function HeartlandB2BNetwork() {
       {/* Content */}
       <div className="relative z-10 h-full w-full mx-auto px-4 sm:px-6 lg:px-[100px] xl:px-[120px] 2xl:px-[160px] flex flex-col justify-center">
         {/* Heading */}
-        <h2 
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-bold text-white mb-5 md:mb-10"
-          style={{ fontFamily: 'Nunito, sans-serif' }}
+        <h2
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-nunito font-bold text-white mb-5 md:mb-10"
         >
           The Heartland B2B Network
         </h2>
 
         {/* Description */}
-        <p 
-          className="text-sm sm:text-base font-roboto font-extralight md:text-lg lg:text-xl xl:text-[22px] 2xl:text-[24px] text-white/70 max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] mb-8 md:mb-10 leading-6 xl:leading-[32px]"
-          
+        <p
+          className="text-sm sm:text-base font-openSans font-extralight md:text-lg lg:text-xl xl:text-[22px] 2xl:text-[24px] text-white/70 max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] mb-8 md:mb-10 leading-6 xl:leading-8"
         >
           Our operational excellence and ISO/HACCP certifications have made us the trusted partner for the UAE&apos;s leading retail giants. 
           You can find our extensive range of products across all major hypermarkets and supermarkets, including:
@@ -56,7 +54,6 @@ export default function HeartlandB2BNetwork() {
               >
                 <span
                   className="text-base lg:text-xl xl:text-[22px] 2xl:text-[24px] font-light text-black text-center"
-                  style={{ fontFamily: 'Roboto, sans-serif' }}
                 >
                   {partner.name}
                 </span>
@@ -73,7 +70,6 @@ export default function HeartlandB2BNetwork() {
               >
                 <span
                   className="text-base lg:text-xl xl:text-[22px] 2xl:text-[24px] font-light text-black text-center"
-                  style={{ fontFamily: 'Roboto, sans-serif' }}
                 >
                   {partner.name}
                 </span>
@@ -89,10 +85,7 @@ export default function HeartlandB2BNetwork() {
               key={index}
               className="bg-white rounded-[16px] sm:rounded-[20px] border border-[#D11417] px-3 sm:px-5 py-2 sm:py-3 w-[110px] sm:w-[140px] h-[42px] sm:h-[48px] flex items-center justify-center shadow-sm"
             >
-              <span
-                className="text-xs sm:text-sm font-semibold text-black text-center"
-                style={{ fontFamily: 'Roboto, sans-serif' }}
-              >
+              <span className="text-xs sm:text-sm font-openSans font-semibold text-black text-center">
                 {partner.name}
               </span>
             </div>

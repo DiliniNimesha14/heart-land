@@ -1,16 +1,10 @@
-import { Open_Sans } from "next/font/google";
 import Image from "next/image";
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
 
 export default function ContactHeader() {
   return (
     <div className="px-0 sm:px-6 md:px-10">
       <section
-        className={`relative w-full h-[250px] sm:h-[280px] md:h-[320px] lg:h-[353px] py-8 sm:py-12 md:py-16 px-0 sm:px-4 bg-[#000000] text-center text-white overflow-hidden ${openSans.className}`}
+        className="relative w-full h-[250px] sm:h-[280px] md:h-[320px] lg:h-[353px] py-8 sm:py-12 md:py-16 px-0 sm:px-4 bg-[#000000] text-center text-white overflow-hidden font-openSans"
       >
         {/* Background Image */}
         <div className="absolute inset-0 flex items-center justify-center lg:justify-center lg:items-center">
@@ -28,7 +22,7 @@ export default function ContactHeader() {
             get in touch
           </p>
 
-          <h2 className="text-[20px] sm:text-[32px] md:text-[45px] lg:text-[55px] font-bold mb-4 sm:mb-0">
+          <h2 className="text-[20px] sm:text-[32px] md:text-[45px] lg:text-[55px] font-nunito font-bold mb-4 sm:mb-0">
             Contact Us
           </h2>
 

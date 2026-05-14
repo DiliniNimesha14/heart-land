@@ -1,14 +1,8 @@
 "use client";
 
-import { Open_Sans } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
 
 export default function HaveQ() {
   const [scrollY, setScrollY] = useState(0);
@@ -22,14 +16,13 @@ export default function HaveQ() {
   const parallax = (multiplier: number) => scrollY * multiplier;
 
   const sectionClass =
-    "relative w-full h-[260px] md:mb-50 md:h-[303px] flex flex-col justify-center bg-[#000000] text-white overflow-hidden md:rounded-tr-[50px] " +
-    openSans.className;
+    "relative w-full h-[260px] md:mb-50 md:h-[303px] flex flex-col justify-center bg-[#000000] text-white overflow-hidden md:rounded-tr-[50px] font-openSans";
 
   return (
     <section suppressHydrationWarning className={sectionClass}>
       {/* TEXT */}
       <div className="relative z-10 text-start md:text-left px-5 md:px-0">
-        <h2 className="text-[20px] md:text-[40px] md:ml-52 font-bold">
+        <h2 className="text-[20px] md:text-[40px] md:ml-52 font-nunito font-bold">
           Still have questions ?
         </h2>
 

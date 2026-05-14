@@ -1,16 +1,10 @@
-import { Open_Sans } from "next/font/google";
 import Image from "next/image";
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
 
 export default function FAQHeader() {
   return (
     <div className="px-0 md:px-10">
       <section
-        className={`relative w-full h-auto md:h-[353px] py-10 md:py-16 px-4 bg-[#000000] text-center text-white overflow-hidden ${openSans.className}`}
+        className="relative w-full h-auto md:h-[353px] py-10 md:py-16 px-4 bg-[#000000] text-center text-white overflow-hidden font-openSans"
       >
         {/* Background question marks */}
 <div className="absolute inset-0 pointer-events-none select-none">
@@ -59,7 +53,7 @@ export default function FAQHeader() {
             F A Q
           </p>
 
-          <h2 className="text-[18px] leading-tight md:text-[50px] font-bold">
+          <h2 className="text-[18px] leading-tight md:text-[50px] font-nunito font-bold">
             Frequently Asked Questions
           </h2>
 

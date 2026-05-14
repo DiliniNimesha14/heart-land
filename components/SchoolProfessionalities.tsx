@@ -42,7 +42,7 @@ export default function SchoolProfessionalTies() {
         <h2 className="text-xl font-nunito md:text-[36px] lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-bold mb-4 text-black">
           Fostering School & Professional Ties
         </h2>
-        <p className="text-sm sm:text-base font-roboto font-light md:text-lg xl:text-xl 2xl:text-[22px] text-black max-w-[1400px] xl:max-w-[1600px]">
+        <p className="text-sm sm:text-base font-openSans font-light md:text-lg xl:text-xl 2xl:text-[22px] text-black max-w-[1400px] xl:max-w-[1600px]">
           Heartland is the preferred partner for Sri Lankan Old Boys
           Associations (OBAs) and professional bodies in the UAE. We are proud
           to have associated our brand with iconic events that celebrate our
@@ -71,7 +71,7 @@ export default function SchoolProfessionalTies() {
             <div className="p-4 sm:p-5 md:p-6 xl:p-8">
               <div className="flex flex-col gap-2">
                 <span className="text-md xl:text-lg">{event.icon}</span>
-                <h3 className="text-lg font-roboto md:text-xl xl:text-[24px] 2xl:text-[30px] font-bold text-black leading-tight">
+                <h3 className="text-lg font-nunito md:text-xl xl:text-[24px] 2xl:text-[30px] font-bold text-black leading-tight">
                   {event.title}
                 </h3>
               </div>
@@ -101,11 +101,11 @@ export default function SchoolProfessionalTies() {
             <div className="p-4 sm:p-5 md:p-6 xl:p-8">
               <div className="flex flex-col gap-2">
                 <span className="text-md xl:text-lg">{project.icon}</span>
-                <h3 className="text-lg font-roboto md:text-xl xl:text-[24px] 2xl:text-[30px] font-bold text-black leading-tight">
+                <h3 className="text-lg font-nunito md:text-xl xl:text-[24px] 2xl:text-[30px] font-bold text-black leading-tight">
                   {project.title}
                 </h3>
                 {project.subtitle && (
-                  <p className="text-sm font-roboto font-bold md:text-xl xl:text-[22px] 2xl:text-[24px] text-black">
+                  <p className="text-sm font-openSans font-bold md:text-xl xl:text-[22px] 2xl:text-[24px] text-black">
                     {project.subtitle}
                   </p>
                 )}

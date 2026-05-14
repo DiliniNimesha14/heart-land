@@ -1,17 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Nunito, Open_Sans } from "next/font/google";
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
 
 export default function OurProjects() {
   return (
@@ -21,7 +10,7 @@ export default function OurProjects() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-14">
           {/* LEFT */}
           <div className="text-left  md:ml-20 ">
-            <h2 className={`${nunito.className} text-[22px] text-center md:text-left sm:text-[25px] md:text-[40px] font-semibold text-black mb-12`}>
+            <h2 className="font-nunito text-[22px] text-center md:text-left sm:text-[25px] md:text-[40px] font-semibold text-black mb-12">
               Our CSR Initiative
             </h2>
 
@@ -35,8 +24,7 @@ export default function OurProjects() {
                 }}
               />
 
-              <p className={`${openSans.className} text-[17px] text-center md:text-left text-black sm:text-[18px] md:text-[20px]
-                 leading-[22px] md:leading-7 md:min-w-[550px]`}>
+              <p className="font-openSans text-[17px] text-center md:text-left text-black sm:text-[18px] md:text-[20px] leading-[22px] md:leading-7 md:min-w-[550px]">
                 Through our signature Corporate Social Responsibility (CSR) initiative, &ldquo;Heartland
                 <span className="text-[#D11417] font-semibold"> ♥ </span>
                  Homeland,&rdquo; we allocate a portion of our annual profits to support vital cancer-related projects in Sri Lanka.

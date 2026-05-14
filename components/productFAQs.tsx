@@ -1,17 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Nunito, Open_Sans } from "next/font/google";
 import Image from "next/image";
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
 
 export default function ProductFaqs() {
   const faqs = [
@@ -64,12 +53,12 @@ export default function ProductFaqs() {
 
         {/* LEFT */}
         <div className="ml-0 md:ml-32 text-center md:text-left">
-          <h2 className={`text-[22px] md:text-[32px] font-bold text-black ${nunito.className}`}>
+          <h2 className="font-nunito text-[22px] md:text-[32px] font-bold text-black">
             Product FAQs
           </h2>
 
           <p
-            className={`text-[14px] md:text-[18px] mt-2 max-w-lg px-5  md:max-w-[400px] text-[#333] leading-[20px] md:leading-7 ${nunito.className}`}
+            className="font-openSans text-[14px] md:text-[18px] mt-2 max-w-lg px-5 md:max-w-[400px] text-[#333] leading-[20px] md:leading-7"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
           </p>
@@ -92,7 +81,7 @@ export default function ProductFaqs() {
           {faqs.map((faq, index) => (
             <div key={index}>
               <p
-                className={`text-[15px] md:text-[18px] py-2 cursor-pointer font-semibold ${openSans.className} ${
+                className={`font-openSans text-[15px] md:text-[18px] py-2 cursor-pointer font-semibold ${
                   openIndex === index
                     ? "text-[#D11417]"
                     : "text-black border-b border-[#D11417]"
@@ -110,7 +99,7 @@ export default function ProductFaqs() {
                 }`}
               >
                 <p
-                  className={`text-[15px] md:text-[16px] text-[#333] leading-5 md:leading-[26px] mt-2 ${nunito.className}`}
+                  className="font-openSans text-[15px] md:text-[16px] text-[#333] leading-5 md:leading-[26px] mt-2"
                 >
                   {faq.answer}
                 </p>

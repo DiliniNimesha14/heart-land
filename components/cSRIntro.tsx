@@ -1,18 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Nunito, Open_Sans } from "next/font/google";
 import { useEffect, useState } from "react";
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-});
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
 
 export default function CsrIntro() {
   const [scrollY, setScrollY] = useState(0);
@@ -75,13 +64,13 @@ export default function CsrIntro() {
         {/* LEFT TEXT */}
         <div className="text-start justify-start md:text-left self-start">
   <h2
-    className={`${nunito.className} text-[16px] md:text-[23px] mb-10 font-extrabold leading-6 text-[#0F0202]`}
+    className="font-nunito text-[16px] md:text-[23px] mb-10 font-extrabold leading-6 text-[#0F0202]"
   >
     Expanding Our Mission
   </h2>
 
   <p
-    className={`${openSans.className} text-[15px] mt-8 leading-[23px] text-[#2C2C2C]`}
+    className="font-openSans text-[15px] mt-8 leading-[23px] text-[#2C2C2C]"
   >
     Looking ahead, we are proud to be expanding this mission. We are currently in the process of partnering
     with prominent Sri Lankan cricketers who lead dedicated cancer projects, ensuring our contributions
