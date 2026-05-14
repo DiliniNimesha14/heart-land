@@ -1,7 +1,7 @@
 import { Open_Sans } from "next/font/google";
-import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { contactDetails } from "@/data/contactDetails";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -116,25 +116,35 @@ export default function Footer() {
           <p className="text-sm text-white leading-6 mb-4">
             <span className="font-semibold">Corporate Office</span>
             <br />
-            Heartland General Trading FZE
+            {contactDetails.corporateAddress.company}
             <br />
-            Office 203A, Sheikha Maryam Building,
+            {contactDetails.corporateAddress.line1}
             <br />
-            Deira, Dubai ,UAE.
+            {contactDetails.corporateAddress.line2}
           </p>
 
-          {/* Sri Lanka Office */}
-          {/*<div className="text-sm text-white leading-6 mb-4">
-            <p className="font-semibold text-white text-[16px] mb-4">Sri Lanka Office</p>
-            <p>No. 10, Palm Grove,<br/>
-            Colombo 03, Sri Lanka</p>
-          </div> */}
-
-          {/* Email */}
-          <p className="text-sm mb-2">info@heartlandtrdng.com</p>
-
-          {/* Phone */}
-          <p className="text-sm mb-2">+971 4 265 9072</p>
+          {/* Contact Numbers */}
+          <div className="text-sm text-white space-y-1 mb-4">
+            <p>
+              <span className="text-gray-400">Email:</span>{" "}
+              {contactDetails.email}
+            </p>
+            <p>
+              <span className="text-gray-400">Office:</span>{" "}
+              {contactDetails.officePhone}
+            </p>
+            <p>
+              <span className="text-gray-400">Warehouse:</span>{" "}
+              {contactDetails.warehousePhone}
+            </p>
+            <p>
+              <span className="text-gray-400">Mobile:</span>{" "}
+              {contactDetails.mobileHotline}
+            </p>
+            <p>
+              <span className="text-gray-400">Fax:</span> {contactDetails.fax}
+            </p>
+          </div>
 
           {/* Inquire Now Button */}
 
@@ -343,19 +353,36 @@ export default function Footer() {
                 <p className="text-sm text-gray-300 leading-6 mb-4">
                   <span className="font-semibold">Corporate Office</span>
                   <br />
-                  Heartland General Trading FZE
+                  {contactDetails.corporateAddress.company}
                   <br />
-                  Office 203A, Sheikha Maryam Building,
+                  {contactDetails.corporateAddress.line1}
                   <br />
-                  Deira, Dubai ,UAE.
+                  {contactDetails.corporateAddress.line2}
                 </p>
-                {/* <p className="text-sm text-gray-300 leading-6 mb-4">
-                  <span className="font-semibold">Sri Lanka Office</span><br/>
-                  No. 10, Palm Grove,<br/>
-                  Colombo 03, Sri Lanka
-                </p> */}
-                <p className="text-sm mb-1">info@heartlandtrdng.com</p>
-                <p className="text-sm mb-4">+971 4 265 9072</p>
+                {/* Contact Numbers */}
+                <div className="text-sm text-gray-300 space-y-1 mb-4">
+                  <p>
+                    <span className="text-gray-400">Email:</span>{" "}
+                    {contactDetails.email}
+                  </p>
+                  <p>
+                    <span className="text-gray-400">Office:</span>{" "}
+                    {contactDetails.officePhone}
+                  </p>
+                  <p>
+                    <span className="text-gray-400">Warehouse:</span>{" "}
+                    {contactDetails.warehousePhone}
+                  </p>
+                  <p>
+                    <span className="text-gray-400">Mobile:</span>{" "}
+                    {contactDetails.mobileHotline}
+                  </p>
+
+                  <p>
+                    <span className="text-gray-400">Fax:</span>{" "}
+                    {contactDetails.fax}
+                  </p>
+                </div>
                 <Link
                   href="/Contact"
                   className="inline-block cursor-pointer text-sm underline mb-8 transition-all duration-300 ease-out hover:scale-105 hover:text-[#D11417] hover:shadow-[0_8px_16px_rgba(209,20,23,0.2)] hover:-translate-y-1 transform-gpu"
