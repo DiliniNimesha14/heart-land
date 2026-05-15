@@ -16,7 +16,7 @@ export default function CommunitySection() {
     <>
       {/* Desktop Layout */}
       <section
-        className={`hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white font-nunito`}
+        className="hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white"
       >
         <div className="flex flex-row gap-0 items-center w-full">
           {/* LEFT SIDE IMAGE */}
@@ -39,7 +39,7 @@ export default function CommunitySection() {
               Be part of our journey
             </h2>
 
-            <p className="text-base lg:text-lg xl:text-[22px] 2xl:text-[26px] text-[#000000] font-normal leading-relaxed xl:leading-8 2xl:leading-9 mb-12 xl:mb-14 2xl:mb-16">
+            <p className="text-base lg:text-lg xl:text-[22px] 2xl:text-[26px] text-[#000000] font-openSans font-normal leading-relaxed xl:leading-8 2xl:leading-9 mb-12 xl:mb-14 2xl:mb-16">
               At Heartland, we believe in growing together. Our success is built
               on the hard work of local farmers and female entrepreneurs in Sri
               Lanka, and we are deeply committed to ensuring they thrive
@@ -50,8 +50,7 @@ export default function CommunitySection() {
 
             <Link href="/Contact">
               <button
-                className={`font-nunito cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2 xl:py-3 2xl:py-4 px-3 xl:px-5 2xl:px-6 gap-[15px]
-                text-[#E60012] text-lg lg:text-2xl xl:text-[26px] 2xl:text-[28px] font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1`}
+                className="font-openSans cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2 xl:py-3 2xl:py-4 px-3 xl:px-5 2xl:px-6 gap-[15px] text-[#E60012] text-lg lg:text-2xl xl:text-[26px] 2xl:text-[28px] font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1"
               >
                 Initiatives to partner with us
               </button>
@@ -62,7 +61,7 @@ export default function CommunitySection() {
 
       {/* Mobile Layout */}
       <section
-        className={`md:hidden w-full py-8 bg-[#F5F5F5] font-nunito`}
+        className="md:hidden w-full py-8 bg-[#F5F5F5]"
       >
         <div className="flex flex-col items-center text-center px-6">
           {/* Heading */}
@@ -73,7 +72,7 @@ export default function CommunitySection() {
           </h2>
 
           {/* Description */}
-          <p className="text-sm text-[#000000] font-normal leading-relaxed mb-6 max-w-md">
+          <p className="text-sm text-[#000000] font-openSans font-normal leading-relaxed mb-6 max-w-md">
             At Heartland, we believe in growing together. Our success is built
             on the hard work of local farmers and female entrepreneurs in Sri
             Lanka, and we are deeply committed to ensuring they thrive alongside
@@ -85,8 +84,7 @@ export default function CommunitySection() {
           {/* Button */}
           <Link href="/Contact">
             <button
-              className={`font-nunito cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2.5 px-8 gap-[15px]
-              text-[#E60012] bg-white text-sm font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg`}
+              className="font-openSans cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2.5 px-8 gap-[15px] text-[#E60012] bg-white text-sm font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg"
             >
               Initiatives to partner with us
             </button>

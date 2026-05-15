@@ -66,7 +66,7 @@ export default function VisionMission() {
 
         {/* Heading + Identity */}
         <div className="text-center space-y-4 md:space-y-6 lg:space-y-8 leading-6 md:leading-8 lg:leading-10 mb-8 md:mb-12 lg:mb-16 mx-auto">
-          <h2 className="text-[18px] sm:text-2xl md:text-4xl lg:text-[52px] xl:text-[58px] 2xl:text-[64px] font-semibold text-gray-900 transition-transform duration-500 hover:scale-[1.02] px-4 mb-10">
+          <h2 className="text-[18px] sm:text-2xl md:text-4xl lg:text-[52px] xl:text-[58px] 2xl:text-[64px] font-nunito font-semibold text-gray-900 transition-transform duration-500 hover:scale-[1.02] px-4 mb-10">
             Our Identity Vision and Mission
           </h2>
 
@@ -123,7 +123,7 @@ export default function VisionMission() {
 
             {/* Desktop Layout */}
             <div className="hidden md:block bg-[#EBEBEB] rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12 pl-6 sm:pl-8 md:pl-12 lg:pl-20 xl:pl-24 pr-4 sm:pr-6 lg:pr-8 shadow-sm hover:scale-[1.01] hover:shadow-lg transition-all duration-500">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-semibold text-[#D11417] mb-2 lg:mb-3">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-nunito font-semibold text-[#D11417] mb-2 lg:mb-3">
                 Our Vision
               </h3>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-relaxed font-openSans">
@@ -173,7 +173,7 @@ export default function VisionMission() {
 
             {/* Desktop Layout */}
             <div className="hidden md:block bg-[#EBEBEB] rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12 pl-4 sm:pl-6 lg:pl-8 pr-6 sm:pr-8 md:pr-12 lg:pr-20 xl:pr-24 shadow-sm hover:scale-[1.01] hover:shadow-lg transition-all duration-500">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-semibold text-[#D11417] mb-2 lg:mb-3 text-right">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-nunito font-semibold text-[#D11417] mb-2 lg:mb-3 text-right">
                 Our Mission
               </h3>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-relaxed text-right font-openSans">
