@@ -114,7 +114,7 @@ export default function WhyWorkWithUs() {
           viewport={{ once: true }}
           variants={fadeIn}
           style={{ letterSpacing: "5px" }}
-          className="text-[16px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-gray-500 uppercase"
+          className="text-[16px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-gray-500 uppercase font-openSans"
         >
           Our Commitment
         </motion.h4>
