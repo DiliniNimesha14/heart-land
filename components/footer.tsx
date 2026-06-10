@@ -4,9 +4,7 @@ import { contactDetails } from "@/data/contactDetails";
 
 export default function Footer() {
   return (
-    <footer
-      className="font-openSans bg-[#1B1D21] text-white px-6 md:px-15 py-6 md:pb-10"
-    >
+    <footer className="font-openSans bg-[#1B1D21] text-white px-6 md:px-15 py-6 md:pb-10">
       {/* Container to center the content */}
       <div className="max-w-7xl 2xl:max-w-[1700px] mx-auto">
         {/* MOBILE LAYOUT */}
@@ -19,7 +17,7 @@ export default function Footer() {
           {/* Email */}
           <div className="flex items-center justify-between mb-4 cursor-pointer w-full">
             <p className="text-sm break-all sm:break-normal">
-              info@heartlandtrdng.com
+              {contactDetails.email}
             </p>
             <span className="text-2xl shrink-0 ml-10">⭧</span>
           </div>
@@ -34,7 +32,9 @@ export default function Footer() {
           {/* Quick Link and Information in one row */}
           <div className="grid grid-cols-2 gap-8 mb-8">
             <div>
-              <h4 className="font-nunito font-semibold text-[16px] mb-4">Quick Link</h4>
+              <h4 className="font-nunito font-semibold text-[16px] mb-4">
+                Quick Link
+              </h4>
               <ul className="space-y-3 text-sm text-white">
                 <li>
                   <a
@@ -73,7 +73,9 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-nunito font-semibold text-[16px] mb-4">Information</h4>
+              <h4 className="font-nunito font-semibold text-[16px] mb-4">
+                Information
+              </h4>
               <ul className="space-y-3 text-sm text-white">
                 <li>
                   <a
@@ -241,7 +243,7 @@ export default function Footer() {
 
               <div className="flex items-center justify-between mb-4 cursor-pointer w-full lg:w-fit">
                 <p className="text-sm break-all sm:break-normal">
-                  info@heartlandtrdng.com
+                  {contactDetails.email}
                 </p>
                 <span className="text-2xl md:text-4xl lg:ml-auto shrink-0">
                   ⭧
