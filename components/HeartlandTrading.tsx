@@ -64,21 +64,17 @@ export default function HeartlandTrading() {
       {/* Hero Section with Background Image */}
       <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[347px] xl:h-[420px] 2xl:h-[500px]">
         <Image
-          src="/Rectangle 34624281.png"
+          src="/rice-curry.jpg"
           alt="Heartland Background"
           fill
-          className="object-cover brightness-100"
+          className="object-cover brightness-50 object-[center_30%]"
           priority
         />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 text-white">
-          <h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[64px] text-[#DADADA] font-nunito font-bold text-center leading-tight sm:leading-none mb-4 sm:mb-6 md:mb-10"
-          >
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[64px] text-[#DADADA] font-nunito font-bold text-center leading-tight sm:leading-none mb-4 sm:mb-6 md:mb-10">
             Heartland General Trading
           </h1>
-          <p
-            className="text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-[40px] 2xl:text-[46px] text-[#DADADA]/80 font-openSans font-semibold text-center leading-tight sm:leading-none px-2"
-          >
+          <p className="text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-[40px] 2xl:text-[46px] text-[#DADADA]/80 font-openSans font-semibold text-center leading-tight sm:leading-none px-2">
             25 Years of Sri Lankan Culinary Excellence in the UAE
           </p>
         </div>
@@ -92,9 +88,7 @@ export default function HeartlandTrading() {
             direction="left"
             className="text-center lg:text-left"
           >
-            <h2
-              className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-nunito font-bold leading-tight sm:leading-12 mb-4 sm:mb-6 md:mb-8 lg:mb-12"
-            >
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-nunito font-bold leading-tight sm:leading-12 mb-4 sm:mb-6 md:mb-8 lg:mb-12">
               Uncompromising Quality & Standards
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl font-openSans leading-relaxed sm:leading-6 xl:leading-8 mb-3 sm:mb-6">
@@ -140,9 +134,7 @@ export default function HeartlandTrading() {
             direction="right"
             className="order-1 lg:order-2 lg:pl-8 xl:pl-0 text-center lg:text-left"
           >
-            <h2
-              className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-nunito font-bold leading-tight sm:leading-none mb-4 sm:mb-6 md:mb-8 lg:mb-12"
-            >
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-nunito font-bold leading-tight sm:leading-none mb-4 sm:mb-6 md:mb-8 lg:mb-12">
               The Heart of the <br className="hidden sm:block" />
               Community
             </h2>
@@ -166,9 +158,7 @@ export default function HeartlandTrading() {
             direction="left"
             className="text-center lg:text-left"
           >
-            <h2
-              className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-nunito font-bold leading-tight sm:leading-none mb-5 sm:mb-10 md:mb-15 lg:mb-25"
-            >
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[46px] 2xl:text-[52px] font-nunito font-bold leading-tight sm:leading-none mb-5 sm:mb-10 md:mb-15 lg:mb-25">
               Sourcing with Purpose
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl font-openSans leading-relaxed sm:leading-6 xl:leading-8 mb-3 sm:mb-6">
