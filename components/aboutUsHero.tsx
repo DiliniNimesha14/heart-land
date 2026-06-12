@@ -31,13 +31,13 @@ export default function AboutHero() {
       {/* Mobile Layout - Only visible on mobile */}
       <section className="md:hidden">
         {/* Top Image - Rectangle 91 - Full Width */}
-        <div className="w-full mb-8">
+        <div className="w-full mb-8 ">
           <Image
-            src="/Rectangle 93.png"
+            src="/food-product.png"
             alt="About Hero"
             width={400}
             height={300}
-            className="w-full h-auto"
+            className="w-full h-auto object-cover"
           />
         </div>
 
@@ -139,7 +139,7 @@ export default function AboutHero() {
               style={{ bottom: "clamp(-150px, -10vw, -50px)" }}
             >
               <Image
-                src="/noodles.jpg"
+                src="/food-product.png"
                 alt="noodles"
                 width={400}
                 height={400}
