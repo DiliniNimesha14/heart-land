@@ -15,9 +15,7 @@ export default function CommunitySection() {
   return (
     <>
       {/* Desktop Layout */}
-      <section
-        className="hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white"
-      >
+      <section className="hidden md:flex w-full justify-start pb-12 sm:pb-16 md:pb-25 lg:pb-28 xl:pb-32 2xl:pb-36 bg-white">
         <div className="flex flex-row gap-0 items-center w-full">
           {/* LEFT SIDE IMAGE */}
           <div className="relative w-[50%] lg:w-[55%] xl:w-[806px] 2xl:w-[900px] h-[350px] lg:h-[380px] xl:h-[450px] 2xl:h-[520px] shrink-0">
@@ -49,10 +47,8 @@ export default function CommunitySection() {
             </p>
 
             <Link href="/Contact">
-              <button
-                className="font-openSans cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2 xl:py-3 2xl:py-4 px-3 xl:px-5 2xl:px-6 gap-[15px] text-[#E60012] text-lg lg:text-2xl xl:text-[26px] 2xl:text-[28px] font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1"
-              >
-                Initiatives to partner with us
+              <button className="font-openSans cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2 xl:py-3 2xl:py-4 px-3 xl:px-5 2xl:px-6 gap-[15px] text-[#E60012] text-lg lg:text-2xl xl:text-[26px] 2xl:text-[28px] font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1">
+                Reach out to us
               </button>
             </Link>
           </div>
@@ -60,9 +56,7 @@ export default function CommunitySection() {
       </section>
 
       {/* Mobile Layout */}
-      <section
-        className="md:hidden w-full py-8 bg-[#F5F5F5]"
-      >
+      <section className="md:hidden w-full py-8 bg-[#F5F5F5]">
         <div className="flex flex-col items-center text-center px-6">
           {/* Heading */}
           <h2
@@ -83,10 +77,8 @@ export default function CommunitySection() {
 
           {/* Button */}
           <Link href="/Contact">
-            <button
-              className="font-openSans cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2.5 px-8 gap-[15px] text-[#E60012] bg-white text-sm font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg"
-            >
-              Initiatives to partner with us
+            <button className="font-openSans cursor-pointer rounded-[20px] border-[3px] border-[#E60012] py-2.5 px-8 gap-[15px] text-[#E60012] bg-white text-sm font-bold transition-all duration-300 ease-out hover:bg-[#E60012] hover:text-white hover:shadow-lg">
+              Reach out to us
             </button>
           </Link>
         </div>

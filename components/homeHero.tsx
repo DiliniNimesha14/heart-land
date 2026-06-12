@@ -12,7 +12,7 @@ export default function HomeHero() {
       <div className="w-full px-0 md:px-4 md:px-6 lg:px-8 xl:px-12">
         <div className="max-w-full lg:max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
           {/* Your existing content here */}
-          <div className="py-8 md:py-16 lg:py-20">
+          <div className="py-8 md:py-16 lg:py-12">
             {/* Add your hero content */}
             {/* Hero Section */}
             <div className="relative w-full px-0 md:px-15 overflow-hidden">
@@ -64,15 +64,13 @@ export default function HomeHero() {
                 {/* Content */}
                 <div className="relative z-20 pl-4 pr-4 pb-4 pt-[300px]">
                   {/* H1 */}
-                  <h1
-                    className="font-nunito font-extrabold text-[32px] leading-[45px] tracking-[0.02em] mb-4 max-w-[250px]"
-                  >
+                  <h1 className="font-nunito font-extrabold text-[32px] leading-[45px] tracking-[0.02em] mb-4 max-w-[250px]">
                     Welcome to Heartland General Trading
                   </h1>
 
                   {/* Paragraphs */}
                   <div className="max-w-[250px]">
-                    <p className="font-normal text-[14px] leading-[26px] text-[#5C6574] mb-8">
+                    <p className="font-normal text-[15px] leading-[26px] text-[#2D3748] mb-8">
                       At Heartland General Trading, we bring the authentic soul
                       of Sri Lankan cuisine to the UAE. We proudly offer a
                       curated selection of over 200+ premium products, each
@@ -81,7 +79,7 @@ export default function HomeHero() {
                       vibrant flavors of the island.
                     </p>
 
-                    <p className="font-normal text-[14px] leading-[26px] text-[#5C6574] mb-8">
+                    <p className="font-normal text-[15px] leading-[26px] text-[#2D3748] mb-8">
                       Discover our aromatic spice collection, featuring
                       Turmeric, Cinnamon, and high-quality Curry Powder,
                       alongside an extensive variety of premium rice. From
@@ -90,7 +88,7 @@ export default function HomeHero() {
                       and Suwadel, we cater to every palate.
                     </p>
 
-                    <p className="font-normal text-[14px] leading-[26px] text-[#5C6574] mb-8">
+                    <p className="font-normal text-[15px] leading-[26px] text-[#2D3748] mb-8">
                       Beyond the essentials, explore our diverse range including
                       fine flours, rich jams, natural Jaggery, and Kithul
                       Treacle. For a true taste of the island&apos;s coast, our
@@ -173,13 +171,11 @@ export default function HomeHero() {
 
                   {/* Left content */}
                   <div className="md:col-span-7 lg:col-span-6 z-10 px-4">
-                    <h1
-                      className="font-nunito font-extrabold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[36px] sm:leading-[44px] md:leading-[56px] lg:leading-[70px] tracking-[0.02em]"
-                      >
+                    <h1 className="font-nunito font-extrabold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[36px] sm:leading-[44px] md:leading-[56px] lg:leading-[70px] tracking-[0.02em]">
                       Welcome to Heartland General Trading
                     </h1>
 
-                    <p className="font-normal text-[14px] leading-[26px] text-[#5C6574] mb-8 text-left">
+                    <p className="font-normal text-[15px] leading-[26px] text-[#2D3748] mb-8 text-left">
                       At Heartland General Trading, we bring the authentic soul
                       of Sri Lankan cuisine to the UAE. We proudly offer a
                       curated selection of over 200+ premium products, each
@@ -188,7 +184,7 @@ export default function HomeHero() {
                       vibrant flavors of the island.
                     </p>
 
-                    <p className="font-normal text-[14px] leading-[26px] text-[#5C6574] mb-8 text-left">
+                    <p className="font-normal text-[15px] leading-[26px] text-[#2D3748] mb-8 text-left">
                       Discover our aromatic spice collection, featuring
                       Turmeric, Cinnamon, and high-quality Curry Powder,
                       alongside an extensive variety of premium rice. From
@@ -197,7 +193,7 @@ export default function HomeHero() {
                       and Suwadel, we cater to every palate.
                     </p>
 
-                    <p className="font-normal text-[14px] leading-[26px] text-[#5C6574] mb-8 text-left">
+                    <p className="font-normal text-[15px] leading-[26px] text-[#2D3748] mb-8 text-left">
                       Beyond the essentials, explore our diverse range including
                       fine flours, rich jams, natural Jaggery, and Kithul
                       Treacle. For a true taste of the island&apos;s coast, our
