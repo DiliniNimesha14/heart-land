@@ -139,8 +139,8 @@ export default function AboutHero() {
               style={{ bottom: "clamp(-150px, -10vw, -50px)" }}
             >
               <Image
-                src="/Rectangle 93.png"
-                alt="food 1"
+                src="/noodles.jpg"
+                alt="noodles"
                 width={400}
                 height={400}
                 className="rounded-xl object-cover h-auto"
