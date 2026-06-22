@@ -10,11 +10,6 @@ export default function ContactGetInTouch() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* LEFT: Form / Text */}
           <div className="p-2 lg:ml-20 mt-15">
-            <p className="text-lg text-gray-600 w-auto mb-8 leading-8 text-center lg:text-left lg:hidden">
-              Connect With One Of The Leading Food <br /> Distributor In Sri
-              Lanka
-            </p>
-
             <h3 className="text-3xl font-nunito font-bold text-black mb-3 text-center lg:text-left">
               Let&#39;s Get in Touch
             </h3>
@@ -178,9 +173,7 @@ export default function ContactGetInTouch() {
               <p className="text-white text-xs font-bold">
                 <span className="font-bold">Email</span>
               </p>
-              <p className="text-white text-xs mt-1">
-                {contactDetails.email}
-              </p>
+              <p className="text-white text-xs mt-1">{contactDetails.email}</p>
             </div>
 
             <div>
