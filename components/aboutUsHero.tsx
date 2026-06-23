@@ -33,7 +33,7 @@ export default function AboutHero() {
         {/* Top Image - Rectangle 91 - Full Width */}
         <div className="w-full mb-8 ">
           <Image
-            src="/food-product.png"
+            src="/products-image2-clean.png"
             alt="About Hero"
             width={400}
             height={300}
