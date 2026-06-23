@@ -139,7 +139,7 @@ export default function AboutHero() {
               style={{ bottom: "clamp(-150px, -10vw, -50px)" }}
             >
               <Image
-                src="/food-product.png"
+                src="/products-image2-clean.png"
                 alt="noodles"
                 width={400}
                 height={400}
