@@ -12,6 +12,7 @@ export default function Navbar() {
     { name: "Products", href: "/Product" },
     // { name: "CSR", href: "/CSR" },
     { name: "Resources & Insights", href: "/Resources" },
+    { name: "Blog", href: "/blog" },
     { name: "FAQ & Support", href: "/FAQ" },
   ];
 

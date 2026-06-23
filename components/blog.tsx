@@ -1,7 +1,8 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
+import { blogs } from "@/data/blogs";
 
 export default function Blog() {
   const blogCarouselRef = useRef<HTMLDivElement | null>(null);
@@ -9,23 +10,13 @@ export default function Blog() {
   const [isPaused, setIsPaused] = useState(false);
   const isProgrammatic = useRef(false);
 
-  const blogCards = [
-    {
-      image: "/Frame 61 (3).png",
-      alt: "Star anise spices",
-      topic: "Supporting Sri Lanka with Compassion and Purpose",
-    },
-    {
-      image: "/Frame 62.png",
-      alt: "Spices on spoons",
-      topic: "Empowering Smallholders, Cultivating Growth",
-    },
-    {
-      image: "/Frame 63.png",
-      alt: "Spice market shop",
-      topic: "Heartland General Trading: A Leader in Quality and Authenticity",
-    },
-  ];
+  // Show the three most recent posts, linked to their full articles.
+  const blogCards = blogs.slice(0, 3).map((post) => ({
+    slug: post.slug,
+    image: post.image,
+    alt: post.title,
+    topic: post.title,
+  }));
 
   // Scroll to card
   useEffect(() => {
@@ -78,75 +69,30 @@ export default function Blog() {
 
           {/* Desktop Layout - 3 cards in a row */}
           <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12">
-            {/* Card 1 */}
-            <div className="group flex flex-col h-full">
-              <div className="relative overflow-hidden mb-6">
-                <Image
-                  src="/Frame 61 (3).png"
-                  alt="Star anise spices"
-                  width={400}
-                  height={300}
-                  className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <p className="text-white text-base mb-4 leading-relaxed flex-grow font-openSans">
-                Supporting Sri Lanka with Compassion and Purpose{" "}
-              </p>
-              {/* <Link
-              href="/CSR"
-              className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
-            >
-              LEARN MORE
-              <span className="ml-2 text-lg">›</span>
-            </Link> */}
-            </div>
-
-            {/* Card 2 */}
-            <div className="group flex flex-col h-full">
-              <div className="relative overflow-hidden mb-6">
-                <Image
-                  src="/Frame 62.png"
-                  alt="Spices on spoons"
-                  width={400}
-                  height={300}
-                  className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <p className="text-white text-base mb-4 leading-relaxed flex-grow font-openSans">
-                Empowering Smallholders, Cultivating Growth{" "}
-              </p>
-              {/* <Link
-              href="/CSR"
-              className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
-            >
-              LEARN MORE
-              <span className="ml-2 text-lg">›</span>
-            </Link> */}
-            </div>
-
-            {/* Card 3 */}
-            <div className="group flex flex-col h-full">
-              <div className="relative overflow-hidden mb-6">
-                <Image
-                  src="/Frame 63.png"
-                  alt="Spice market shop"
-                  width={400}
-                  height={300}
-                  className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <p className="text-white text-base mb-4 leading-relaxed flex-grow font-openSans">
-                Heartland General Trading: A Leader in Quality and
-                Authenticity{" "}
-              </p>
-              {/* <Link
-              href="/CSR"
-              className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
-            >
-              LEARN MORE
-              <span className="ml-2 text-lg">›</span>
-            </Link> */}
-            </div>
+            {blogCards.map((card) => (
+              <Link
+                key={card.slug}
+                href={`/blog/${card.slug}`}
+                className="group flex flex-col h-full"
+              >
+                <div className="relative overflow-hidden mb-6">
+                  <Image
+                    src={card.image}
+                    alt={card.alt}
+                    width={400}
+                    height={300}
+                    className="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <p className="text-white text-base mb-4 leading-relaxed flex-grow font-openSans transition-colors group-hover:text-red-500">
+                  {card.topic}
+                </p>
+                <span className="inline-flex items-center text-white text-sm tracking-[0.3em] uppercase group-hover:text-red-500 transition-colors">
+                  LEARN MORE
+                  <span className="ml-2 text-lg">›</span>
+                </span>
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Layout - Carousel/Slider style */}
@@ -159,8 +105,9 @@ export default function Blog() {
                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               >
                 {blogCards.map((card, index) => (
-                  <div
+                  <Link
                     key={index}
+                    href={`/blog/${card.slug}`}
                     className="shrink-0 w-full snap-start snap-always"
                   >
                     <div className="relative overflow-hidden">
@@ -177,14 +124,11 @@ export default function Blog() {
                       <p className="text-white text-base mb-3 leading-relaxed">
                         {card.topic}
                       </p>
-                      {/* <Link
-                      href="/CSR"
-                      className="inline-flex items-center text-[#757575] text-[12px] tracking-[0.3em] uppercase hover:text-gray-300 transition-colors"
-                    >
-                      LEARN MORE
-                    </Link> */}
+                      <span className="inline-flex items-center text-[#757575] text-[12px] tracking-[0.3em] uppercase">
+                        LEARN MORE
+                      </span>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
 
