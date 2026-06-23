@@ -6,7 +6,7 @@ export default function CommunityPillar() {
       {/* Header Section */}
       <div className="mb-8 md:mb-12">
         <div className="flex items-center gap-2.5 mb-3">
-          <span className="text-sm font-roboto font-normal md:text-lg xl:text-xl text-black">
+          <span className="text-sm font-openSans font-normal md:text-lg xl:text-xl text-black">
             Events & Sponsorships
           </span>
           <span className="w-[80px] md:w-[100px] h-[1px] bg-black" />
@@ -14,7 +14,7 @@ export default function CommunityPillar() {
         <h2 className="text-2xl font-nunito font-semibold md:text-[40px] xl:text-[46px] 2xl:text-[52px] mb-10 leading-[140%] text-black">
           A Pillar of the Community
         </h2>
-        <p className="text-sm font-nunito font-light sm:text-base md:text-xl xl:text-[24px] 2xl:text-[30px] leading-[130%] text-black max-w-[1200px] xl:max-w-[1400px]">
+        <p className="text-sm font-openSans font-light sm:text-base md:text-xl xl:text-[24px] 2xl:text-[30px] leading-[130%] text-black max-w-[1200px] xl:max-w-[1400px]">
           At Heartland General Trading, we believe true success means making a
           difference.
           <br className="hidden sm:block" />
@@ -45,14 +45,14 @@ export default function CommunityPillar() {
               Diplomatic & Institutional Partnerships
             </h3>
 
-            <p className="text-sm sm:text-base md:text-lg lg:text-[20px] xl:text-[22px] leading-[150%] text-black mb-4 md:mb-6 font-roboto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-[20px] xl:text-[22px] leading-[150%] text-black mb-4 md:mb-6 font-openSans">
               We maintain a close and ongoing collaboration with the key
               institutions that represent our nation abroad. Heartland is a
               proud partner of:
             </p>
 
             {/* Partnership List */}
-            <ul className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 mb-4 md:mb-5 font-roboto">
+            <ul className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 mb-4 md:mb-5 font-openSans">
               <li className="flex items-start text-sm sm:text-base md:text-md lg:text-[18px] xl:text-[20px] leading-[150%] text-black">
                 <span className="mr-2 md:mr-3 text-black">•</span>
                 <span>The Embassy of Sri Lanka (Abu Dhabi)</span>
@@ -67,7 +67,7 @@ export default function CommunityPillar() {
               </li>
             </ul>
 
-            <p className="text-sm sm:text-base md:text-md lg:text-[18px] xl:text-[20px] leading-[150%] text-black font-roboto">
+            <p className="text-sm sm:text-base md:text-md lg:text-[18px] xl:text-[20px] leading-[150%] text-black font-openSans">
               From sponsoring the Sri Lankan Independence Day celebrations to
               the &quot;Sri Lanka Beyond Your Dreams&quot; initiative, we are
               dedicated to supporting the vision of our diplomatic offices. We

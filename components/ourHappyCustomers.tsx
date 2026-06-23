@@ -91,13 +91,13 @@ export default function Testimonials() {
         <div className="lg:hidden">
           {/* Header */}
           <div className="text-center mb-5">
-            <p className="uppercase text-[#6D7D7D] tracking-[0.35em] text-[16px] mb-4 font-normal" style={{ fontFamily: 'Open Sans' }}>
+            <p className="font-openSans uppercase text-[#6D7D7D] tracking-[0.35em] text-[16px] mb-4 font-normal">
               TESTIMONIALS
             </p>
-            <h2 className="text-[16px] font-bold text-black mb-6 leading-tight" style={{ fontFamily: 'Open Sans' }}>
+            <h2 className="font-nunito text-[16px] font-bold text-black mb-6 leading-tight">
               Our Happy Customers
             </h2>
-            <p className="text-[#5C6574] text-[12px] leading-[1.7] max-w-[360px] mx-auto px-4" style={{ fontFamily: 'Open Sans' }}>
+            <p className="font-openSans text-[#5C6574] text-[12px] leading-[1.7] max-w-[360px] mx-auto px-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
             </p>
           </div>
@@ -132,16 +132,16 @@ export default function Testimonials() {
               }}
             >
               {/* Testimonial Text */}
-              <p className="text-[#5C6574] text-center text-[12px] leading-[1.7] mb-3 px-2" style={{ fontFamily: 'Inter' }}>
+              <p className="font-openSans text-[#5C6574] text-center text-[12px] leading-[1.7] mb-3 px-2">
                 {testimonials[activeIndex].text}
               </p>
 
               {/* Name and Role */}
               <div className="text-center">
-                <h4 className="font-bold text-black text-[14px] mb-1" style={{ fontFamily: 'Inter' }}>
+                <h4 className="font-nunito font-bold text-black text-[14px] mb-1">
                   {testimonials[activeIndex].name}
                 </h4>
-                <p className="text-[#5C6574] text-[14px]" style={{ fontFamily: 'Inter' }}>
+                <p className="font-openSans text-[#5C6574] text-[14px]">
                   {testimonials[activeIndex].role}
                 </p>
               </div>

@@ -4,11 +4,6 @@ import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Icon } from "@iconify/react";
 
-import { Nunito, Open_Sans, Poppins } from "next/font/google";
-
-const nunito = Nunito({ subsets: ["latin"] });
-const openSans = Open_Sans({ subsets: ["latin"] });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 export default function WhyWorkWithUs() {
   const { scrollY } = useScroll();
@@ -119,7 +114,7 @@ export default function WhyWorkWithUs() {
           viewport={{ once: true }}
           variants={fadeIn}
           style={{ letterSpacing: "5px" }}
-          className="text-[16px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-gray-500 uppercase"
+          className="text-[16px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-gray-500 uppercase font-openSans"
         >
           Our Commitment
         </motion.h4>
@@ -129,7 +124,7 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className={`${nunito.className} text-[18px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[64px] font-bold mt-2`}
+          className="font-nunito text-[18px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-[64px] font-bold mt-2"
         >
           Why Work With Us
         </motion.h1>
@@ -139,8 +134,7 @@ export default function WhyWorkWithUs() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
-          className={`${nunito.className} max-w-[1080px] xl:max-w-[1600px] text-[12px] sm:text-base md:text-lg
-        lg:text-xl xl:text-[24px] 2xl:text-3xl mt-3 md:mt-10 mb-6 md:mb-10 mx-auto text-black leading-[29px] lg:leading-8 xl:leading-9 px-4`}
+          className="font-openSans max-w-[1080px] xl:max-w-[1600px] text-[12px] sm:text-base md:text-lg lg:text-xl xl:text-[24px] 2xl:text-3xl mt-3 md:mt-10 mb-6 md:mb-10 mx-auto text-black leading-[29px] lg:leading-8 xl:leading-9 px-4"
         >
           At Heartland General Trading, we prioritize quality, freshness,
           authenticity, and community. As a premier distributor of Sri Lankan
@@ -165,19 +159,19 @@ export default function WhyWorkWithUs() {
         >
           <div className="relative flex items-center justify-start h-14 lg:h-16 xl:h-18 mb-2 sm:mb-5">
             <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-full bg-[#D11417] flex items-center justify-center">
-              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-inter font-bold">
+              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-nunito font-bold">
                 01
               </span>
             </div>
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mb-5 mt-5`}
+            className="font-nunito font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mb-5 mt-5"
           >
             Quality Products & Freshness
           </h3>
           <p
-            className={`${nunito.className} text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7`}
+            className="font-openSans text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7"
           >
             At Heartland, we take quality seriously. We carefully select our
             products from trusted suppliers to ensure that each item from our
@@ -202,26 +196,26 @@ export default function WhyWorkWithUs() {
         >
           <div className="relative flex items-center justify-start h-14 lg:h-16 xl:h-18 mb-2 sm:mb-5">
             <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-full bg-[#D11417] flex items-center justify-center">
-              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-bold font-inter">
+              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-bold font-nunito">
                 02
               </span>
             </div>
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5`}
+            className="font-nunito font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5"
           >
             Extensive Supplier Network
           </h3>
           <p
-            className={`${nunito.className} text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7`}
+            className="font-openSans text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7"
           >
             Our strong network of suppliers is key to maintaining the quality
             and availability of our products. By partnering closely with local
             farmers and producers in Sri Lanka, we not only ensure a great
             selection but also support our agricultural community back home.
           </p>
-           {/*<button
+          {/*<button
             className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm hover:underline self-start`}
           >
             Explore more →
@@ -239,19 +233,19 @@ export default function WhyWorkWithUs() {
         >
           <div className="relative flex items-center justify-start h-14 lg:h-16 xl:h-18 mb-2 sm:mb-5">
             <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-full bg-[#D11417] flex items-center justify-center">
-              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-bold font-inter">
+              <span className="text-white text-[24px] sm:text-4xl lg:text-[40px] xl:text-[44px] font-bold font-nunito">
                 03
               </span>
             </div>
           </div>
 
           <h3
-            className={`${openSans.className} font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5`}
+            className="font-nunito font-semibold text-[#071440] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] mt-5 mb-5"
           >
             Nationwide Distribution
           </h3>
           <p
-            className={`${nunito.className} text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7`}
+            className="font-openSans text-[#676767] text-[14px] lg:text-[16px] xl:text-[18px] leading-normal lg:leading-5 xl:leading-7"
           >
             With over two decades of experience, Heartland General Trading has
             established a robust distribution network across the UAE. Our
@@ -259,7 +253,7 @@ export default function WhyWorkWithUs() {
             and grocery stores, ensuring easy access to your favorite Sri Lankan
             essentials.
           </p>
-           {/* <button
+          {/* <button
             className={`${poppins.className} mt-auto pt-6 text-[#071440] cursor-pointer font-bold text-sm hover:underline self-start`}
           >
             Explore more →

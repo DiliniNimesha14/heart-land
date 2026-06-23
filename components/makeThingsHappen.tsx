@@ -49,7 +49,7 @@ export default function HeroBanner() {
                 {/* Content block */}
                 <div className="relative z-20 flex flex-col items-start text-left text-white max-w-xl">
                   <h1
-                    className="font-openSans font-bold text-[40px] leading-10 text-white"
+                    className="font-nunito font-bold text-[40px] leading-10 text-white"
                     style={{ maxWidth: 800 }}
                   >
                     {" "}
@@ -78,7 +78,7 @@ export default function HeroBanner() {
               <div className="relative flex items-center justify-between ">
                 {/* Content block - left side */}
                 <div className="relative z-20 flex flex-col items-start text-left text-white px-2 font-openSans max-w-[400px] sm:max-w-[55%] md:max-w-[70%]">
-                  <h1 className="font-openSans font-bold text-[22px] sm:text-[28px] md:text-[32px] leading-[1.2] text-white mb-3 sm:mb-4">
+                  <h1 className="font-nunito font-bold text-[22px] sm:text-[28px] md:text-[32px] leading-[1.2] text-white mb-3 sm:mb-4">
                     Get in Touch
                   </h1>
 

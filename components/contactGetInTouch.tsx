@@ -1,20 +1,12 @@
 "use client";
 
-import { Nunito } from "next/font/google";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-});
+import { contactDetails } from "@/data/contactDetails";
 
 export default function ContactGetInTouch() {
   return (
     <>
-      <section
-        className={`${nunito.className} w-full bg-white py-5 px-8 md:px-20 lg:mb-10`}
-      >
+      <section className="font-openSans w-full bg-white py-5 px-8 md:px-20 lg:mb-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* LEFT: Form / Text */}
           <div className="p-2 lg:ml-20 mt-15">
@@ -23,7 +15,7 @@ export default function ContactGetInTouch() {
               Lanka
             </p>
 
-            <h3 className="text-3xl font-bold text-black mb-3 text-center lg:text-left">
+            <h3 className="text-3xl font-nunito font-bold text-black mb-3 text-center lg:text-left">
               Let&#39;s Get in Touch
             </h3>
             <p className="text-lg text-gray-600 w-auto mb-12 lg:mb-8 leading-8 text-center lg:text-left">
@@ -45,32 +37,34 @@ export default function ContactGetInTouch() {
                   />
                 </div>
 
-              <div>
-                <label className="block text-base sm:text-lg text-[#444444] mb-2">Email</label>
-                <input
-                  type="email"
-                  className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-300 text-sm sm:text-base text-black"
-                />
-              </div>
-              <div>
-  <label className="block text-base sm:text-lg text-[#444444] mb-3">
-    Inquiry Type
-  </label>
+                <div>
+                  <label className="block text-base sm:text-lg text-[#444444] mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-300 text-sm sm:text-base text-black"
+                  />
+                </div>
+                <div>
+                  <label className="block text-base sm:text-lg text-[#444444] mb-3">
+                    Inquiry Type
+                  </label>
 
-  <select
-    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none 
+                  <select
+                    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none 
     focus:border-[#D11417] px-0 py-4 text-sm sm:text-base text-black"
-    defaultValue=""
-    required
-  >
-    <option value="" disabled className="text-gray-500">
-      Select inquiry type
-    </option>
-    <option value="retailers">Retailers</option>
-    <option value="products">Product Inquiry</option>
-    <option value="general">General Inquiry</option>
-  </select>
-</div>
+                    defaultValue=""
+                    required
+                  >
+                    <option value="" disabled className="text-gray-500">
+                      Select inquiry type
+                    </option>
+                    <option value="retailers">Retailers</option>
+                    <option value="products">Product Inquiry</option>
+                    <option value="general">General Inquiry</option>
+                  </select>
+                </div>
 
                 <div>
                   <label className="block text-base sm:text-lg text-[#444444] mb-2">
@@ -82,16 +76,17 @@ export default function ContactGetInTouch() {
                   />
                 </div>
 
-              <div>
-                <label className="block text-base sm:text-lg text-[#444444] mb-2">Message</label>
-                <textarea
-                  rows={1}   
-                               
-                  className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none
+                <div>
+                  <label className="block text-base sm:text-lg text-[#444444] mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    rows={1}
+                    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none
                    focus:border-[#D11417] px-0 py-2 placeholder-gray-300 resize-none text-sm sm:text-base
                     text-black"
-                />
-              </div>
+                  />
+                </div>
 
                 <div className="pt-4">
                   <button
@@ -133,16 +128,16 @@ export default function ContactGetInTouch() {
       {/* Mobile Contact Info Section - Independent positioning */}
       <div className="lg:hidden mx-4  mb-6 relative z-20">
         <div className="bg-[#B10003] p-6 text-center">
-          <h4 className="text-white text-m font-light mb-3 mt-10 tracking-wide ">
+          <h4 className="text-white text-m font-nunito font-light mb-3 mt-10 tracking-wide">
             Head Office
           </h4>
-          <h3 className="text-white text-lg font-bold mb-4">
-            Heartland General Trading FZE
+          <h3 className="text-white text-lg font-nunito font-bold mb-4">
+            {contactDetails.corporateAddress.company}
           </h3>
           <p className="text-white text-xs mb-15 leading-relaxed">
-            Warehouse No. 18, Industrial Area 3,
+            {contactDetails.corporateAddress.line1}
             <br />
-            Al Qusais, Dubai, United Arab Emirates
+            {contactDetails.corporateAddress.line2}
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-5">
@@ -184,7 +179,7 @@ export default function ContactGetInTouch() {
                 <span className="font-bold">Email</span>
               </p>
               <p className="text-white text-xs mt-1">
-                info@heartlandgeneraltrading.com
+                {contactDetails.email}
               </p>
             </div>
 
@@ -193,7 +188,7 @@ export default function ContactGetInTouch() {
                 <span className="font-bold mt-3">Telephone</span>
               </p>
               <p className="text-white text-xs font-light mt-2">
-                +971 4 265 9072
+                {contactDetails.officePhone}
               </p>
             </div>
 
@@ -201,23 +196,22 @@ export default function ContactGetInTouch() {
               <p className="text-white text-xs font-bold mb-5">Follow Us</p>
               <div className="flex gap-5 justify-center">
                 <a
-  href="https://www.facebook.com/p/Heartland-General-Trading-Co-LLC-61556223026571/"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Visit our Facebook page"
-  className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
->
-  <Facebook size={16} className="text-black" />
-</a>
+                  href="https://www.facebook.com/p/Heartland-General-Trading-Co-LLC-61556223026571/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our Facebook page"
+                  className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <Facebook size={16} className="text-black" />
+                </a>
                 <a
                   href="https://www.instagram.com/heartlandgeneral/"
                   target="_blank"
-  rel="noopener noreferrer"
+                  rel="noopener noreferrer"
                   className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
                 >
                   <Instagram size={16} className="text-black" />
                 </a>
- 
               </div>
             </div>
           </div>
@@ -227,11 +221,12 @@ export default function ContactGetInTouch() {
       {/* Dark Blue Background Section - Independent positioning */}
       <div className="lg:hidden w-full bg-[#090B21] relative z-10 -mt-175 pt-175">
         <div className="px-6 py-8">
-          <h3 className="text-white text-xl font-bold mb-2 text-center">
+          <h3 className="text-white text-xl font-nunito font-bold mb-2 text-center">
             Get In Touch
           </h3>
           <p className="text-gray-300 text-xs text-center mb-6 leading-relaxed">
-            Our team is always ready to listen, guide, and help you take the next step
+            Our team is always ready to listen, guide, and help you take the
+            next step
           </p>
 
           <form className="space-y-5 max-w-md mx-auto">
@@ -252,22 +247,24 @@ export default function ContactGetInTouch() {
               />
             </div>
             <div>
-  <label className="block text-sm text-white mb-2">Inquiry Type</label>
+              <label className="block text-sm text-white mb-2">
+                Inquiry Type
+              </label>
 
-  <select
-    className="w-full bg-black border-0 border-b border-[#D11417] focus:outline-none 
+              <select
+                className="w-full bg-black border-0 border-b border-[#D11417] focus:outline-none 
     focus:border-[#D11417] px-0 py-2 text-sm text-white"
-    defaultValue=""
-    required
-  >
-    <option value="" disabled className="text-gray-400">
-      Select inquiry type
-    </option>
-    <option value="retailers">Retailers</option>
-    <option value="products">Product Inquiry</option>
-    <option value="general">General Inquiry</option>
-  </select>
-</div>
+                defaultValue=""
+                required
+              >
+                <option value="" disabled className="text-gray-400">
+                  Select inquiry type
+                </option>
+                <option value="retailers">Retailers</option>
+                <option value="products">Product Inquiry</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
 
             <div>
               <label className="block text-sm text-white mb-2">Subject</label>

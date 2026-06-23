@@ -1,18 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Nunito, Open_Sans } from "next/font/google";
 import Image from "next/image";
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
 
 type FaqItem = { question: string; answer: React.ReactNode };
 type FaqSection = {
@@ -136,7 +125,7 @@ export default function Faqs() {
             <div key={sectionIndex} className="contents">
               {/* LEFT cell (title) */}
               <div className="self-start">
-                <h2 className={`text-[36px] font-bold text-black ${nunito.className}`}>
+                <h2 className="text-[36px] font-nunito font-bold text-black">
                   {sec.title}
                 </h2>
               </div>
@@ -150,7 +139,7 @@ export default function Faqs() {
                     <div key={faqIndex}>
                       {/* Question */}
                       <p
-                        className={`text-xl py-2 cursor-pointer font-semibold my-3 ${openSans.className} ${
+                        className={`text-xl py-2 cursor-pointer font-semibold my-3 font-openSans ${
                           isOpen ? "text-[#D11417]" : "text-black"
                         }`}
                         onClick={() => toggleFaq(sectionIndex, faqIndex)}
@@ -165,7 +154,7 @@ export default function Faqs() {
                         }`}
                       >
                         <p
-                          className={`text-[16px] text-black leading-[25px] mt-1 mb-8 ${nunito.className}`}
+                          className="text-[16px] text-black leading-[25px] mt-1 mb-8 font-openSans"
                         >
                           {faq.answer}
                         </p>
@@ -188,12 +177,12 @@ export default function Faqs() {
           <div key={sectionIndex} className="grid grid-cols-1 gap-6">
             {/* mobile header */}
             <div className="text-center">
-              <h2 className={`text-[22px] font-bold text-black ${nunito.className}`}>
+              <h2 className="text-[22px] font-nunito font-bold text-black">
                 {sec.title}
               </h2>
 
               {sec.intro ? (
-                <p className={`text-[14px] mt-4 px-5 text-[#333] leading-[26px] ${nunito.className}`}>
+                <p className="text-[14px] mt-4 px-5 text-[#333] leading-[26px] font-openSans">
                   {sec.intro}
                 </p>
               ) : null}
@@ -207,7 +196,7 @@ export default function Faqs() {
                 return (
                   <div key={faqIndex}>
                     <p
-                      className={`text-[16px] py-2 cursor-pointer font-semibold ${openSans.className} ${
+                      className={`text-[16px] py-2 cursor-pointer font-semibold font-openSans ${
                         isOpen ? "text-[#D11417]" : "text-black border-b border-[#D11417]"
                       }`}
                       onClick={() => toggleFaq(sectionIndex, faqIndex)}
@@ -220,7 +209,7 @@ export default function Faqs() {
                         isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                       }`}
                     >
-                      <p className={`text-[15px] text-[#333] leading-[24px] mt-2 ${nunito.className}`}>
+                      <p className="text-[15px] text-[#333] leading-[24px] mt-2 font-openSans">
                         {faq.answer}
                       </p>
                     </div>

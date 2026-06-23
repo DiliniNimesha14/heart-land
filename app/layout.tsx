@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, David_Libre, Nunito, Inter, Roboto } from "next/font/google";
+import { Open_Sans, Nunito } from "next/font/google";
 import "./globals.css";
 import FadeTransition from "../components/FadeTransition";
 import Navbar from "../components/Navbar";
@@ -13,13 +13,6 @@ const openSans = Open_Sans({
   variable: "--font-openSans",
 });
 
-const davidLibre = David_Libre({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-davidLibre",
-});
-
 const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -27,19 +20,6 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-roboto",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -57,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${openSans.variable} ${davidLibre.variable} ${nunito.variable} ${inter.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${openSans.variable} ${nunito.variable}`}>
       <body>
         <NavigationProvider>
           <Navbar />

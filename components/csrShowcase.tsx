@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Oswald, Questrial, Newsreader, Nunito } from "next/font/google";
+import { Oswald, Questrial, Newsreader } from "next/font/google";
 import { useEffect, useState } from "react";
 import { inter } from "@/app/fonts";
 
 
-const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"] });
 const newsReader = Newsreader({ subsets: ["latin"] });
 const oswald = Oswald({ subsets: ["latin"], weight: ["700"] });
 const questrial = Questrial({ subsets: ["latin"], weight: ["400"] });
@@ -30,14 +29,14 @@ export default function CsrShowcase() {
 
       {/* Heading */}
       <h2
-  className={`${nunito.className} text-2xl md:text-5xl font-bold text-center max-w-4xl mx-auto mt-14 leading-tight`}
+  className="font-nunito text-2xl md:text-5xl font-bold text-center max-w-4xl mx-auto mt-14 leading-tight"
 >
   Heartland <span className="text-red-700">♥</span> Homeland <br />
   Our Commitment to a Healthier Future
 </h2>
 
 <p
-  className={`${nunito.className} text-center mt-8 max-w-4xl mx-auto font-medium text-[16px] md:text-[22px] leading-[29px] text-black`}
+  className="font-openSans text-center mt-8 max-w-4xl mx-auto font-medium text-[16px] md:text-[22px] leading-[29px] text-black"
 >
   At Heartland General Trading, we believe that business
   success is only meaningful when it serves a greater purpose. We view our
@@ -191,11 +190,11 @@ className="absolute flex items-center justify-between px-4"
 <div className="block md:hidden relative pt-10 pb-16 overflow-hidden">
 
    {/* Heading */}
-      <h2 className={`${nunito.className} text-xl max-w-5xl font-extrabold text-center`}>
+      <h2 className="font-nunito text-xl max-w-5xl font-extrabold text-center">
         Building Communities Beyond Business
       </h2>
 
-      <p className={`${nunito.className} text-center mt-10 max-w-xl px-6 font-medium mx-auto text-[16px] leading-[29px]`}>
+      <p className="font-openSans text-center mt-10 max-w-xl px-6 font-medium mx-auto text-[16px] leading-[29px]">
         At <span className="font-extrabold">Heartland General Trading</span>, we believe true success
         means making a difference. Our CSR efforts support Sri Lankan farmers,
         small businesses, and communities, promoting sustainable growth that

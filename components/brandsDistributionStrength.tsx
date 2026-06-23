@@ -1,16 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Nunito, Open_Sans } from "next/font/google";
 import { Icon } from "@iconify/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
-const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"] });
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
 
 export default function BrandsDistributionStrength() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -30,13 +23,13 @@ export default function BrandsDistributionStrength() {
         {/* Heading */}
         <div className="text-center">
           <h2
-            className={`${nunito.className} text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[42px] 2xl:text-[48px] font-bold text-black`}
+            className="font-nunito text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[42px] 2xl:text-[48px] font-bold text-black"
           >
             Our Brands & Distribution Strength
           </h2>
 
           <p
-            className={`${openSans.className} mt-3 md:mt-4 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] leading-5 md:leading-[22px] lg:leading-[26px] xl:leading-[30px] text-black max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto`}
+            className="font-openSans mt-3 md:mt-4 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] leading-5 md:leading-[22px] lg:leading-[26px] xl:leading-[30px] text-black max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto"
           >
             Beyond our distribution services, Heartland is the proud home of
             Kelani Lanka, a brand synonymous with premium quality and authentic
@@ -52,13 +45,13 @@ export default function BrandsDistributionStrength() {
           className="mt-8 lg:mt-10 xl:mt-12 bg-white rounded-2xl lg:rounded-3xl border border-[#EAEAEA] shadow-sm p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-14"
         >
           <h3
-            className={`${openSans.className} text-[13px] sm:text-[14px] md:text-[15px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-bold text-black`}
+            className="font-openSans text-[13px] sm:text-[14px] md:text-[15px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-bold text-black"
           >
             Sole Distributor for Sri Lanka’s Most Iconic Global Brands
           </h3>
 
           <p
-            className={`${openSans.className} mt-1 lg:mt-2 text-[10px] sm:text-[10px] md:text-[12px] lg:text-[12px] xl:text-[14px] 2xl:text-[18px] text-black`}
+            className="font-openSans mt-1 lg:mt-2 text-[10px] sm:text-[10px] md:text-[12px] lg:text-[12px] xl:text-[14px] 2xl:text-[18px] text-black"
           >
             Furthermore, our strength as a market leader is cemented by our role
             as the Sole Distributor for:
@@ -77,12 +70,12 @@ export default function BrandsDistributionStrength() {
               </div>
               <div className="min-w-0">
                 <p
-                  className={`${openSans.className} text-[13px] mb-3 lg:text-[15px] xl:text-[17px] 2xl:text-[18px] font-bold text-black leading-tight`}
+                  className="font-openSans text-[13px] mb-3 lg:text-[15px] xl:text-[17px] 2xl:text-[18px] font-bold text-black leading-tight"
                 >
                   Maliban
                 </p>
                 <p
-                  className={`${openSans.className} text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-[15px] text-black leading-tight`}
+                  className="font-openSans text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-[15px] text-black leading-tight"
                 >
                   The taste of Sri Lankan heritage.
                 </p>
@@ -100,12 +93,12 @@ export default function BrandsDistributionStrength() {
               </div>
               <div className="min-w-0">
                 <p
-                  className={`${openSans.className} text-[13px] mb-3 lg:text-[15px] xl:text-[17px] 2xl:text-[18px] font-bold text-black leading-tight`}
+                  className="font-openSans text-[13px] mb-3 lg:text-[15px] xl:text-[17px] 2xl:text-[18px] font-bold text-black leading-tight"
                 >
                   Prima Kottumee
                 </p>
                 <p
-                  className={`${openSans.className} text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-[15px] text-black leading-tight`}
+                  className="font-openSans text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-[15px] text-black leading-tight"
                 >
                   The island&apos;s favorite instant indulgence.
                 </p>

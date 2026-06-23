@@ -47,7 +47,7 @@ export default function VisionMission() {
         {/* Evolution paragraph */}
         <p
           id="evolution-section"
-          className="text-center text-[#676767] text-[12px] sm:text-md md:text-[16px] lg:text-lg xl:text-[20px] leading-relaxed max-w-5xl xl:max-w-6xl mx-auto mb-15 md:mb-20 scroll-mt-20"
+          className="text-center text-[#676767] text-[12px] sm:text-md md:text-[16px] lg:text-lg xl:text-[20px] leading-relaxed max-w-5xl xl:max-w-6xl mx-auto mb-15 md:mb-20 scroll-mt-20 font-openSans"
         >
           Our Evolution: From Local Roots to Global Trading. While we began as a
           trusted local distributor, Heartland’s vision has always been global.
@@ -66,25 +66,27 @@ export default function VisionMission() {
 
         {/* Heading + Identity */}
         <div className="text-center space-y-4 md:space-y-6 lg:space-y-8 leading-6 md:leading-8 lg:leading-10 mb-8 md:mb-12 lg:mb-16 mx-auto">
-          <h2 className="text-[18px] sm:text-2xl md:text-4xl lg:text-[52px] xl:text-[58px] 2xl:text-[64px] font-semibold text-gray-900 transition-transform duration-500 hover:scale-[1.02] px-4 mb-10">
-            Our Identity Vision and Mission
+          <h2 className="text-[18px] sm:text-2xl md:text-4xl lg:text-[52px] xl:text-[58px] 2xl:text-[64px] font-nunito font-semibold text-gray-900 transition-transform duration-500 hover:scale-[1.02] px-4 mb-10">
+            Our Identity
           </h2>
 
-          <p className="
-  mt-4 font-medium
+          <p
+            className="
+  mt-4 font-openSans font-medium
   text-[14px] sm:text-lg md:text-xl lg:text-[22px] xl:text-[24px]
   max-w-2xl md:max-w-6xl xl:max-w-7xl mx-auto
   leading-[1.7] sm:leading-relaxed
   px-6 sm:px-4
   text-justify sm:text-center
   mb-12 md:mb-20
-">
-  We are dedicated to redefining the way Sri Lankan food products
-  reach international markets. With a focus on quality, authenticity,
-  and trust, we aim to represent the rich heritage of Sri Lankan
-  flavors through modern, reliable distribution and sustainable
-  partnerships.
-</p>
+"
+          >
+            We are dedicated to redefining the way Sri Lankan food products
+            reach international markets. With a focus on quality, authenticity,
+            and trust, we aim to represent the rich heritage of Sri Lankan
+            flavors through modern, reliable distribution and sustainable
+            partnerships.
+          </p>
         </div>
 
         {/* Cards */}
@@ -99,10 +101,9 @@ export default function VisionMission() {
             {/* Mobile Layout */}
             <div className="md:hidden flex items-center gap-4 -mr-8">
               <h3
-                className={`text-[36px] font-bold shrink-0 mx-5 leading-[42px] transition-all duration-700 ${
+                className={`text-[36px] font-nunito font-bold shrink-0 mx-5 leading-[42px] transition-all duration-700 ${
                   visionVisible ? "opacity-100" : "opacity-0"
                 }`}
-                style={{ fontFamily: "Open Sans" }}
               >
                 Our <br />
                 Vision
@@ -114,10 +115,7 @@ export default function VisionMission() {
                     : "translate-x-full opacity-0"
                 }`}
               >
-                <p
-                  className="text-[12px] text-white leading-relaxed italic"
-                  style={{ fontFamily: "Nunito" }}
-                >
+                <p className="text-[12px] text-white leading-relaxed italic font-openSans">
                   To be the premier link between Sri Lankan culture and the UAE,
                   enhancing lives through authentic food products that celebrate
                   our rich heritage and strengthen community ties.
@@ -127,10 +125,10 @@ export default function VisionMission() {
 
             {/* Desktop Layout */}
             <div className="hidden md:block bg-[#EBEBEB] rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12 pl-6 sm:pl-8 md:pl-12 lg:pl-20 xl:pl-24 pr-4 sm:pr-6 lg:pr-8 shadow-sm hover:scale-[1.01] hover:shadow-lg transition-all duration-500">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-semibold text-[#D11417] mb-2 lg:mb-3">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-nunito font-semibold text-[#D11417] mb-2 lg:mb-3">
                 Our Vision
               </h3>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-relaxed font-openSans">
                 To be the premier link between Sri Lankan culture and the UAE,
                 enhancing lives through authentic food products that celebrate
                 our rich heritage and strengthen community ties.
@@ -154,10 +152,7 @@ export default function VisionMission() {
                     : "-translate-x-full opacity-0"
                 }`}
               >
-                <p
-                  className="text-[12px] text-white leading-relaxed italic text-right"
-                  style={{ fontFamily: "Nunito" }}
-                >
+                <p className="text-[12px] text-white leading-relaxed italic text-right font-openSans">
                   Heartland General Trading is dedicated to providing
                   high-quality Sri Lankan food products that bring the essence
                   of home to every household. Our commitment to supporting local
@@ -169,10 +164,9 @@ export default function VisionMission() {
               </div>
 
               <h3
-                className={`text-[36px] font-bold text-right shrink-0 mx-5 leading-[42px] transition-all duration-700 ${
+                className={`text-[36px] font-nunito font-bold text-right shrink-0 mx-5 leading-[42px] transition-all duration-700 ${
                   missionVisible ? "opacity-100" : "opacity-0"
                 }`}
-                style={{ fontFamily: "Open Sans" }}
               >
                 Our <br />
                 Mission
@@ -181,10 +175,10 @@ export default function VisionMission() {
 
             {/* Desktop Layout */}
             <div className="hidden md:block bg-[#EBEBEB] rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12 pl-4 sm:pl-6 lg:pl-8 pr-6 sm:pr-8 md:pr-12 lg:pr-20 xl:pr-24 shadow-sm hover:scale-[1.01] hover:shadow-lg transition-all duration-500">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-semibold text-[#D11417] mb-2 lg:mb-3 text-right">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-nunito font-semibold text-[#D11417] mb-2 lg:mb-3 text-right">
                 Our Mission
               </h3>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-relaxed text-right">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-relaxed text-right font-openSans">
                 Heartland General Trading is dedicated to providing high-quality
                 Sri Lankan food products that bring the essence of home to every
                 household. Our commitment to supporting local farmers and

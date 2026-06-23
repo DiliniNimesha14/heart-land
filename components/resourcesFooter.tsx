@@ -1,12 +1,6 @@
-import { Open_Sans } from "next/font/google";
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-open-sans",
-});
-
 export default function Footer() {
   return (
-    <footer className={`${openSans.className} bg-[#1B1D21] text-white md:pb-10 md:pt-10 mt-0 px-6 md:px-15 md:py-0 py-1`}>
+    <footer className="font-openSans bg-[#1B1D21] text-white md:pb-10 md:pt-10 mt-0 px-6 md:px-15 md:py-0 py-1">
    
       {/* Container to center the content */}
       <div className="max-w-7xl mx-auto">

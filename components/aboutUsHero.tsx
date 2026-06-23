@@ -31,28 +31,25 @@ export default function AboutHero() {
       {/* Mobile Layout - Only visible on mobile */}
       <section className="md:hidden">
         {/* Top Image - Rectangle 91 - Full Width */}
-        <div className="w-full mb-8">
+        <div className="w-full mb-8 ">
           <Image
-            src="/left-circle.png"
+            src="/food-product.png"
             alt="About Hero"
             width={400}
             height={300}
-            className="w-full h-auto"
+            className="w-full h-auto object-cover"
           />
         </div>
 
         {/* Text Content - Centered */}
         <div className="text-center mb-8 px-8">
-          <p className="text-[16px] font-semibold text-[#BA5561] tracking-[3px] uppercase mb-5" style={{ fontFamily: 'Open Sans' }}>
+          <p className="text-[16px] font-openSans font-semibold text-[#BA5561] tracking-[3px] uppercase mb-5">
             A BIT ABOUT US
           </p>
-          <h1
-            className="text-[25px] font-bold mb-4 tracking-[4px]"
-            style={{ fontFamily: "Open Sans" }}
-          >
+          <h1 className="text-[25px] font-nunito font-bold mb-4 tracking-[4px]">
             A 25-Year Legacy of Authenticity
           </h1>
-          <p className="text-[14px] text-gray-700 mb-6 leading-8.5 font-nunito ">
+          <p className="text-[14px] text-gray-700 mb-6 leading-8.5 font-openSans">
             Welcome to Heartland General Trading Co LLC, your premier gateway to
             the authentic flavors of Sri Lanka in the UAE. Established in 2001
             by entrepreneur Mohamed Fazal Mawjood, we are proud to have served
@@ -73,11 +70,8 @@ export default function AboutHero() {
     transition-all duration-300 ease-out
     hover:gap-3
   "
-            style={{ fontFamily: "David Libre" }}
           >
-            Explore More  &gt;&gt;
-
-
+            Explore More &gt;&gt;
           </button>
         </div>
       </section>
@@ -86,19 +80,13 @@ export default function AboutHero() {
       <section className="hidden md:flex max-w-[1600px] mx-auto px-[clamp(16px,3.5vw,60px)] mt-[7vw] mb-[clamp(80px,8vw,160px)] flex-row items-center gap-[4vw]">
         {/* Left Content */}
         <div className="flex-1 w-full max-w-[48%] ml-[clamp(8px,1vw,16px)] mb-[5vw]">
-          <p
-            className="text-[clamp(11px,1.6vw,22px)] font-semibold text-[#BA5561] tracking-[clamp(1px,0.3vw,4px)] uppercase mb-[clamp(4px,0.8vw,12px)]"
-            style={{ fontFamily: "Open Sans" }}
-          >
+          <p className="text-[clamp(11px,1.6vw,22px)] font-openSans font-semibold text-[#BA5561] tracking-[clamp(1px,0.3vw,4px)] uppercase mb-[clamp(4px,0.8vw,12px)]">
             A BIT ABOUT US
           </p>
-          <h1
-            className="text-[clamp(16px,4.2vw,56px)] tracking-[clamp(1px,0.45vw,6px)] leading-[1.15] font-bold mb-[clamp(6px,2.2vw,32px)]"
-            style={{ fontFamily: "Open Sans" }}
-          >
+          <h1 className="text-[clamp(16px,4.2vw,56px)] font-nunito tracking-[clamp(1px,0.45vw,6px)] leading-[1.15] font-bold mb-[clamp(6px,2.2vw,32px)]">
             A 25-Year Legacy of Authenticity
           </h1>
-          <p className="text-[clamp(11px,1.35vw,20px)] text-gray-700 mb-[clamp(10px,2vw,40px)] leading-[clamp(18px,2.6vw,36px)] font-nunito">
+          <p className="text-[clamp(11px,1.35vw,20px)] text-gray-700 mb-[clamp(10px,2vw,40px)] leading-[clamp(18px,2.6vw,36px)] font-openSans">
             Welcome to Heartland General Trading Co LLC, your premier gateway to
             the authentic flavors of Sri Lanka in the UAE. Established in 2001
             by entrepreneur Mohamed Fazal Mawjood, we are proud to have served
@@ -151,15 +139,16 @@ export default function AboutHero() {
               style={{ bottom: "clamp(-150px, -10vw, -50px)" }}
             >
               <Image
-                src="/Rectangle 90.png"
-                alt="food 1"
+                src="/food-product.png"
+                alt="noodles"
                 width={400}
-                height={340}
-                className="rounded-lg h-auto"
+                height={400}
+                className="rounded-xl object-cover h-auto"
                 style={{
                   marginLeft: "clamp(-140px, -9vw, -40px)",
-                  marginBottom: "clamp(-30px, 1vw, -6px)",
+                  marginBottom: "clamp(-30px, 1vw, 1px)",
                   width: "clamp(180px, 24vw, 380px)",
+                  height: "clamp(180px, 24vw, 380px)",
                 }}
               />
               <div>
