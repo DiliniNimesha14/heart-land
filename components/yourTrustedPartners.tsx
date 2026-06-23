@@ -134,56 +134,51 @@ export default function Partners() {
           </div>
 
           {/* Two-column section - Desktop only */}
-          <div className="relative hidden lg:block">
-            <div className="relative min-h-[620px] xl:min-h-[700px] 2xl:min-h-[760px]">
-              {/* Left: image group */}
-              <div
-                ref={slowRef}
-                className="relative flex flex-nowrap gap-5 justify-start"
-                style={{ willChange: "transform" }}
-              >
-                {/* Market image */}
-                <div className="w-[230px] h-[420px] overflow-hidden">
-                  <Image
-                    src="/market.png"
-                    alt="Food market"
-                    width={243}
-                    height={442}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Rice image */}
-                <div className="w-[230px] h-[420px] overflow-hidden">
-                  <Image
-                    src="/Rice.png"
-                    alt="Rice"
-                    width={241}
-                    height={442}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Spices image */}
-                <div className="w-[230px] h-[270px] overflow-hidden rounded-tr-[50px]">
-                  <Image
-                    src="/Spices.png"
-                    alt="Spices"
-                    width={243}
-                    height={290}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+          <div className="hidden lg:flex items-start gap-8 xl:gap-12 mt-4">
+            {/* Left: image group — fixed widths, never shrinks */}
+            <div
+              ref={slowRef}
+              className="flex flex-nowrap gap-4 xl:gap-5 shrink-0"
+              style={{ willChange: "transform" }}
+            >
+              {/* Market image */}
+              <div className="w-[140px] xl:w-[190px] 2xl:w-[230px] h-[360px] xl:h-[400px] 2xl:h-[420px] overflow-hidden">
+                <Image
+                  src="/market.png"
+                  alt="Food market"
+                  width={243}
+                  height={442}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
-              {/* Right: Read More button - Desktop */}
-              <div
-                className="absolute"
-                style={{
-                  top: "clamp(140px, 18vw, 190px)",
-                  right: "clamp(120px, 15vw, 280px)",
-                }}
-              >
+              {/* Rice image */}
+              <div className="w-[140px] xl:w-[190px] 2xl:w-[230px] h-[360px] xl:h-[400px] 2xl:h-[420px] overflow-hidden">
+                <Image
+                  src="/Rice.png"
+                  alt="Rice"
+                  width={241}
+                  height={442}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Spices image */}
+              <div className="w-[140px] xl:w-[190px] 2xl:w-[230px] h-[230px] xl:w-[190px] xl:h-[260px] 2xl:h-[270px] overflow-hidden rounded-tr-[50px]">
+                <Image
+                  src="/Spices.png"
+                  alt="Spices"
+                  width={243}
+                  height={290}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Right: button + stats — fills remaining space, never overlaps images */}
+            <div className="flex-1 flex flex-col justify-between min-h-[360px] xl:min-h-[400px] 2xl:min-h-[420px] py-4">
+              {/* Read More button */}
+              <div className="flex justify-center">
                 <Link href="/About">
                   <button
                     type="button"
@@ -194,17 +189,11 @@ export default function Partners() {
                 </Link>
               </div>
 
-              {/* Stats section - Desktop */}
-              <div
-                className="absolute w-full lg:max-w-[750px] flex justify-end gap-28 px-10"
-                style={{
-                  top: "clamp(240px, 32vw, 380px)",
-                  right: "clamp(60px, 6vw, 120px)", // ← moved left
-                }}
-              >
+              {/* Stats */}
+              <div className="flex justify-center gap-10 xl:gap-16 2xl:gap-28 px-4">
                 {/* 25 Years Expertise */}
                 <div className="text-left">
-                  <h4 className="font-nunito font-normal text-[36px] leading-none text-[#6D7D7D]">
+                  <h4 className="font-nunito font-normal text-[28px] xl:text-[36px] leading-none text-[#6D7D7D]">
                     25+
                   </h4>
                   <div className="mt-4 space-y-1">
@@ -219,7 +208,7 @@ export default function Partners() {
 
                 {/* 30+ Partner Brands */}
                 <div className="text-left">
-                  <h4 className="font-nunito font-normal text-[36px] leading-none text-[#6D7D7D]">
+                  <h4 className="font-nunito font-normal text-[28px] xl:text-[36px] leading-none text-[#6D7D7D]">
                     30+
                   </h4>
                   <div className="mt-4 space-y-1">
@@ -234,7 +223,7 @@ export default function Partners() {
 
                 {/* 1000+ Happy Clients */}
                 <div className="text-left">
-                  <h4 className="font-nunito font-normal text-[36px] leading-none text-[#6D7D7D]">
+                  <h4 className="font-nunito font-normal text-[28px] xl:text-[36px] leading-none text-[#6D7D7D]">
                     1000+
                   </h4>
                   <div className="mt-4 space-y-1">
