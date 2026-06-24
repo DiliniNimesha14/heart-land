@@ -10,23 +10,31 @@ export default function HeroBanner() {
     <section className="relative w-full overflow-visible mt-6 sm:mt-10  sm:mb-28 md:mb-36">
       {/* Red banner */}
       <div className="bg-[#D11417] w-full">
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-5 sm:py-6 md:py-5 pb-8 lg:pb-5">
-          <div className="max-w-full lg:max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
+        <div className="w-full px-4 sm:px-6 lg:px-[clamp(48px,3.43vw,89px)] py-5 sm:py-6 md:py-5 pb-8 lg:py-[clamp(20px,1.43vw,37px)]">
+          <div className="max-w-full lg:max-w-[clamp(1200px,100vw,2412px)] mx-auto">
             {/* Desktop Layout (lg and above) */}
             <div className="hidden lg:block">
-              <div className="relative flex items-center justify-center min-h-[260px]">
+              <div
+                className="relative flex items-center justify-center"
+                style={{ minHeight: "clamp(260px, 18.57vw, 481px)" }}
+              >
                 {/* Left circular image */}
                 <div
-                  className="absolute left-10 top-1/2 -translate-y-1/2"
-                  style={{ width: 300, height: 300, marginLeft: -155 }}
+                  className="absolute top-1/2 -translate-y-1/2"
+                  style={{
+                    width: "clamp(300px, 21.43vw, 555px)",
+                    height: "clamp(300px, 21.43vw, 555px)",
+                    left: "clamp(40px, 2.86vw, 74px)",
+                    marginLeft: "clamp(-287px, -11.07vw, -155px)",
+                  }}
                 >
                   <div className="w-full h-full overflow-hidden">
                     <Image
                       src="/left-circle.png"
                       alt="spices circle"
-                      width={300}
-                      height={300}
-                      className="object-cover"
+                      width={555}
+                      height={555}
+                      className="object-cover w-full h-full"
                     />
                   </div>
                 </div>
@@ -34,38 +42,67 @@ export default function HeroBanner() {
                 {/* Right decorative chili image */}
                 <div
                   ref={chiliRef}
-                  className="absolute pointer-events-none -right-40 top-[-200px]"
-                  style={{ width: 420, height: 420 }}
+                  className="absolute pointer-events-none flex items-center justify-center"
+                  style={{
+                    width: "clamp(420px, 30vw, 777px)",
+                    height: "clamp(420px, 30vw, 777px)",
+                    right: "clamp(-148px, -5.71vw, -80px)",
+                    top: "clamp(-222px, -8.57vw, -120px)",
+                  }}
                 >
                   <Image
                     src="/chili.png"
                     alt="chili splash"
-                    width={400}
-                    height={400}
-                    className="object-contain w-[370px]"
+                    width={685}
+                    height={685}
+                    className="object-contain h-auto"
+                    style={{ width: "clamp(370px, 26.43vw, 685px)" }}
                   />
                 </div>
 
                 {/* Content block */}
-                <div className="relative z-20 flex flex-col items-start text-left text-white max-w-xl">
+                <div
+                  className="relative z-20 flex flex-col items-start text-left text-white"
+                  style={{ maxWidth: "clamp(576px, 41.14vw, 1066px)" }}
+                >
                   <h1
-                    className="font-nunito font-bold text-[40px] leading-10 text-white"
-                    style={{ maxWidth: 800 }}
+                    className="font-nunito font-bold text-white"
+                    style={{
+                      fontSize: "clamp(40px, 2.86vw, 74px)",
+                      lineHeight: "clamp(40px, 2.86vw, 74px)",
+                    }}
                   >
                     {" "}
                     Get in Touch
                   </h1>
 
                   <p
-                    className="mt-4 text-[16px] leading-6 text-[#FAFAFA] max-w-full font-openSans"
-                    style={{ opacity: 1 }}
+                    className="text-[#FAFAFA] max-w-full font-openSans"
+                    style={{
+                      opacity: 1,
+                      marginTop: "clamp(16px, 1.14vw, 30px)",
+                      fontSize: "clamp(16px, 1.14vw, 30px)",
+                      lineHeight: "clamp(24px, 1.71vw, 44px)",
+                    }}
                   >
-                  We&apos;d love to hear from you! Whether you have questions about our products or need  assistance, our team is here to help. Please fill out the contact form or reach out to us directly.  Your feedback is important to us!
-
+                    We&apos;d love to hear from you! Whether you have questions
+                    about our products or need assistance, our team is here to
+                    help. Please fill out the contact form or reach out to us
+                    directly. Your feedback is important to us!
                   </p>
 
                   <Link href="/Contact">
-                    <button className="mt-6 inline-flex items-center justify-center cursor-pointer px-9 py-2 rounded-full border border-white text-white font-openSans font-semibold text-[16px] leading-4 tracking-[0.43em] transition-all duration-300 ease-out hover:scale-110 hover:shadow-[0_12px_24px_rgba(255,255,255,0.2)] hover:-translate-y-2 hover:bg-white hover:text-[#D11417] transform-gpu uppercase">
+                    <button
+                      className="inline-flex items-center justify-center cursor-pointer rounded-full border border-white text-white font-openSans font-semibold leading-4 tracking-[0.43em] transition-all duration-300 ease-out hover:scale-110 hover:shadow-[0_12px_24px_rgba(255,255,255,0.2)] hover:-translate-y-2 hover:bg-white hover:text-[#D11417] transform-gpu uppercase"
+                      style={{
+                        marginTop: "clamp(24px, 1.71vw, 44px)",
+                        paddingLeft: "clamp(36px, 2.57vw, 67px)",
+                        paddingRight: "clamp(36px, 2.57vw, 67px)",
+                        paddingTop: "clamp(8px, 0.57vw, 15px)",
+                        paddingBottom: "clamp(8px, 0.57vw, 15px)",
+                        fontSize: "clamp(16px, 1.14vw, 30px)",
+                      }}
+                    >
                       CONTACT US
                     </button>
                   </Link>
@@ -83,7 +120,10 @@ export default function HeroBanner() {
                   </h1>
 
                   <p className="font-openSans text-[14px]  leading-[1.5] sm:leading-6 text-[#FAFAFA] mb-5 sm:mb-6">
-                    We&apos;d love to hear from you! Whether you have questions about our products or need  assistance, our team is here to help. Please fill out the contact form or reach out to us directly.  Your feedback is important to us!
+                    We&apos;d love to hear from you! Whether you have questions
+                    about our products or need assistance, our team is here to
+                    help. Please fill out the contact form or reach out to us
+                    directly. Your feedback is important to us!
                   </p>
 
                   <Link href="/Contact">
