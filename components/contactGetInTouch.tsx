@@ -136,10 +136,21 @@ export default function ContactGetInTouch() {
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-5">
-            <a href="" className="text-white text-xs underline">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Heartland%20General%20Trading%20FZE%2C%20Sheikha%20Maryam%20Building%2C%20Deira%2C%20Dubai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-xs underline"
+            >
               View us on google map
             </a>
-            <button className="w-6 h-6 bg-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300 ease-out">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Heartland%20General%20Trading%20FZE%2C%20Sheikha%20Maryam%20Building%2C%20Deira%2C%20Dubai"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View us on Google Maps"
+              className="w-6 h-6 bg-white rounded-full flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300 ease-out"
+            >
               <svg
                 className="w-3 h-3 text-[#D11417]"
                 fill="none"
@@ -153,7 +164,7 @@ export default function ContactGetInTouch() {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </button>
+            </a>
           </div>
 
           <div className="mb-4 rounded overflow-hidden aspect-square">
