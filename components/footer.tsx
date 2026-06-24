@@ -87,7 +87,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/Resources"
+                    href="/blog"
                     className="hover:text-[#D11417] transition-colors duration-300"
                   >
                     Blog
@@ -95,7 +95,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/Resources#SuccessStory"
+                    href="/Resources"
                     className="hover:text-[#D11417] transition-colors duration-300"
                   >
                     News
@@ -325,7 +325,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="/Resources"
+                      href="/blog"
                       className="hover:text-[#D11417] transition-colors duration-300"
                     >
                       Blog
@@ -333,7 +333,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="/Resources#SuccessStory"
+                      href="/Resources"
                       className="hover:text-[#D11417] transition-colors duration-300"
                     >
                       News
