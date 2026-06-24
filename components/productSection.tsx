@@ -543,7 +543,8 @@ export default function ProductsSection() {
                 placeholder="Search category"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full rounded-full border px-4 py-3 pr-10 text-sm"
+                // text-base (16px) prevents iOS Safari auto-zoom on focus
+                className="w-full rounded-full border px-4 py-3 pr-10 text-base"
               />
 
               <Search
