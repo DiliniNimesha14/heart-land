@@ -1,9 +1,62 @@
 "use client";
 
+import { useState } from "react";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { contactDetails } from "@/data/contactDetails";
 
+const INITIAL_FORM = {
+  fullName: "",
+  email: "",
+  inquiryType: "",
+  subject: "",
+  message: "",
+};
+
+type Status = "idle" | "sending" | "success" | "error";
+
 export default function ContactGetInTouch() {
+  const [form, setForm] = useState(INITIAL_FORM);
+  const [status, setStatus] = useState<Status>("idle");
+  const [feedback, setFeedback] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("sending");
+    setFeedback("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data?.error || "Something went wrong.");
+      }
+
+      setStatus("success");
+      setFeedback("Thanks! Your message has been sent.");
+      setForm(INITIAL_FORM);
+    } catch (err) {
+      setStatus("error");
+      setFeedback(
+        err instanceof Error ? err.message : "Failed to send your message."
+      );
+    }
+  };
+
+  const sending = status === "sending";
+
   return (
     <>
       <section className="font-openSans w-full bg-white py-5 px-8 md:px-20 lg:mb-10">
@@ -20,13 +73,20 @@ export default function ContactGetInTouch() {
 
             {/* Desktop Form */}
             <div className="hidden lg:block">
-              <form className="space-y-4 sm:space-y-6 max-w-md w-full">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-4 sm:space-y-6 max-w-md w-full"
+              >
                 <div>
                   <label className="block text-base sm:text-lg mt-6 sm:mt-10 text-[#444444] mb-2">
                     Full name
                   </label>
                   <input
                     type="text"
+                    name="fullName"
+                    value={form.fullName}
+                    onChange={handleChange}
+                    required
                     placeholder=""
                     className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-300 text-sm sm:text-base text-black"
                   />
@@ -38,6 +98,10 @@ export default function ContactGetInTouch() {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
                     className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-300 text-sm sm:text-base text-black"
                   />
                 </div>
@@ -47,9 +111,11 @@ export default function ContactGetInTouch() {
                   </label>
 
                   <select
-                    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none 
+                    name="inquiryType"
+                    value={form.inquiryType}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none
     focus:border-[#D11417] px-0 py-4 text-sm sm:text-base text-black"
-                    defaultValue=""
                     required
                   >
                     <option value="" disabled className="text-gray-500">
@@ -67,6 +133,9 @@ export default function ContactGetInTouch() {
                   </label>
                   <input
                     type="text"
+                    name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
                     className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-300 text-sm sm:text-base text-black"
                   />
                 </div>
@@ -77,6 +146,10 @@ export default function ContactGetInTouch() {
                   </label>
                   <textarea
                     rows={1}
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    required
                     className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none
                    focus:border-[#D11417] px-0 py-2 placeholder-gray-300 resize-none text-sm sm:text-base
                     text-black"
@@ -86,10 +159,22 @@ export default function ContactGetInTouch() {
                 <div className="pt-4">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto inline-block h-10 sm:h-12 cursor-pointer bg-[#D11417] text-white px-4 sm:px-5 py-2 text-sm sm:text-base shadow-md hover:shadow-[0_15px_30px_rgba(209,20,23,0.4)] transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-3 hover:rotate-1 transform-gpu rounded-tl-2xl rounded-br-xl rounded-tr-sm rounded-bl-sm"
+                    disabled={sending}
+                    className="w-full sm:w-auto inline-block h-10 sm:h-12 cursor-pointer bg-[#D11417] text-white px-4 sm:px-5 py-2 text-sm sm:text-base shadow-md hover:shadow-[0_15px_30px_rgba(209,20,23,0.4)] transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-3 hover:rotate-1 transform-gpu rounded-tl-2xl rounded-br-xl rounded-tr-sm rounded-bl-sm disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:translate-y-0 disabled:hover:rotate-0"
                   >
-                    Send Message
+                    {sending ? "Sending..." : "Send Message"}
                   </button>
+                  {feedback && (
+                    <p
+                      className={`mt-3 text-sm ${
+                        status === "success"
+                          ? "text-green-600"
+                          : "text-[#D11417]"
+                      }`}
+                    >
+                      {feedback}
+                    </p>
+                  )}
                 </div>
               </form>
             </div>
@@ -222,11 +307,15 @@ export default function ContactGetInTouch() {
             next step
           </p>
 
-          <form className="space-y-5 max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-5 max-w-md mx-auto">
             <div>
               <label className="block text-sm text-white mb-2">Full name</label>
               <input
                 type="text"
+                name="fullName"
+                value={form.fullName}
+                onChange={handleChange}
+                required
                 placeholder=""
                 className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-400 text-sm text-white"
               />
@@ -236,6 +325,10 @@ export default function ContactGetInTouch() {
               <label className="block text-sm text-white mb-2">Email</label>
               <input
                 type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
                 className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-400 text-sm text-white"
               />
             </div>
@@ -245,9 +338,11 @@ export default function ContactGetInTouch() {
               </label>
 
               <select
-                className="w-full bg-black border-0 border-b border-[#D11417] focus:outline-none 
+                name="inquiryType"
+                value={form.inquiryType}
+                onChange={handleChange}
+                className="w-full bg-black border-0 border-b border-[#D11417] focus:outline-none
     focus:border-[#D11417] px-0 py-2 text-sm text-white"
-                defaultValue=""
                 required
               >
                 <option value="" disabled className="text-gray-400">
@@ -263,6 +358,9 @@ export default function ContactGetInTouch() {
               <label className="block text-sm text-white mb-2">Subject</label>
               <input
                 type="text"
+                name="subject"
+                value={form.subject}
+                onChange={handleChange}
                 className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-400 text-sm text-white"
               />
             </div>
@@ -271,17 +369,31 @@ export default function ContactGetInTouch() {
               <label className="block text-sm text-white mb-2">Message</label>
               <textarea
                 rows={3}
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                required
                 className="w-full bg-transparent border-0 border-b border-[#D11417] focus:outline-none focus:border-[#D11417] px-0 py-2 placeholder-gray-400 resize-none text-sm text-white"
               />
             </div>
 
-            <div className="pt-4 flex justify-center">
+            <div className="pt-4 flex flex-col items-center">
               <button
                 type="submit"
-                className="w-auto inline-block h-10 sm:h-12 cursor-pointer bg-[#D11417] text-white px-4 sm:px-5 py-2 text-sm sm:text-base shadow-md hover:shadow-[0_15px_30px_rgba(209,20,23,0.4)] transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-3 hover:rotate-1 transform-gpu rounded-tl-2xl rounded-br-xl rounded-tr-sm rounded-bl-sm"
+                disabled={sending}
+                className="w-auto inline-block h-10 sm:h-12 cursor-pointer bg-[#D11417] text-white px-4 sm:px-5 py-2 text-sm sm:text-base shadow-md hover:shadow-[0_15px_30px_rgba(209,20,23,0.4)] transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-3 hover:rotate-1 transform-gpu rounded-tl-2xl rounded-br-xl rounded-tr-sm rounded-bl-sm disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:translate-y-0 disabled:hover:rotate-0"
               >
-                Send Message
+                {sending ? "Sending..." : "Send Message"}
               </button>
+              {feedback && (
+                <p
+                  className={`mt-3 text-sm text-center ${
+                    status === "success" ? "text-green-400" : "text-red-300"
+                  }`}
+                >
+                  {feedback}
+                </p>
+              )}
             </div>
           </form>
         </div>
